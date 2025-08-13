@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+	<title>Цветы</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="../style.css">
+	<link rel="shortcut icon" href="../circles.ico">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+	<script src="https://use.fontawesome.com/c61f48834a.js"></script>
+
+</head>
+
+<body>
+	<div class="container">
+
+		<!-- Форма Закрыть смену -->
+		<div class="modal-container"> <!-- чтобы показать, нужен класс - open -->
+			<div class="close-shift-modal">
+				<div class="modal-header">
+					<h2 class="modal-title">Закрыть смену <span>№3</span></h2>
+					<button class="close-modal">
+						<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none" class="setprice_close">
+							<rect opacity="0.8" x="1.5" y="1.5" width="47" height="47" rx="23.5" stroke="#844451" stroke-width="3"></rect>
+							<path d="M17 33L33 17M17 17L33 33" stroke="#844451" stroke-width="3" stroke-linecap="round"></path>
+						</svg>
+					</button>
+				</div>
+				<div class="modal-body">
+		
+					<div class="responsible-container">
+						<div class="responsible-shift-info">
+							<div class="rsi-row">
+								<div class="rsi-row-name">Открытие:</div>
+								<div class="rsi-row-employee">
+									<div class="name">Александра Мандрагора</div>
+									<div class="date-time">
+										<span class="time">08:43</span>
+										<span class="date">(31.04.2023)</span>
+									</div>
+								</div>
+							</div>
+							<div class="rsi-row">
+								<div class="rsi-row-name">Закрытие:</div>
+								<div class="rsi-row-employee">
+									<div class="name">Александра Мандрагора</div>
+									<div class="date-time">
+										<span class="time">23:07</span> 
+										<span class="date">(31.04.2023)</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="responsible-table">
+							<div class="table-header">Выручка</div>
+							<div class="table-body">
+								<div class="table-row">
+									<div class="name">Наличные</div>
+									<div class="value">2 563</div>
+								</div>
+								<div class="table-row">
+									<div class="name">Терминал</div>
+									<div class="value">5 638</div>
+								</div>
+								<div class="table-row">
+									<div class="name">Переносной терминал</div>
+									<div class="value muted">0</div>
+								</div>
+								<div class="table-row">
+									<div class="name">Перевод на СБЕР</div>
+									<div class="value">500</div>
+								</div>
+								<div class="table-row">
+									<div class="name">Оплаты с сайта</div>
+									<div class="value">1 269</div>
+								</div>
+								<div class="table-row">
+									<div class="name">Возврат</div>
+									<div class="value minus">600</div>
+								</div>
+							</div>
+							<div class="table-footer">
+								<div class="table-row">
+									<div class="name">Итого</div>
+									<div class="value">8 693</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="responsible-table">
+							<div class="table-header">Предоплата</div>
+							<div class="table-body">
+								<div class="table-row">
+									<div class="name">Наличные</div>
+									<div class="value">2 563</div>
+								</div>
+								<div class="table-row">
+									<div class="name">Терминал</div>
+									<div class="value muted">0</div>
+								</div>
+								<div class="table-row">
+									<div class="name">Переносной терминал</div>
+									<div class="value muted">0</div>
+								</div>
+								<div class="table-row">
+									<div class="name">Перевод на СБЕР</div>
+									<div class="value muted">0</div>
+								</div>
+							</div>
+							<div class="table-footer">
+								<div class="table-row">
+									<div class="name">Итого</div>
+									<div class="value">600</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="responsible-info">
+							<div class="info-row">
+								<div class="name">В кассе при открытии</div>
+								<div class="value">5 863</div>
+							</div>
+							<div class="info-row">
+								<div class="name">Инкассация</div>
+								<div class="value">5 000</div>
+							</div>
+							<div class="info-row">
+								<div class="name">Пополнение баланса</div>
+								<div class="value">1 026</div>
+							</div>
+							<div class="info-row">
+								<div class="name">Выдача </div>
+								<div class="value">0</div>
+							</div>
+							<div class="info-row">
+								<div class="name">Расхождение</div>
+								<div class="value">0</div>
+							</div>
+							<div class="info-row">
+								<div class="name">В кассе</div>
+								<div class="value">100</div>
+							</div>
+							<div class="info-row w-input">
+								<div class="name">В кассе фактически</div>
+								<div class="input-icon">
+									<input type="text" class="custominput actually-money">
+								</div>
+							</div>
+						</div>
+					</div>
+						
+					<div class="btn-container">
+						<button class="btn btn-disabled">Закрыть смену</button>
+					</div>
+		
+				</div>
+			</div>
+		</div>
+
+		<!-- Форма Провести инкассацию --> 
+		<div class="modal-container"> <!-- чтобы показать, нужен класс - open --> 
+			<div class="collector-modal money-view">
+				<div class="modal-header">
+					<h2 class="modal-title">Провести инкассацию</h2>
+					<button class="close-modal">
+						<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none" class="setprice_close">
+							<rect opacity="0.8" x="1.5" y="1.5" width="47" height="47" rx="23.5" stroke="#844451" stroke-width="3"></rect>
+							<path d="M17 33L33 17M17 17L33 33" stroke="#844451" stroke-width="3" stroke-linecap="round"></path>
+						</svg>
+					</button>
+				</div>
+				<div class="modal-body">
+
+					<div class="modal-desc">Укажите сумму денежных средств к инкасации</div>
+
+					<form action="">
+						<div class="field-cont">
+							<div class="input-icon">
+								<input type="text" class="custominput">
+							</div>
+						</div>
+
+						<div class="field-cont">
+							<select name="" id="">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>
+						</div>
+
+						<div class="field-cont">
+							<div class="field-cont-title">Комментарий</div>
+							<textarea class="customtextarea" name="" id=""></textarea>
+						</div>
+					</form>
+						
+					<div class="btn-container">
+						<button class="btn btn-disabled">Продолжить</button>
+					</div>
+		
+				</div>
+			</div>
+		</div>
+
+		<!-- Форма Выдать из кассы --> 
+		<div class="modal-container open"> <!-- чтобы показать, нужен класс - open --> 
+			<div class="cashbox-modal money-view">
+				<div class="modal-header">
+					<h2 class="modal-title">Выдать из кассы</h2>
+					<button class="close-modal">
+						<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none" class="setprice_close">
+							<rect opacity="0.8" x="1.5" y="1.5" width="47" height="47" rx="23.5" stroke="#844451" stroke-width="3"></rect>
+							<path d="M17 33L33 17M17 17L33 33" stroke="#844451" stroke-width="3" stroke-linecap="round"></path>
+						</svg>
+					</button>
+				</div>
+				<div class="modal-body">
+
+					<div class="modal-desc">Выберите причину выдачи и укажите сумму выдачи</div>
+
+					<form action="">
+						<div class="field-cont">
+							<div class="input-icon">
+								<input type="text" class="custominput">
+							</div>
+						</div>
+
+						<div class="field-cont">
+							<select name="" id="">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>
+						</div>
+
+						<div class="field-cont m-size hidden">
+							<div class="field-cont-title">Номер заказа</div>
+							<input type="text" class="custominput">
+						</div>
+
+						<div class="field-cont">
+							<div class="field-cont-title">Комментарий<span>*</span></div>
+							<textarea class="customtextarea" name="" id=""></textarea>
+						</div>
+					</form>
+						
+					<div class="btn-container">
+						<button class="btn btn-disabled">Продолжить</button>
+					</div>
+		
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</body>
+
+<script src="../script/jquery-3.3.1.min.js"></script>
+<script src="../script/main.js"></script>
+
+</html>
+
+<!-- #CECECE -->

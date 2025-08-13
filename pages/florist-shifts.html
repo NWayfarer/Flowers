@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+	<title>Цветы</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="../style.css">
+	<link rel="shortcut icon" href="../circles.ico">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+	<script src="https://use.fontawesome.com/c61f48834a.js"></script>
+
+</head>
+
+<body>
+	<div class="container">
+		
+		<div class="info-section-cont left-sis staff-cont">
+			<div class="rBlock-header info-sect-h h-container-flex">
+				<div class="money-btns">
+					<button class="btn btn-fine">Журнал  пересчета</button>
+					<button class="btn btn-fine">Остатки ДС</button>
+					<button class="btn btn-fine"><img src="../img/money-rub.svg" alt="">Выдать</button>
+				</div>
+
+				<div class="collector-btns">
+					<button class="btn btn-collector">Журнал  инкассации</button>
+					<button class="btn btn-collector"><img src="../img/collector.svg" alt="">Инкасс</button>
+				</div>
+			</div>
+			
+			<div class="rBlock-header shift-set">
+				<input type="date" name="" id="" class="date-picker">
+
+				<button class="btn btn-fine hidden">Открыть смену</button>
+			</div>
+			
+			<div class="rBlock-body staff-b">
+				<div class="staff-table">
+					<div class="st-control">
+						<div class="control-item">
+							№
+							<button class="btn btn-control">
+								<img src="../img/up-down.svg" alt="">
+							</button>
+						</div>
+						<div class="control-item">
+							Дата
+							<button class="btn btn-control">
+								<img src="../img/up-down.svg" alt="">
+							</button>
+						</div>
+						<div class="control-item">Время работы</div>
+						<div class="control-item">Ответственный</div>
+					</div>
+					
+					<div class="st-body">
+						<div class="st-row">
+							<div class="employee-id">3</div>
+							<div class="employee-date">31.04.2023</div>
+							<div class="employee-time">08:43 - </div>
+							<div class="employee-name">Александра Мандрагора</div>
+							<div class="employee-btn">
+								<button class="btn btn-fine">Закрыть смену</button>
+							</div>
+						</div>
+
+						<div class="st-row">
+							<div class="employee-id">2</div>
+							<div class="employee-date">31.04.2023</div>
+							<div class="employee-time">10:00 - 22:05</div>
+							<div class="employee-name">Наталья Лихолат</div>
+							<div class="employee-btns"></div>
+						</div>
+						
+						<div class="st-row">
+							<div class="employee-id">1</div>
+							<div class="employee-date">31.04.2023</div>
+							<div class="employee-time">07:59 - 08:43</div>
+							<div class="employee-name">Анастасия Рожкова</div>
+							<div class="employee-btns"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="info-section-cont right-sis empty-info-sect" data-empty="Выберите смену, чтобы увидеть детали"></div>
+		
+	</div>
+</body>
+
+<script src="../script/jquery-3.3.1.min.js"></script>
+<script src="../script/main.js"></script>
+
+</html>
+
+<!-- #CECECE -->
