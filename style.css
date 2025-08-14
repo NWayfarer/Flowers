@@ -262,13 +262,15 @@ button {
     position: relative;
 }
 .input-icon:before {
-    content: "₽";
     position: absolute;
     top: 50%;
     right: 22px;
     transform: translate(0, -50%);
     font-size: 25px;
     color: #252525;
+}
+.input-icon:has(.actually-money):before {
+    content: "₽";
 }
 .input-icon .custominput {
     padding: 16px 45px 16px 20px;
@@ -281,6 +283,11 @@ button {
     padding: 14px 20px;
     border: 1px solid #D9D9D9;
     border-radius: 6px;
+}
+
+.w-rub:after {
+    content: "₽";
+    margin-left: 5px;
 }
 /* !Какие-то общие стили */
 
@@ -416,7 +423,8 @@ button {
     padding: 0 22px;
 }
 /* ----- Левый блок ----- */
-.staff-cont {
+.staff-cont,
+.journal-cont {
     gap: 20px;
 }
 
@@ -461,7 +469,8 @@ button {
     display: none;
 }
 
-.staff-b {
+.staff-b,
+.journal-b {
     max-height: 585px;
     overflow-y: auto;
 }
@@ -537,7 +546,9 @@ button {
 }
 
 .staff-table .st-body .st-row .employee-date, 
-.staff-table .st-body .st-row .employee-name {
+.staff-table .st-body .st-row .employee-name,
+.staff-table .st-body .st-row .employee-shift,
+.staff-table .st-body .st-row .employee-amount {
     color: #777777;
 }
 
@@ -549,7 +560,6 @@ button {
 .staff-table .st-body .st-row.active .employee-btn .btn.btn-disabled {
     color: #a8a8a8;
 }
-
 /* ----- !Левый блок ----- */
 
 /* ----- Правый блок ----- */
@@ -854,3 +864,117 @@ button {
 }
 /*----- !Модалки Инкасации и Выдачи из кассы -----*/
 /* !Смены флористов */
+
+/* Журнал инкассации */
+/* ----- Левый блок ----- */
+.journal-b {
+    padding-top: 20px;
+}
+
+.btn-back-cont {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-back-cont .btn-back,
+.filter-panel .btn-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+}
+
+.btn-back-cont .btn-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background-color: #8C4957;
+    border-radius: 50%;
+}
+
+.btn-back-cont .title {
+    font-size: 30px;
+    color: #282828;
+}
+
+.filter-panel {
+    gap: 20px;
+    padding-right: 46px;
+}
+
+.filter-panel input {
+    min-height: 64px;
+    flex-grow: 1;
+}
+
+.filter-panel .btn-control {
+    padding: 0;
+    background-color: #ffffff;
+    border: 1px solid #D9D9D9;
+}
+
+.journal-b .staff-table .st-control {
+    grid-template-columns: 74px 100px 60px 260px 150px 100px;
+    gap: 34px;
+}
+
+.journal-b .staff-table .st-body .st-row {
+    grid-template-columns: 67px 114px 73px 275px 164px auto;
+}
+
+.journal-b .staff-table .st-body .st-row .employee-id,
+.journal-b .staff-table .st-body .st-row .employee-date-time, 
+.journal-b .staff-table .st-body .st-row .employee-reason {
+    color: rgba(147, 147, 147, .7);
+}
+
+.journal-b .staff-table .st-body .st-row .employee-amount:after {
+    content: "₽";
+    font-style: 16px;
+    margin-left: 5px;
+}
+/* ----- !Левый блок ----- */
+
+/* ----- Правый блок ----- */
+.withdrawal-b {
+    padding: 10px 22px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.withdrawal-b .withdrawal-date {
+    font-size: 20px;
+    color: #777777;
+}
+
+.withdrawal-b .withdrawal-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.withdrawal-info .info-row {
+    display: flex;
+    gap: 10px;
+}
+
+.withdrawal-info .info-row .name {
+    width: 94px;
+    color: #939393;
+}
+
+.withdrawal-comment-cont .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.withdrawal-comment-cont .customtextarea {
+    width: 100%;
+}
+/* ----- !Правый блок ----- */
+/* !Журнал инкассации */
