@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+	<title>Цветы</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="../style.css">
+	<link rel="shortcut icon" href="../circles.ico">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+	<script src="https://use.fontawesome.com/c61f48834a.js"></script>
+
+</head>
+
+<body>
+	<div class="container">
+		
+		<div class="info-section-cont left-sis write-cont">
+			<div class="rBlock-header info-sect-h h-container-flex">
+				<div class="filter-items">
+					<input type="text" class="custominput" placeholder="Тип списания">
+					<input type="text" class="custominput" placeholder="Магазины"> 
+				</div>
+				
+				<button class="btn">Списать товары</button>
+			</div>
+			
+			<div class="rBlock-body write-b">
+				<div class="staff-table">
+					<div class="st-control">
+						<div class="control-item">№</div>
+						<div class="control-item">Дата</div>
+						<div class="control-item">Инициатор</div>
+						<div class="control-item">Тип списания</div>
+						<div class="control-item">Сумма списания</div>
+					</div>
+					
+					<div class="st-body">
+						<div class="st-row">
+							<div class="employee-id">3</div>
+							<div class="employee-date-time">
+								<div class="date">31.04.2023</div>
+								<div class="time">08:43</div>
+							</div>
+							<div class="employee-name">Александра Мандрагора</div>
+							<div class="employee-reason">Курьер такси</div>
+							<div class="employee-amount w-rub">8 693</div>
+						</div>
+
+						<div class="st-row active">
+							<div class="employee-id">2</div>
+							<div class="employee-date-time">
+								<div class="date">31.04.2023</div>
+								<div class="time">08:43</div>
+							</div>
+							<div class="employee-name">Александра Мандрагора</div>
+							<div class="employee-reason">Курьер такси</div>
+							<div class="employee-amount w-rub">10 693</div>
+						</div>
+
+						<div class="st-row">
+							<div class="employee-id">1</div>
+							<div class="employee-date-time">
+								<div class="date">31.04.2023</div>
+								<div class="time">08:43</div>
+							</div>
+							<div class="employee-name">Александра Мандрагора</div>
+							<div class="employee-reason">Курьер такси</div>
+							<div class="employee-amount w-rub">5 693</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="info-section-cont right-sis" data-empty="Выберите запись, чтобы увидеть детали">
+			<div class="rBlock-header info-sect-h h-container-flex">
+				<h3 class="rb-title">Списание</h3>
+			</div>
+			<div class="rBlock-body write-deteil-b">
+				<div class="info-list write-deteil-info">
+					<div class="info-row">
+						<div class="name">Инициатор:</div>
+						<div class="value">Заречный проезд 14</div>
+					</div>
+					<div class="info-row">
+						<div class="name">Склад:</div>
+						<div class="value">Червишевский тракт 90</div>
+					</div>
+					<div class="info-row">
+						<div class="name">Дата:</div>
+						<div class="value">12.01.2024 12:09</div>
+					</div>
+					<div class="info-row">
+						<div class="name">Тип списания:</div>
+						<div class="value">Ручное</div>
+					</div>
+				</div>
+
+				<div class="products-list write-deteil-products">
+					<div class="products-header write-deteil-header sect-cont-def">
+						<div class="p-header-item">№</div>
+						<div class="p-header-item">Название</div>
+						<div class="p-header-item">Кол-во</div>
+						<div class="p-header-item">Сумма списания</div>
+					</div>
+
+					<div class="products-items write-deteil-items sect-cont-def">
+						<div class="product-row">
+							<div class="num">1</div>
+							<div class="name">Конфеты «Ferrero Rocher» 125гр.</div>
+							<div class="quantity">1</div>
+							<div class="amount w-rub">500</div>
+						</div>
+
+						<div class="product-row">
+							<div class="num">2</div>
+							<div class="name">Конфеты «Ferrero Rocher» 100гр.</div>
+							<div class="quantity">1</div>
+							<div class="amount w-rub">500</div>
+						</div>
+
+						<div class="product-row">
+							<div class="num">3</div>
+							<div class="name">Роза кустовая красная</div>
+							<div class="quantity">6</div>
+							<div class="amount w-rub">500</div>
+						</div>
+
+						<div class="product-row">
+							<div class="num">4</div>
+							<div class="name">Хризантема одноголовая желтая</div>
+							<div class="quantity">2</div>
+							<div class="amount w-rub">500</div>
+						</div>
+
+						<div class="product-row">
+							<div class="num">5</div>
+							<div class="name">Декоративная прищепка 2.5 см цветная</div>
+							<div class="quantity">1</div>
+							<div class="amount w-rub">50</div>
+						</div>
+					</div>
+
+					<div class="products-total write-deteil-total sect-cont-def">
+						<div class="title">Итого</div>
+						<div class="quantity">11</div>
+						<div class="amount w-rub">7 566</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</body>
+
+<script src="../script/jquery-3.3.1.min.js"></script>
+<script src="../script/main.js"></script>
+
+</html>
+
+<!-- #CECECE -->

@@ -289,6 +289,43 @@ button {
     content: "₽";
     margin-left: 5px;
 }
+
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.info-list .info-row {
+    display: flex;
+    gap: 10px;
+}
+
+
+.sect-cont-def {
+   padding: 0 22px;
+}
+
+
+.products-list,
+.products-list .products-header,
+.products-list .products-items,
+.products-list .products-items .product-row,
+.products-list .products-total {
+    display: grid;
+}
+
+.products-list {
+   row-gap: 16px;
+}
+
+.products-header {
+    color: #777777;
+}
+
+.products-items {
+   row-gap: 8px;
+}
 /* !Какие-то общие стили */
 
 
@@ -548,8 +585,23 @@ button {
 .staff-table .st-body .st-row .employee-date, 
 .staff-table .st-body .st-row .employee-name,
 .staff-table .st-body .st-row .employee-shift,
-.staff-table .st-body .st-row .employee-amount {
+.staff-table .st-body .st-row .employee-amount,
+.staff-table .st-body .st-row .employee-type,
+.staff-table .st-body .st-row .employee-discrepancy {
     color: #777777;
+}
+
+.staff-table .st-body .st-row .employee-discrepancy.plus {
+    color: #628222;
+}
+
+.staff-table .st-body .st-row .employee-discrepancy.plus:before {
+    content: "+";
+    margin-right: 3px;
+}
+
+.staff-table .st-body .st-row .employee-discrepancy.n-enough {
+    color: #8A0000;
 }
 
 .staff-table .st-body .st-row .employee-btn .btn {
@@ -926,6 +978,14 @@ button {
     grid-template-columns: 67px 114px 73px 275px 164px auto;
 }
 
+.journal-b.collection-spec .staff-table .st-control {
+    grid-template-columns: 74px 100px 60px 200px 200px 115px;
+}
+
+.journal-b.collection-spec .staff-table .st-body .st-row {
+    grid-template-columns: 67px 114px 73px 216px 216px auto;
+}
+
 .journal-b .staff-table .st-body .st-row .employee-id,
 .journal-b .staff-table .st-body .st-row .employee-date-time, 
 .journal-b .staff-table .st-body .st-row .employee-reason {
@@ -933,9 +993,7 @@ button {
 }
 
 .journal-b .staff-table .st-body .st-row .employee-amount:after {
-    content: "₽";
     font-style: 16px;
-    margin-left: 5px;
 }
 /* ----- !Левый блок ----- */
 
@@ -952,18 +1010,7 @@ button {
     color: #777777;
 }
 
-.withdrawal-b .withdrawal-info {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.withdrawal-info .info-row {
-    display: flex;
-    gap: 10px;
-}
-
-.withdrawal-info .info-row .name {
+.withdrawal-b .withdrawal-info .info-row .name {
     width: 94px;
     color: #939393;
 }
@@ -978,3 +1025,101 @@ button {
 }
 /* ----- !Правый блок ----- */
 /* !Журнал инкассации */
+
+/* Журнал пересчета */
+.journal-b.conversion-spec .staff-table .st-control {
+    grid-template-columns: 74px 100px 204px 130px 115px 115px;
+}
+
+.journal-b.conversion-spec .staff-table .st-body .st-row {
+    grid-template-columns: 67px 114px 220px 144px 128px auto;
+    cursor: default;
+}
+/* !Журнал пересчета */
+
+
+/* Списание */
+/* --- Общий список и информация об списании --- */
+/* ----- Левый блок ----- */
+
+.write-cont .info-sect-h .filter-items {
+    display: flex;
+    gap: 10px;
+}
+
+.write-cont .info-sect-h input {
+    max-width: 265px;
+    height: 64px;
+}
+
+.write-b {
+    padding-top: 50px;
+}
+
+.write-b .staff-table .st-control {
+    grid-template-columns: 74px 100px 240px 200px auto;
+}
+
+.write-b .staff-table .st-control .control-item:first-child {
+    padding-left: 20px;
+}
+
+.write-b .staff-table .st-body .st-row {
+    grid-template-columns: 72px 120px 260px 220px auto;
+}
+
+.write-b .staff-table .st-body .st-row .employee-amount {
+    color: #8B2D2E;
+}
+
+.write-b .staff-table .st-body .st-row .employee-amount:after {
+    color: rgba(139, 45, 46, .5);
+}
+/* ----- !Левый блок ----- */
+
+/* ----- Правый блок ----- */
+.write-deteil-b {
+   padding-top: 30px; 
+}
+
+.write-deteil-info {
+   padding: 0 22px;
+}
+
+.write-deteil-info .info-row .name {
+   width: 120px;
+   color: #939393;
+}
+
+.write-deteil-products {
+   padding-top: 20px;
+}
+
+.write-deteil-products .amount.w-rub {
+    color: #8B2D2E;
+}
+
+.write-deteil-products .amount.w-rub::after {
+    opacity: .5;
+}
+
+.write-deteil-header, 
+.write-deteil-items .product-row {
+    grid-template-columns: 40px auto 70px 100px;
+    column-gap: 20px;
+}
+
+.write-deteil-header {
+    align-items: center;
+}
+
+.write-deteil-total {
+    grid-template-columns: auto 70px 100px;
+    column-gap: 20px;
+    padding-top: 16px;
+    border-top: 1px solid #D9D9D9;
+}
+/* ----- !Правый блок ----- */
+
+/* --- !Общий список и информация об списании --- */
+/* !Списание */

@@ -19,28 +19,20 @@
 <body>
 	<div class="container">
 		
-		<div class="info-section-cont left-sis staff-cont">
+		<div class="info-section-cont left-sis journal-cont">
 			<div class="rBlock-header info-sect-h h-container-flex">
-				<div class="money-btns">
-					<button class="btn btn-fine">Журнал  пересчета</button>
-					<button class="btn btn-fine">Остатки ДС</button>
-					<button class="btn btn-fine"><img src="../img/money-rub.svg" alt="">Выдать</button>
+				<div class="btn-back-cont">
+					<a href="javascript:void(0)" class="btn btn-back">
+						<img src="../img/arrow-left.svg" alt="">
+					</a>
+					<div class="title">Журнал инкассации</div>
 				</div>
 
-				<div class="collector-btns">
-					<button class="btn btn-collector">Журнал  инкассации</button>
-					<button class="btn btn-collector"><img src="../img/collector.svg" alt="">Инкасс</button>
-				</div>
-			</div>
-			
-			<div class="rBlock-header shift-set">
 				<input type="text" class="custominput" placeholder="Дата">
 				<!-- Компонент выбора даты (date picker) -->
-
-				<button class="btn btn-fine hidden">Открыть смену</button>
 			</div>
 			
-			<div class="rBlock-body staff-b">
+			<div class="rBlock-body journal-b conversion-spec">
 				<div class="staff-table">
 					<div class="st-control">
 						<div class="control-item">
@@ -55,42 +47,52 @@
 								<img src="../img/up-down.svg" alt="">
 							</button>
 						</div>
-						<div class="control-item">Время работы</div>
-						<div class="control-item">Ответственный</div>
+						<div class="control-item">Автор</div>
+						<div class="control-item">Тип</div>
+						<div class="control-item">Сумма</div>
+						<div class="control-item">Расхождение</div>
 					</div>
 					
 					<div class="st-body">
 						<div class="st-row">
 							<div class="employee-id">3</div>
-							<div class="employee-date">31.04.2023</div>
-							<div class="employee-time">08:43 - </div>
-							<div class="employee-name">Александра Мандрагора</div>
-							<div class="employee-btn">
-								<button class="btn btn-fine">Закрыть смену</button>
+							<div class="employee-date-time">
+								<div class="date">31.04.2023</div>
+								<div class="time">08:43</div>
 							</div>
+							<div class="employee-name">Александра Мандрагора</div>
+							<div class="employee-type">При открытии</div>
+							<div class="employee-amount w-rub">8 693</div>
+							<div class="employee-discrepancy w-rub">0</div>
 						</div>
-
+						
 						<div class="st-row">
 							<div class="employee-id">2</div>
-							<div class="employee-date">31.04.2023</div>
-							<div class="employee-time">10:00 - 22:05</div>
-							<div class="employee-name">Наталья Лихолат</div>
-							<div class="employee-btns"></div>
+							<div class="employee-date-time">
+								<div class="date">31.04.2023</div>
+								<div class="time">08:43</div>
+							</div>
+							<div class="employee-name">Александра Мандрагора</div>
+							<div class="employee-type">Пересчет</div>
+							<div class="employee-amount w-rub">15 368</div>
+							<div class="employee-discrepancy w-rub plus">1 236</div>
 						</div>
 						
 						<div class="st-row">
 							<div class="employee-id">1</div>
-							<div class="employee-date">31.04.2023</div>
-							<div class="employee-time">07:59 - 08:43</div>
-							<div class="employee-name">Анастасия Рожкова</div>
-							<div class="employee-btns"></div>
+							<div class="employee-date-time">
+								<div class="date">31.04.2023</div>
+								<div class="time">08:43</div>
+							</div>
+							<div class="employee-name">Александра Мандрагора</div>
+							<div class="employee-type">При открытии</div>
+							<div class="employee-amount w-rub">10 235</div>
+							<div class="employee-discrepancy w-rub n-enough">500</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
-		<div class="info-section-cont right-sis empty-info-sect" data-empty="Выберите смену, чтобы увидеть детали"></div>
 		
 	</div>
 </body>

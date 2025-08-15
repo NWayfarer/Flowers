@@ -30,18 +30,21 @@
 			</div>
 			
 			<div class="rBlock-header h-container-flex filter-panel">
-				<input type="text" class="custominput" placeholder="Выдача из кассы">
+				<input type="text" class="custominput" placeholder="Инкасация">
+				<!-- Выпадающий список -->
 
 				<input type="text" class="custominput" placeholder="Флорист">
+				<!-- Выпадающий список -->
 
 				<input type="text" class="custominput" placeholder="Причина">
+				<!-- Выпадающий список -->
 
 				<button class="btn btn-control">
 					<img src="../img/date.svg" alt="">
 				</button>
 			</div>
 			
-			<div class="rBlock-body journal-b">
+			<div class="rBlock-body journal-b collection-spec">
 				<div class="staff-table">
 					<div class="st-control">
 						<div class="control-item">
@@ -58,7 +61,7 @@
 						</div>
 						<div class="control-item">Смена</div>
 						<div class="control-item">Выдал</div>
-						<div class="control-item">Причина</div>
+						<div class="control-item">Получатель</div>
 						<div class="control-item">Сумма</div>
 					</div>
 					
@@ -70,9 +73,9 @@
 								<div class="time">08:43</div>
 							</div>
 							<div class="employee-shift">53</div>
-							<div class="employee-name">Александра Мандрагора</div>
-							<div class="employee-reason">Курьер такси</div>
-							<div class="employee-amount">8 693</div>
+							<div class="employee-issued">Александра Мандрагора</div>
+							<div class="employee-recipient">Анастасия Рожкова</div>
+							<div class="employee-amount w-rub">8 693</div>
 						</div>
 
 						<div class="st-row active">
@@ -82,9 +85,9 @@
 								<div class="time">08:43</div>
 							</div>
 							<div class="employee-shift">53</div>
-							<div class="employee-name">Александра Мандрагора</div>
-							<div class="employee-reason">Курьер такси</div>
-							<div class="employee-amount">10 693</div>
+							<div class="employee-issued">Александра Мандрагора</div>
+							<div class="employee-recipient">Анастасия Рожкова</div>
+							<div class="employee-amount w-rub">10 693</div>
 						</div>
 
 						<div class="st-row">
@@ -94,51 +97,16 @@
 								<div class="time">08:43</div>
 							</div>
 							<div class="employee-shift">53</div>
-							<div class="employee-name">Александра Мандрагора</div>
-							<div class="employee-reason">Курьер такси</div>
-							<div class="employee-amount">5 693</div>
+							<div class="employee-issued">Александра Мандрагора</div>
+							<div class="employee-recipient">Анастасия Рожкова</div>
+							<div class="employee-amount w-rub">5 693</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="info-section-cont right-sis" data-empty="Выберите запись, чтобы увидеть детали">
-			<div class="rBlock-header info-sect-h h-container-flex">
-				<h3 class="rb-title">Выдача из кассы</h3>
-			</div>
-			<div class="rBlock-body withdrawal-b">
-				<div class="withdrawal-date">от 31.09.2023 12:18</div>
-
-				<div class="withdrawal-info">
-					<div class="info-row">
-						<div class="name">Выдал:</div>
-						<div class="value">Александра Мандрагора</div>
-					</div>
-					<div class="info-row">
-						<div class="name">Магазин:</div>
-						<div class="value">Заречный проезд 14</div>
-					</div>
-					<div class="info-row">
-						<div class="name">№ смены:</div>
-						<div class="value">36</div>
-					</div>
-					<div class="info-row">
-						<div class="name">Причина:</div>
-						<div class="value">Оплата дворнику</div>
-					</div>
-					<div class="info-row">
-						<div class="name">Сумма:</div>
-						<div class="value w-rub">10 500</div>
-					</div>
-				</div>
-
-				<div class="withdrawal-comment-cont">
-					<div class="title">Комментарий</div>
-					<textarea class="customtextarea" name="" id=""></textarea>
-				</div>
-			</div>
-		</div>
+		<div class="info-section-cont right-sis" data-empty="Выберите запись, чтобы увидеть детали"></div>
 		
 	</div>
 </body>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+	<title>Цветы</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="../style.css">
+	<link rel="shortcut icon" href="../circles.ico">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+	<script src="https://use.fontawesome.com/c61f48834a.js"></script>
+
+</head>
+
+<body>
+	<div class="container">
+		
+		<div class="info-section-cont left-sis journal-cont">
+			<div class="rBlock-header info-sect-h h-container-flex">
+				<div class="btn-back-cont">
+					<a href="javascript:void(0)" class="btn btn-back">
+						<img src="../img/arrow-left.svg" alt="">
+					</a>
+					<div class="title">Журнал инкассации</div>
+				</div>
+			</div>
+			
+			<div class="rBlock-header h-container-flex filter-panel">
+				<input type="text" class="custominput" placeholder="Выдача из кассы">
+				<!-- Выпадающий список -->
+
+				<input type="text" class="custominput" placeholder="Флорист">
+				<!-- Выпадающий список -->
+
+				<input type="text" class="custominput" placeholder="Причина">
+				<!-- Выпадающий список -->
+
+				<button class="btn btn-control">
+					<img src="../img/date.svg" alt="">
+				</button>
+			</div>
+			
+			<div class="rBlock-body journal-b">
+				<div class="staff-table">
+					<div class="st-control">
+						<div class="control-item">
+							№
+							<button class="btn btn-control">
+								<img src="../img/up-down.svg" alt="">
+							</button>
+						</div>
+						<div class="control-item">
+							Дата
+							<button class="btn btn-control">
+								<img src="../img/up-down.svg" alt="">
+							</button>
+						</div>
+						<div class="control-item">Смена</div>
+						<div class="control-item">Выдал</div>
+						<div class="control-item">Причина</div>
+						<div class="control-item">Сумма</div>
+					</div>
+					
+					<div class="st-body">
+						<div class="st-row">
+							<div class="employee-id">3</div>
+							<div class="employee-date-time">
+								<div class="date">31.04.2023</div>
+								<div class="time">08:43</div>
+							</div>
+							<div class="employee-shift">53</div>
+							<div class="employee-name">Александра Мандрагора</div>
+							<div class="employee-reason">Курьер такси</div>
+							<div class="employee-amount w-rub">8 693</div>
+						</div>
+
+						<div class="st-row active">
+							<div class="employee-id">2</div>
+							<div class="employee-date-time">
+								<div class="date">31.04.2023</div>
+								<div class="time">08:43</div>
+							</div>
+							<div class="employee-shift">53</div>
+							<div class="employee-name">Александра Мандрагора</div>
+							<div class="employee-reason">Курьер такси</div>
+							<div class="employee-amount w-rub">10 693</div>
+						</div>
+
+						<div class="st-row">
+							<div class="employee-id">1</div>
+							<div class="employee-date-time">
+								<div class="date">31.04.2023</div>
+								<div class="time">08:43</div>
+							</div>
+							<div class="employee-shift">53</div>
+							<div class="employee-name">Александра Мандрагора</div>
+							<div class="employee-reason">Курьер такси</div>
+							<div class="employee-amount w-rub">5 693</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="info-section-cont right-sis" data-empty="Выберите запись, чтобы увидеть детали">
+			<div class="rBlock-header info-sect-h h-container-flex">
+				<h3 class="rb-title">Выдача из кассы</h3>
+			</div>
+			<div class="rBlock-body withdrawal-b">
+				<div class="withdrawal-date">от 31.09.2023 12:18</div>
+
+				<div class="info-list withdrawal-info">
+					<div class="info-row">
+						<div class="name">Выдал:</div>
+						<div class="value">Александра Мандрагора</div>
+					</div>
+					<div class="info-row">
+						<div class="name">Магазин:</div>
+						<div class="value">Заречный проезд 14</div>
+					</div>
+					<div class="info-row">
+						<div class="name">№ смены:</div>
+						<div class="value">36</div>
+					</div>
+					<div class="info-row">
+						<div class="name">Причина:</div>
+						<div class="value">Оплата дворнику</div>
+					</div>
+					<div class="info-row">
+						<div class="name">Сумма:</div>
+						<div class="value w-rub">10 500</div>
+					</div>
+				</div>
+
+				<div class="withdrawal-comment-cont">
+					<div class="title">Комментарий</div>
+					<textarea class="customtextarea" name="" id=""></textarea>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</body>
+
+<script src="../script/jquery-3.3.1.min.js"></script>
+<script src="../script/main.js"></script>
+
+</html>
+
+<!-- #CECECE -->
