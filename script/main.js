@@ -70,6 +70,17 @@ $('document').ready(function() {
             elem: document.getElementById($(this).attr('id'))
         });
     });
+
+
+
+    //Инициализация скролла
+    new ScrollBooster({
+        viewport: document.querySelector('.tabs-viewport'),
+        content: document.querySelector('.tabs-control'),
+        scrollMode: 'transform',
+        direction: 'horizontal',
+        emulateScroll: true,
+    });
 });
 
 //Кастомная кнопка добавления файла

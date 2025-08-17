@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+	<title>Цветы</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="../style.css">
+	<link rel="shortcut icon" href="../circles.ico">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+	<script src="https://use.fontawesome.com/c61f48834a.js"></script>
+	
+	<!-- скрипт для создания скроллов -->
+	<script src="https://unpkg.com/scrollbooster@3/dist/scrollbooster.min.js" defer></script>
+</head>
+
+<body>
+	<div class="container">
+		
+		<div class="info-section-cont left-sis write-create-cont">
+			<div class="rBlock-header info-sect-h h-container-flex">
+				<input type="text" class="custominput" placeholder="Найти заказ">
+			</div>
+			
+			<div class="rBlock-body write-b">
+				<div class="tabs-cont sect-cont-def">
+					<div class="tabs-viewport">
+						<div class="tabs-control">
+							<div class="tabs-control-item active">Все</div>
+							<div class="tabs-control-item">Роза</div>
+							<div class="tabs-control-item">Хризантемы</div>
+							<div class="tabs-control-item" data-tab-id="tab-a-1"> <!-- Добавить класс при нажатии open -->
+								<div class="select-mode">
+									Цветы
+									<svg width="17" height="10" viewBox="0 0 17 10" stroke="black" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1 1L8.77174 9L16 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</div>
+							</div>
+							<div class="tabs-control-item">
+								<div class="select-mode">
+									Зелень
+									<svg width="17" height="10" viewBox="0 0 17 10" stroke="black" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1 1L8.77174 9L16 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</div>
+							</div>
+							<div class="tabs-control-item">Упаковка</div>
+							<div class="tabs-control-item">Декор</div>
+							<div class="tabs-control-item">Дополнительные товары</div>
+						</div>
+					</div>
+
+					<div class="tabs-content">
+						<div class="tabs-items">
+							<div class="tabs-item n-available">
+								<div class="item-img-cont">
+									<div class="item-img" style="background-image: url('../img/rose.png');" data-empty="Нет в наличии">
+										<div class="item-img-top">
+											<div class="percent">%</div>
+											<div class="select"><img src="../img/selected.svg" alt=""></div>
+										</div>
+										<div class="item-img-bottom">
+											<div class="amount">122 шт</div>
+											<div class="reserved"><img src="../img/lock.svg" alt=""> 15</div>
+										</div>
+									</div>
+								</div>
+								<div class="item-info">
+									<div class="item-name">Роза желтая 50см</div>
+									<div class="item-price-cont">
+										<div class="item-price w-rub">90</div>
+										<div class="item-price-old w-rub">100</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="tabs-item selected w-reserve w-old-p">
+								<div class="item-img-cont">
+									<div class="item-img" style="background-image: url('../img/flower.png');" data-empty="Нет в наличии">
+										<div class="item-img-top">
+											<div class="percent">%</div>
+											<div class="select"><img src="../img/selected.svg" alt=""></div>
+										</div>
+										<div class="item-img-bottom">
+											<div class="amount">18 шт</div>
+											<div class="reserved"><img src="../img/lock.svg" alt=""> 20</div>
+										</div>
+									</div>
+								</div>
+								<div class="item-info">	
+									<div class="item-name">Хризантема одноголовая белая </div>
+									<div class="item-price-cont">
+										<div class="item-price w-rub">125</div>
+										<div class="item-price-old w-rub">100</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="tabs-item p-staff w-reserve w-old-p">
+								<div class="item-img-cont">
+									<div class="item-img" style="background-image: url('../img/flower.png');" data-empty="Нет в наличии">
+										<div class="item-img-top">
+											<div class="percent">%</div>
+											<div class="select"><img src="../img/selected.svg" alt=""></div>
+										</div>
+										<div class="item-img-bottom">
+											<div class="amount">20 шт</div>
+											<div class="reserved"><img src="../img/lock.svg" alt=""> 14</div>
+										</div>
+									</div>
+								</div>
+								<div class="item-info">	
+									<div class="item-name">Хризантема одноголовая белая </div>
+									<div class="item-price-cont">
+										<div class="item-price w-rub">125</div>
+										<div class="item-price-old w-rub">100</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="tabs-item selected w-reserve w-old-p">
+								<div class="item-img-cont">
+									<div class="item-img" style="background-image: url('../img/flower.png');" data-empty="Нет в наличии">
+										<div class="item-img-top">
+											<div class="percent">%</div>
+											<div class="select"><img src="../img/selected.svg" alt=""></div>
+										</div>
+										<div class="item-img-bottom">
+											<div class="amount">18 шт</div>
+											<div class="reserved"><img src="../img/lock.svg" alt=""> 20</div>
+										</div>
+									</div>
+								</div>
+								<div class="item-info">	
+									<div class="item-name">Хризантема одноголовая белая </div>
+									<div class="item-price-cont">
+										<div class="item-price w-rub">125</div>
+										<div class="item-price-old w-rub">100</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="tabs-item p-staff w-reserve w-old-p">
+								<div class="item-img-cont">
+									<div class="item-img" style="background-image: url('../img/flower.png');" data-empty="Нет в наличии">
+										<div class="item-img-top">
+											<div class="percent">%</div>
+											<div class="select"><img src="../img/selected.svg" alt=""></div>
+										</div>
+										<div class="item-img-bottom">
+											<div class="amount">20 шт</div>
+											<div class="reserved"><img src="../img/lock.svg" alt=""> 14</div>
+										</div>
+									</div>
+								</div>
+								<div class="item-info">	
+									<div class="item-name">Хризантема одноголовая белая </div>
+									<div class="item-price-cont">
+										<div class="item-price w-rub">125</div>
+										<div class="item-price-old w-rub">100</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="tabs-item selected w-reserve w-old-p">
+								<div class="item-img-cont">
+									<div class="item-img" style="background-image: url('../img/flower.png');" data-empty="Нет в наличии">
+										<div class="item-img-top">
+											<div class="percent">%</div>
+											<div class="select"><img src="../img/selected.svg" alt=""></div>
+										</div>
+										<div class="item-img-bottom">
+											<div class="amount">18 шт</div>
+											<div class="reserved"><img src="../img/lock.svg" alt=""> 20</div>
+										</div>
+									</div>
+								</div>
+								<div class="item-info">	
+									<div class="item-name">Хризантема одноголовая белая </div>
+									<div class="item-price-cont">
+										<div class="item-price w-rub">125</div>
+										<div class="item-price-old w-rub">100</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="tabs-item p-staff w-reserve w-old-p">
+								<div class="item-img-cont">
+									<div class="item-img" style="background-image: url('../img/flower.png');" data-empty="Нет в наличии">
+										<div class="item-img-top">
+											<div class="percent">%</div>
+											<div class="select"><img src="../img/selected.svg" alt=""></div>
+										</div>
+										<div class="item-img-bottom">
+											<div class="amount">20 шт</div>
+											<div class="reserved"><img src="../img/lock.svg" alt=""> 14</div>
+										</div>
+									</div>
+								</div>
+								<div class="item-info">	
+									<div class="item-name">Хризантема одноголовая белая </div>
+									<div class="item-price-cont">
+										<div class="item-price w-rub">125</div>
+										<div class="item-price-old w-rub">100</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="tabs-item n-available">
+								<div class="item-img-cont">
+									<div class="item-img" style="background-image: url('../img/rose.png');" data-empty="Нет в наличии">
+										<div class="item-img-top">
+											<div class="percent">%</div>
+											<div class="select"><img src="../img/selected.svg" alt=""></div>
+										</div>
+										<div class="item-img-bottom">
+											<div class="amount">122 шт</div>
+											<div class="reserved"><img src="../img/lock.svg" alt=""> 15</div>
+										</div>
+									</div>
+								</div>
+								<div class="item-info">
+									<div class="item-name">Роза желтая 50см</div>
+									<div class="item-price-cont">
+										<div class="item-price w-rub">90</div>
+										<div class="item-price-old w-rub">100</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="tabs-item selected w-reserve w-old-p">
+								<div class="item-img-cont">
+									<div class="item-img" style="background-image: url('../img/flower.png');" data-empty="Нет в наличии">
+										<div class="item-img-top">
+											<div class="percent">%</div>
+											<div class="select"><img src="../img/selected.svg" alt=""></div>
+										</div>
+										<div class="item-img-bottom">
+											<div class="amount">18 шт</div>
+											<div class="reserved"><img src="../img/lock.svg" alt=""> 20</div>
+										</div>
+									</div>
+								</div>
+								<div class="item-info">	
+									<div class="item-name">Хризантема одноголовая белая </div>
+									<div class="item-price-cont">
+										<div class="item-price w-rub">125</div>
+										<div class="item-price-old w-rub">100</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="tabs-item p-staff w-reserve w-old-p">
+								<div class="item-img-cont">
+									<div class="item-img" style="background-image: url('../img/flower.png');" data-empty="Нет в наличии">
+										<div class="item-img-top">
+											<div class="percent">%</div>
+											<div class="select"><img src="../img/selected.svg" alt=""></div>
+										</div>
+										<div class="item-img-bottom">
+											<div class="amount">20 шт</div>
+											<div class="reserved"><img src="../img/lock.svg" alt=""> 14</div>
+										</div>
+									</div>
+								</div>
+								<div class="item-info">	
+									<div class="item-name">Хризантема одноголовая белая </div>
+									<div class="item-price-cont">
+										<div class="item-price w-rub">125</div>
+										<div class="item-price-old w-rub">100</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="tabs-content-pagitation">
+							<div class="pagination-btn prev-page disabled">
+								<svg width="32" height="24" viewBox="0 0 32 24" fill="black" xmlns="http://www.w3.org/2000/svg">
+									<path d="M30 13.5C30.8284 13.5 31.5 12.8284 31.5 12C31.5 11.1716 30.8284 10.5 30 10.5L30 13.5ZM0.93934 10.9393C0.353553 11.5251 0.353553 12.4749 0.93934 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97919 12.6066 1.3934C12.0208 0.807612 11.0711 0.807612 10.4853 1.3934L0.93934 10.9393ZM30 10.5L2 10.5L2 13.5L30 13.5L30 10.5Z"/>
+								</svg>
+							</div>
+							<div class="pagination-page">1/5</div>
+							<div class="pagination-btn next-page">
+								<svg width="32" height="24" viewBox="0 0 32 24" fill="black" xmlns="http://www.w3.org/2000/svg">
+									<path d="M30 13.5C30.8284 13.5 31.5 12.8284 31.5 12C31.5 11.1716 30.8284 10.5 30 10.5L30 13.5ZM0.93934 10.9393C0.353553 11.5251 0.353553 12.4749 0.93934 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97919 12.6066 1.3934C12.0208 0.807612 11.0711 0.807612 10.4853 1.3934L0.93934 10.9393ZM30 10.5L2 10.5L2 13.5L30 13.5L30 10.5Z"/>
+								</svg>
+							</div>
+						</div>
+
+						<div class="add-tabs-items">
+							<div class="add-item sect-cont-def" id="tab-a-1">
+								<div class="card">
+									<div class="card-title">Категория</div>
+									<div class="card-name">Экзотические цветы ЭФИОПСКИЕ</div>
+								</div>
+
+								<div class="card">
+									<div class="card-title">Категория</div>
+									<div class="card-name">Классика</div>
+								</div>
+
+								<div class="card">
+									<div class="card-title">Категория</div>
+									<div class="card-name">Диантусы</div>
+								</div>
+
+								<div class="card">
+									<div class="card-title">Категория</div>
+									<div class="card-name">Ромашки</div>
+								</div>
+
+								<div class="card">
+									<div class="card-title">Категория</div>
+									<div class="card-name">Экзотика</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="info-section-cont right-sis info-section-cont-write">
+			<div class="rBlock-header info-sect-h h-container-flex">
+				<h3 class="rb-title">Создать списание</h3> <!-- Для страницы "Взять в работу", заголовок соответвствующий -->
+			</div>
+			<div class="rBlock-body write-create-b">
+				<div class="comment-sect sect-cont-def">
+					<div class="title">Комментарий</div>
+					<textarea class="customtextarea" name="" id=""></textarea>
+				</div>
+
+				<div class="assembly-list write-view" data-empty="Выберите товар к списанию"> <!-- Если пустой добавить empty-info-sect -->
+					<div class="assembly-items">
+						<div class="assembly-item assembly-item-edited">
+							<div class="item-header">
+								<div class="info-block">
+									<div class="title">Товары к списанию</div>
+									<div class="price w-rub">2 536</div>
+								</div>
+							</div>
+
+							<div class="item-product">
+								<div class="name">Хризантема одноголовая белая</div>
+								<div class="s-price w-rub">223</div>
+								<div class="amount">2</div>
+								<div class="e-price w-rub">446</div>
+								<div class="del-btn">
+									<svg width="26" height="25" viewBox="0 0 26 25" stroke="black" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M2 23.5L24 1.5M2 1.5L24 23.5" stroke-width="3" stroke-linecap="round"/>
+									</svg>
+								</div>
+							</div>
+							
+							<div class="item-product">
+								<div class="name">Диантус Россия асс</div>
+								<div class="s-price w-rub">100</div>
+								<div class="amount">1</div>
+								<div class="e-price w-rub">100</div>
+								<div class="del-btn">
+									<svg width="26" height="25" viewBox="0 0 26 25" stroke="black" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M2 23.5L24 1.5M2 1.5L24 23.5" stroke-width="3" stroke-linecap="round"/>
+									</svg>
+								</div>
+							</div>
+							
+							<div class="item-product">
+								<div class="name">Писташ (Фисташка)</div>
+								<div class="s-price w-rub">100</div>
+								<div class="amount">1</div>
+								<div class="e-price w-rub">100</div>
+								<div class="del-btn">
+									<svg width="26" height="25" viewBox="0 0 26 25" stroke="black" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M2 23.5L24 1.5M2 1.5L24 23.5" stroke-width="3" stroke-linecap="round"/>
+									</svg>
+								</div>
+							</div>
+							
+							<div class="item-product">
+								<div class="name">Писташ (Фисташка)</div>
+								<div class="s-price w-rub">100</div>
+								<div class="amount">1</div>
+								<div class="e-price w-rub">100</div>
+								<div class="del-btn">
+									<svg width="26" height="25" viewBox="0 0 26 25" stroke="black" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M2 23.5L24 1.5M2 1.5L24 23.5" stroke-width="3" stroke-linecap="round"/>
+									</svg>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="assembly-control-panel">
+						<div class="assembly-control-btns">
+							<div class="control-btn up-item">
+								<svg width="17" height="10" viewBox="0 0 17 10" stroke="black" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1 1L8.77174 9L16 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</div>
+							<div class="control-btn down-item">
+								<svg width="17" height="10" viewBox="0 0 17 10" stroke="black" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1 1L8.77174 9L16 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</div>
+							<div class="control-btn del-item">
+								<svg width="26" height="25" viewBox="0 0 26 25" stroke="black" fill="none" xmlns="http://www.w3.org/2000/svg">
+    								<path d="M2 23.5L24 1.5M2 1.5L24 23.5" stroke-width="3" stroke-linecap="round"/>
+								</svg>
+							</div>
+							<div class="control-btn num-item">123</div>
+							<div class="control-btn minus-item">
+								<svg width="26" height="4" viewBox="0 0 26 4" stroke="black" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1.68629 2.00121H24.3137" stroke-width="2.5" stroke-linecap="round"/>
+								</svg>
+							</div>
+							<div class="control-btn plus-item">
+								<svg width="26" height="25" viewBox="0 0 26 25" stroke="black" fill="none" xmlns="http://www.w3.org/2000/svg">
+    								<path d="M2 23.5L24 1.5M2 1.5L24 23.5" stroke-width="3" stroke-linecap="round"/>
+								</svg>
+							</div>
+						</div>
+
+						<div class="btn">Списать</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</body>
+
+<script src="../script/jquery-3.3.1.min.js"></script>
+<script src="../script/main.js"></script>
+
+</html>
+
+<!-- #CECECE -->
