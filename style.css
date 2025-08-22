@@ -350,6 +350,7 @@ button {
     font-size: 20px;
     white-space: nowrap;
     cursor: pointer;
+    transition: all .3s ease-in-out;
 }
 
 .tabs-control .tabs-control-item.active,
@@ -359,9 +360,47 @@ button {
     color: #ffffff;
 }
 
+.tabs-control .tabs-control-item svg {
+    transition: all .3s ease-in-out;
+}
+
 .tabs-control .tabs-control-item.open svg {
     stroke: #ffffff;
     transform: rotate(180deg);
+}
+
+.tabs-control .tabs-control-item.type-mode.open {
+    padding: 0;
+    background-color: #ffffff;
+    border-color: #939393;
+    color: #434343
+}
+
+.tabs-control .tabs-control-item.type-mode .type-mode-items {
+    display: flex;
+}
+
+.tabs-control .tabs-control-item.type-mode .type {
+    padding: 15px 20px;
+}
+
+.tabs-control .tabs-control-item.type-mode .type:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.tabs-control .tabs-control-item.type-mode .type:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.tabs-control .tabs-control-item.type-mode .type:not(:first-child) {
+    border-left: 1px solid #939393;
+}
+
+.tabs-control .tabs-control-item.type-mode .type.active {
+    background-color: #844451;
+    color: #ffffff;
 }
 
 .comment-sect {
@@ -383,6 +422,7 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex-grow: 1;
 }
 
 .assembly-list.empty-info-sect {
@@ -395,8 +435,25 @@ button {
     max-height: 622px;
 }
 
+.assembly-list.edited .assembly-item {
+    opacity: .5;
+}
+.assembly-list.edited .assembly-item.assembly-item-edited {
+    opacity: 1;
+}
+
+.assembly-list .assembly-item:last-child {
+    border-bottom: 1px solid #C2C2C2;
+}
+
 .assembly-list .assembly-item .item-header {
     display: flex;
+    border-top: 1px solid #C2C2C2;
+    border-bottom: 1px solid #C2C2C2;
+}
+
+.assembly-list .assembly-item:first-child .item-header {
+    border-top: unset;
 }
 
 .assembly-list .assembly-item .item-header .info-block {
@@ -404,15 +461,30 @@ button {
     justify-content: space-between;
     flex-grow: 1;
     padding: 20px;
-    color: #ffffff;
-    background: #696969;
     font-size: 20px;
     font-weight: 600;
+}
+
+.assembly-list .assembly-item.assembly-item-new .item-header .info-block {
+    color: #ffffff;
+    background: #844451;
+}
+
+.assembly-list .assembly-item.assembly-item-edited .item-header .info-block {
+    color: #ffffff;
+    background: #696969;
 }
 
 .assembly-list .assembly-item .item-header .info-block .price.w-rub:after {
     font-weight: 500;
     font-size: 18px;
+}
+
+.assembly-list .assembly-item .item-header .btns-block .btn.btn-accept {
+    height: 100%;
+    border-radius: unset;
+    background-color: #567AFB;
+    border-left: 1px solid #C2C2C2;
 }
 
 .assembly-list .assembly-item .item-product {
@@ -421,10 +493,13 @@ button {
     grid-template-columns: auto 94px 50px 94px 56px;
     gap: 16px;
     color: #000000;
+}
+
+.assembly-list .assembly-item .item-product:not(:last-child) {
     border-bottom: 1px solid #C2C2C2;
 }
 
-.assembly-list .assembly-item .item-product:nth-child(odd) {
+.assembly-list .assembly-item .item-product.active {
     background-color: #d9d9d9;
 }
 
@@ -433,14 +508,20 @@ button {
 }
 
 .assembly-list .assembly-item .item-product .del-btn {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    margin: -14px 0;
+}
+
+.assembly-list .assembly-item.assembly-item-edited .item-product .del-btn {
+    display: flex;
 }
 
 .assembly-list .assembly-item .item-product .del-btn svg {
     width: 16px;
+    height: 16px;
     stroke: #F81D1D;
 }
 
@@ -492,6 +573,10 @@ button {
 .assembly-list .assembly-control-panel .control-btn.plus-item svg {
     transform: rotate(45deg);
     width: 14px;
+}
+
+.assembly-list .assembly-control-panel .control-btn.menu-items {
+    border-left: 1px solid #D9D9D9;
 }
 
 .tabs-cont {
@@ -1596,7 +1681,6 @@ button {
 }
 
 .write-create-b {
-    height: 100%;
     display: flex;
     flex-direction: column;
     row-gap: 30px;
@@ -1615,3 +1699,194 @@ button {
 /* --- !Создать списание --- */
 
 /* !Списание */
+
+/* Чеки */
+.checks-container {
+    width: 795px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.checks-tabs-cont, .checks-tabs {
+    display: flex;
+    align-items: flex-end;
+    column-gap: 5px;
+}
+
+.checks-tabs-cont .checks-tab {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    min-width: 195px;
+    padding: 12px 20px;
+    background-color: #ffffff;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.checks-tabs-cont .checks-tab.active {
+    background-color: #30BD57;
+    color: #ffffff;
+}
+
+.checks-tabs-cont .checks-tab .close-check {
+    height: 24px;
+}
+
+.checks-tabs-cont .checks-tab .close-check svg {
+    width: 16px;
+    stroke: #434343;
+}
+
+.checks-tabs-cont .checks-tab.active .close-check svg {
+    stroke: #ffffff;
+}
+
+.checks-tabs-cont .checks-tab .close-check-menu {
+    display: none;
+}
+
+.check-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+
+.check-header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-bottom: 1px solid #C2C2C2;
+}
+
+.check-header .check-header-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 18px 20px;
+}
+
+.check-header .check-header-item.type {
+    border-right: 1px solid #C2C2C2;
+}
+
+.check-header .check-header-item img,
+.check-header .check-header-item svg {
+    height: 25px;
+    margin-right: 10px;
+}
+
+.check-header .check-header-item.client {
+    justify-content: space-between;
+    font-size: 18px;
+    text-transform: none;
+}
+
+.check-header .check-header-item.client svg {
+    fill: #30BD57;
+    stroke: #30BD57;
+}
+
+.check-header .check-header-item.client-empty {
+    justify-content: center;
+}
+
+.check-header .check-header-item.client-empty {
+    fill: #AAAAAA;
+    stroke: #AAAAAA;
+}
+
+
+
+.check-control-panel {
+    display: flex;
+    background-color: #696969;
+}
+
+.check-control-btns {
+    width: 140px;
+}
+
+.check-control-btns .control-btn {
+    width: 100%;
+    padding: 17px 12px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+    background-color: #434343;
+}
+
+.check-control-btns .control-btn:not(:last-child) {
+    border-bottom: 1px solid #696969;
+}
+
+.check-control-info {
+    flex-grow: 1;
+    padding: 15px;
+}
+
+.check-control-info .info-items {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px 10px;
+}
+
+.check-control-info .info-items .info-item {
+    display: flex;
+    column-gap: 6px;
+    color: #ffffff;
+}
+
+.check-control-info .info-items .info-item.balance {
+    opacity: .5;
+}
+
+.check-control-info .info-items .info-item .value {
+    font-weight: 500;
+}
+
+.check-control-info .info-items .info-item .value.w-rub:after {
+    font-size: 16px;
+}
+
+.check-control-info .info-btns {
+    margin-top: 18px;
+    display: flex;
+    column-gap: 10px;
+}
+
+.check-control-info .info-btns .btn {
+    flex-grow: 1;
+}
+
+.check-control-info .info-btns .btn-pay {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.check-control-info .info-btns .btn-pay.btn-disabled {
+    background-color: #939393 !important;
+}
+
+.check-control-info .info-btns .btn-pay span {
+    font-size: 34px;
+}
+
+.check-control-info .info-btns .btn-pay span.w-rub:after {
+    font-size: 25px;
+}
+/* !Чеки */

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+	<title>Цветы</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="../style.css">
+	<link rel="shortcut icon" href="../circles.ico">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+	<script src="https://use.fontawesome.com/c61f48834a.js"></script>
+
+</head>
+
+<body>
+	<div class="container">
+
+		<!-- Форма Выдать из кассы --> 
+		<div class="modal-container open"> <!-- чтобы показать, нужен класс - open --> 
+			<div class="cashbox-modal money-view">
+				<div class="modal-header">
+					<h2 class="modal-title">Выдать из кассы</h2>
+					<button class="close-modal">
+						<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none" class="setprice_close">
+							<rect opacity="0.8" x="1.5" y="1.5" width="47" height="47" rx="23.5" stroke="#844451" stroke-width="3"></rect>
+							<path d="M17 33L33 17M17 17L33 33" stroke="#844451" stroke-width="3" stroke-linecap="round"></path>
+						</svg>
+					</button>
+				</div>
+				<div class="modal-body">
+
+					<div class="modal-desc">Выберите причину выдачи и укажите сумму выдачи</div>
+
+					<form action="">
+						<div class="field-cont">
+							<div class="input-icon">
+								<input type="text" class="custominput actually-money">
+							</div>
+						</div>
+
+						<div class="field-cont">
+							<input type="text" class="custominput" placeholder="Причина выдачи">
+							<!-- Выпадающий список -->
+						</div>
+
+						<div class="field-cont m-size hidden">
+							<div class="field-cont-title">Номер заказа</div>
+							<input type="text" class="custominput">
+						</div>
+
+						<div class="field-cont">
+							<div class="field-cont-title">Комментарий<span>*</span></div>
+							<textarea class="customtextarea" name="" id=""></textarea>
+						</div>
+					</form>
+						
+					<div class="btn-container">
+						<button class="btn btn-disabled">Продолжить</button>
+					</div>
+		
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</body>
+
+<script src="../script/jquery-3.3.1.min.js"></script>
+<script src="../script/main.js"></script>
+
+</html>
+
+<!-- #CECECE -->

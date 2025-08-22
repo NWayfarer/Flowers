@@ -13,7 +13,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
 	<script src="https://use.fontawesome.com/c61f48834a.js"></script>
-	
+
 </head>
 
 <body>
@@ -323,75 +323,63 @@
 			</div>
 		</div>
 
-		<div class="info-section-cont right-sis info-section-cont-write">
-			<div class="rBlock-header info-sect-h h-container-flex">
-				<h3 class="rb-title">Создать списание</h3> <!-- Для страницы "Взять в работу", заголовок соответвствующий -->
-			</div>
-			<div class="rBlock-body write-create-b">
-				<div class="comment-sect sect-cont-def">
-					<div class="title">Комментарий</div>
-					<textarea class="customtextarea" name="" id=""></textarea>
-				</div>
+		<div class="checks-container">
+			<div class="checks-tabs-cont">
+				<div class="checks-tabs">
+					<div class="checks-tab">
+						<div class="name">Чек 00089</div>
+						<button class="close-check">
+							<svg width="26" height="25" viewBox="0 0 26 25" stroke="black" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M2 23.5L24 1.5M2 1.5L24 23.5" stroke-width="3" stroke-linecap="round"/>
+							</svg>
+						</button>
+						<div class="close-check-menu">
+							<div class="close-check-menu-item cancel-check">
+								<svg width="21" height="24" viewBox="0 0 21 24" stroke="#AFAFAF" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M5.89062 8.33594L14.446 16.8913M5.89062 16.8913L14.446 8.33594" stroke-width="2" stroke-linejoin="bevel"/>
+									<path d="M0.998047 1.00052L13.22 1L19.3309 6.64074V23H0.998047V1.00052Z" stroke-width="2" stroke-linejoin="bevel"/>
+								</svg>
 
-				<div class="assembly-list write-view" data-empty="Выберите товар к списанию"> <!-- Если пустой добавить empty-info-sect -->
-					<div class="assembly-items">
-						<div class="assembly-item assembly-item-edited">
-							<div class="item-header">
-								<div class="info-block">
-									<div class="title">Товары к списанию</div>
-									<div class="price w-rub">2 536</div>
-								</div>
+								Отмена заказа
 							</div>
+							<div class="close-check-menu-item clear-check">
+								<svg width="26" height="22" viewBox="0 0 26 22" stroke="#AFAFAF" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M23.8865 10.201L13.0865 21.001H7.57404C7.26353 20.9869 6.9694 20.8577 6.74904 20.6385L2.11154 16.0635C1.87872 15.8293 1.74805 15.5125 1.74805 15.1822C1.74805 14.852 1.87872 14.5352 2.11154 14.301L15.049 1.36349C15.2832 1.13068 15.6001 1 15.9303 1C16.2605 1 16.5773 1.13068 16.8115 1.36349L23.8865 8.50099C24.1009 8.73214 24.22 9.03574 24.22 9.35099C24.22 9.66624 24.1009 9.96985 23.8865 10.201Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M12.999 20.9969H20.499M8.29904 8.10938L2.11154 14.3594C1.87872 14.5936 1.74805 14.9104 1.74805 15.2406C1.74805 15.5709 1.87872 15.8877 2.11154 16.1219L6.74904 20.6344C6.86584 20.7502 7.00436 20.8419 7.15665 20.9041C7.30895 20.9663 7.47203 20.9978 7.63654 20.9969H13.149L17.199 16.9469L8.29904 8.10938Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
 
-							<div class="item-product">
-								<div class="name">Хризантема одноголовая белая</div>
-								<div class="s-price w-rub">223</div>
-								<div class="amount">2</div>
-								<div class="e-price w-rub">446</div>
-								<div class="del-btn">
-									<svg width="26" height="25" viewBox="0 0 26 25" stroke="black" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M2 23.5L24 1.5M2 1.5L24 23.5" stroke-width="3" stroke-linecap="round"/>
-									</svg>
-								</div>
-							</div>
-							
-							<div class="item-product active">
-								<div class="name">Диантус Россия асс</div>
-								<div class="s-price w-rub">100</div>
-								<div class="amount">1</div>
-								<div class="e-price w-rub">100</div>
-								<div class="del-btn">
-									<svg width="26" height="25" viewBox="0 0 26 25" stroke="black" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M2 23.5L24 1.5M2 1.5L24 23.5" stroke-width="3" stroke-linecap="round"/>
-									</svg>
-								</div>
-							</div>
-							
-							<div class="item-product">
-								<div class="name">Писташ (Фисташка)</div>
-								<div class="s-price w-rub">100</div>
-								<div class="amount">1</div>
-								<div class="e-price w-rub">100</div>
-								<div class="del-btn">
-									<svg width="26" height="25" viewBox="0 0 26 25" stroke="black" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M2 23.5L24 1.5M2 1.5L24 23.5" stroke-width="3" stroke-linecap="round"/>
-									</svg>
-								</div>
-							</div>
-							
-							<div class="item-product">
-								<div class="name">Писташ (Фисташка)</div>
-								<div class="s-price w-rub">100</div>
-								<div class="amount">1</div>
-								<div class="e-price w-rub">100</div>
-								<div class="del-btn">
-									<svg width="26" height="25" viewBox="0 0 26 25" stroke="black" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M2 23.5L24 1.5M2 1.5L24 23.5" stroke-width="3" stroke-linecap="round"/>
-									</svg>
-								</div>
+								Очистить чек
 							</div>
 						</div>
 					</div>
+				</div>
+
+				<button class="checks-tab-add">
+					<svg width="26" height="25" viewBox="0 0 26 25" stroke="black" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M2 23.5L24 1.5M2 1.5L24 23.5" stroke-width="3" stroke-linecap="round"/>
+					</svg>
+				</button>
+			</div>
+
+			<div class="check-body">
+
+				<div class="check-header">
+					<div class="check-header-item type">
+						<img src="../img/bouquet.svg" alt="">
+						Собрать букет
+					</div>
+					<div class="check-header-item client-empty"> <!-- client -->
+						<svg width="17" height="25" viewBox="0 0 17 25" fill="#AAAAAA" stroke="#AAAAAA" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="8.60938" cy="6.75" r="5.07812" stroke-width="1.95312"/>
+							<path d="M16.0145 21.559C13.9955 23.9078 4.02671 24.495 1.1875 21.559C1.1875 20.458 2.1339 14.9531 8.44325 14.9531C14.5002 14.9531 16.2248 19.3571 16.0145 21.559Z" stroke-width="1.95312" stroke-linecap="round"/>
+						</svg>
+
+						Клиент
+					</div>
+				</div>
+
+				<div class="assembly-list write-view">
+					<div class="assembly-items"></div>
 
 					<div class="assembly-control-panel">
 						<div class="assembly-control-btns">
@@ -423,7 +411,47 @@
 							</div>
 						</div>
 
-						<div class="btn">Списать</div>
+						<div class="control-btn menu-items">
+							<svg width="26" height="18" viewBox="0 0 26 18" stroke="black" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.82859 9.40844L24.456 9.40844M1.8286 16.5049L24.456 16.5049M1.54567 1.50121L24.1731 1.50121" stroke-width="2.5" stroke-linecap="round"/>
+							</svg>
+						</div>
+					</div>
+
+					<div class="check-control-panel">
+						<div class="check-control-btns">
+							<button class="control-btn">аквабокс</button>
+							<button class="control-btn">аквапак</button>
+							<button class="control-btn">переноска</button>
+						</div>
+
+						<div class="check-control-info">
+							<div class="info-items">
+								<div class="info-item total">
+									<div class="title">Итого:</div>
+									<div class="value w-rub">1 362</div>
+								</div>
+								<div class="info-item pay">
+									<div class="title">К оплате:</div>
+									<div class="value w-rub">1 000</div>
+								</div>
+								<div class="info-item discount">
+									<div class="title">Скидка:</div>
+									<div class="value w-rub">- 362</div>
+									<div class="reason">(Купон 25%)</div>
+								</div>
+								<div class="info-item balance">
+									<div class="title">Баланс:</div>
+									<div class="value w-rub">0</div>
+								</div>
+							</div>
+
+							<div class="info-btns">
+								<button class="btn btn-pay btn-disabled">
+									К оплате <span class="w-rub">0</span>
+								</button>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

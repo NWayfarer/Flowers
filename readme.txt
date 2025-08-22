@@ -9,3 +9,6 @@
 
 Списать товары - write-list.html
 Создать списание и Взять в работу - write-create.html (тут есть элементы для продаж)
+
+Пустой чек - blank-check.html
+Заполненный чек - filling-check.html (почти закончен)
