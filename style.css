@@ -476,8 +476,12 @@ button {
 }
 
 .assembly-list .assembly-item .item-header .info-block .price.w-rub:after {
-    font-weight: 500;
     font-size: 18px;
+    font-weight: 500;
+}
+
+.assembly-list .assembly-item .item-header .btns-block {
+    display: flex;
 }
 
 .assembly-list .assembly-item .item-header .btns-block .btn.btn-accept {
@@ -485,6 +489,29 @@ button {
     border-radius: unset;
     background-color: #567AFB;
     border-left: 1px solid #C2C2C2;
+}
+
+.assembly-list .assembly-item .item-header .btns-block .btn-disband {
+    width: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid #C2C2C2;
+}
+
+.assembly-list .assembly-item .item-header .btns-block .btn-disband svg {
+    width: 18px;
+    stroke: #434343;
+}
+
+.assembly-list .assembly-item .item-header .btns-block .btn-edit {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    padding: 20px 22px;
+    border-radius: 0;
+    background-color: #ffffff;
+    color: #434343;
 }
 
 .assembly-list .assembly-item .item-product {
@@ -523,6 +550,18 @@ button {
     width: 16px;
     height: 16px;
     stroke: #F81D1D;
+}
+
+.assembly-list .assembly-item.single-product {
+    border-top: 2px solid #C2C2C2;
+}
+
+.assembly-list .assembly-item.single-product .item-product .del-btn {
+    display: flex;
+}
+
+.assembly-list .assembly-item.single-product .item-product .del-btn svg {
+    stroke: #434343;
 }
 
 .assembly-list .assembly-control-panel {
@@ -1758,7 +1797,6 @@ button {
     background-color: #ffffff;
 }
 
-
 .check-header {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1805,7 +1843,24 @@ button {
     stroke: #AAAAAA;
 }
 
+.check-header .check-header-item.client .client-box {
+    display: flex;
+    align-items: center;
+}
 
+.check-header .check-header-item.client .client-clear {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.check-header .check-header-item.client .client-clear svg {
+    width: 20px;
+    margin: 0;
+    stroke: #6F1B2D;
+}
 
 .check-control-panel {
     display: flex;
@@ -1876,6 +1931,7 @@ button {
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
+    background-color: #30BD57;
 }
 
 .check-control-info .info-btns .btn-pay.btn-disabled {
@@ -1888,5 +1944,20 @@ button {
 
 .check-control-info .info-btns .btn-pay span.w-rub:after {
     font-size: 25px;
+}
+
+.check-control-info .info-btns .btn-sale {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    flex-grow: 0;
+    width: 174px;
+    background-color: #ffffff;
+    color: #434343;
+}
+
+.check-control-info .info-btns .btn-sale.not-applied svg {
+    display: none;
 }
 /* !Чеки */
