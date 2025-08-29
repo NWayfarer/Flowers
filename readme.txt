@@ -20,6 +20,7 @@
 Управление товарами (редактировать товар) - product-management-edit.html
 Управление товарами (новый товар) - product-management-new.html
 Управление товарами (новый товар, не заполненный) - product-management-new-clear.html
+Управление товарами (форма Пересчитать цену) - product-management-modal.html
 
 Состав товара (Список товаров) - product-composition.html
 Состав товара (Выбрать из витрины) - product-composition-showcase.html

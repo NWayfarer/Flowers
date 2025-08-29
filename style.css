@@ -2950,4 +2950,33 @@ button {
 }
 /* --- Состав товара --- */
 
+/* --- Форма --- */
+.recalculate-view {
+    width: 587px;
+    padding: 50px 60px 40px 40px;
+    border-radius: 15px;
+    background: #FFFFFF;
+    position: relative;
+}
+
+.modal-container .recalculate-view .modal-header .close-modal.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.recalculate-view .btn-container {
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.recalculate-view .btn-container .btn {
+    width: 100%;
+    min-height: unset;
+    padding: 17px 20px;
+    font-weight: 400;
+    text-transform: none;
+}
+/* --- !Форма --- */
+
 /* !Управление товарами */
