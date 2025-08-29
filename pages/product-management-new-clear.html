@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+	<title>Цветы</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="../style.css">
+	<link rel="shortcut icon" href="../circles.ico">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+	<script src="https://use.fontawesome.com/c61f48834a.js"></script>
+
+</head>
+
+<body>
+	<div class="container">
+		
+		<div class="info-section-cont full-sis pm-list">
+			<div class="rBlock-header info-sect-h h-container-flex">
+				<h3 class="rb-title">Создать товар</h3>
+			</div>
+
+			<div class="pm-body edit-view sect-cont-def">
+				<div class="pm-info-container">
+					<div class="pm-info pm-info-main">
+						<h4 class="pm-title">Основные данные</h4>
+
+						<div class="pm-i-fields-group">
+							<div class="pm-i-field">
+								<div class="title">Название</div>
+								<div class="counter">
+									<input class="custominput" />
+									<output>0/70</output>
+								</div>
+
+							</div>
+							<div class="pm-i-f-group three-col">
+								<div class="pm-i-field">
+									<div class="title">Категория</div>
+									<!-- Выпадающий список -->
+									<input class="custominput" placeholder="Выбрать" />
+								</div>
+								<div class="pm-i-field">
+									<div class="title">Подкатегория</div>
+									<!-- Выпадающий список -->
+									<input class="custominput" placeholder="Выбрать" />
+								</div>
+								<div class="pm-i-field">
+									<div class="title">Цвет</div>
+									<!-- Выпадающий список -->
+									<input class="custominput" placeholder="Выбрать" />
+								</div>
+							</div>
+							<div class="pm-i-field">
+								<div class="title">Описание</div>
+								<textarea class="customtextarea" rows="4" wrap="hard"></textarea>
+							</div>
+						</div>
+
+						<div class="pm-i-cb-container">
+							<div class="cb-box">
+								<input type="checkbox" class="simple-cb">
+								<div class="label">Добавить инструкцию</div>
+							</div>
+							
+							<!-- Выпадающий список -->
+							<input type="text" class="custominput" placeholder="Выбрать" />
+						</div>
+					</div>
+
+					<div class="pm-info pm-info-params">
+						<h4 class="pm-title">Параметры</h4>
+
+						<div class="pm-i-params-sect">
+							<div class="pm-i-f-group two-col">
+								<div class="pm-i-field two-f">
+									<div class="title">Размеры товара (ШхВ), см</div>
+									<input class="custominput" />
+									<input class="custominput" />
+								</div>
+								<div class="pm-i-field">
+									<div class="title">Размер</div>
+									<!-- Выпадающий список -->
+									<input class="custominput" placeholder="Выбрать" />
+								</div>
+							</div>
+
+							<div class="pm-i-radio-group">
+								<div class="title">Лейбл:</div>
+								<label class="pm-i-radio">
+									<input type="radio" class="simple-radio" name="label">
+									Не выбрано
+								</label>
+								<label class="pm-i-radio">
+									<input type="radio" class="simple-radio" name="label">
+									Хит
+								</label>
+								<label class="pm-i-radio">
+									<input type="radio" class="simple-radio" name="label">
+									Новинка
+								</label>
+								<label class="pm-i-radio">
+									<input type="radio" class="simple-radio" name="label">
+									Скидка
+								</label>
+							</div>
+						</div>
+
+						<div class="pm-i-params-sect composition-sect">
+							<h4 class="pm-title">Состав</h4>
+
+							<div class="btns-create">
+								<button class="btn btn-new">Добавить состав</button>
+								<button class="btn btn-disabled">Выбрать из витрины</button>
+							</div>
+						</div>
+
+						<div class="pm-i-params-sect prices-sect">
+							<h4 class="pm-title">Цены</h4>
+
+							<div class="pm-i-f-group prices">
+								<div class="pm-i-field">
+									<div class="title">Цена</div>
+									<div class="input-icon">
+										<input type="text" class="custominput actually-money" />
+									</div>
+								</div>
+								<div class="pm-i-field">
+									<div class="title">Скидочная цена</div>
+									<div class="input-icon">
+										<input type="text" class="custominput actually-money" />
+									</div>
+								</div>
+								<button class="btn btn-disabled">Пересчитать цену</button>
+							</div>
+						</div>
+
+						<div class="pm-i-cb-container">
+							<div class="cb-box">
+								<input type="checkbox" class="simple-cb">
+								<div class="label">Показывать на сайте</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="btns-container">
+						<button class="btn">Сохранить</button>
+						
+						<div class="add-btns">
+							<button class="btn btn-second">Добавить вариацию</button>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="pm-products-container">
+					<div class="pm-p-sect materials-groups">
+						<h4 class="pm-title">Материалы</h4>
+
+						<div class="materials-group"></div>
+
+						<div class="materials-btn">
+							<button class="btn-material">Добавить фото</button>
+							<button class="btn-material">Добавить видео</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</body>
+
+<script src="../script/jquery-3.3.1.min.js"></script>
+<script src="../script/main.js"></script>
+
+</html>
+
+<!-- #CECECE -->

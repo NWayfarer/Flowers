@@ -17,7 +17,9 @@
 Справочники(редактирование) - directory-edit.html
 
 Управление товарами (список товаров) - product-management.html
-Управление товарами (редактировать товар) - product-management-edit.html (не закончен)
+Управление товарами (редактировать товар) - product-management-edit.html
+Управление товарами (новый товар) - product-management-new.html
+Управление товарами (новый товар, не заполненный) - product-management-new-clear.html
 
 Состав товара (Список товаров) - product-composition.html
 Состав товара (Выбрать из витрины) - product-composition-showcase.html
