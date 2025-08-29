@@ -109,6 +109,11 @@ button {
     border-radius: 15px 15px 0 0;
 }
 
+.full-sis {
+    width: 1800px;
+    border-radius: 15px 0 0 0;
+}
+
 .info-section-cont {
     display: flex;
     flex-direction: column;
@@ -261,6 +266,9 @@ button {
     border-radius: 6px;
     font-size: 18px;
     color: #252525;
+}
+.custominput::placeholder {
+    color: rgba(67, 67, 67, .3);
 }
 .input-icon {
     width: fit-content;
@@ -1084,6 +1092,15 @@ button {
 .custom-checkbox:focus:not(:checked)+label::before {
   border-color: rgba(111, 27, 45, .35);
 }
+
+/* --- simple custom --- */
+.simple-cb {
+    accent-color: #719D18;
+    width: 25px;
+    height: 25px;
+}
+/* --- simple custom --- */
+
 /* Custom checkbox */
 
 
@@ -2018,3 +2035,479 @@ button {
     display: none;
 }
 /* !Чеки */
+
+/* Управление товарами */
+
+/* --- Справочники --- */
+.filter-table {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.filter-table .ft-control {
+    display: grid;
+    grid-template-columns: 480px 120px 100px auto;
+    column-gap: 20px;
+}
+
+.filter-table .ft-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 760px;
+    overflow-y: auto;
+}
+
+.filter-table .ft-control .control-item {
+    font-size: 16px;
+    color: #777777;
+}
+
+.filter-table .ft-body .ft-row {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 120px 125px 150px;
+    column-gap: 20px;
+    padding: 20px 15px;
+    border-bottom: 1px solid #E4E4E4;
+}
+
+.filter-table .ft-body .ft-row.active {
+    background-color: #EDEDED;
+    border-bottom: unset;
+    border-radius: 6px;
+}
+
+.filter-table .ft-body .ft-row .filter-amount {
+    text-align: center;
+    font-size: 16px;
+    color: rgba(55, 55, 55, .8);
+}
+
+.filter-table .ft-body .ft-row .filter-last-change {
+    font-size: 16px;
+    color: rgba(55, 55, 55, .5);
+}
+
+.filter-table .ft-body .ft-row .filter-edit {
+    padding-left: 20px;
+}
+
+.filter-table .ft-body .ft-row .filter-edit a {
+    color: #2D7CB6;
+}
+
+.directory-sect .btns-container {
+    width: 100%;
+}
+
+.directory-sect .btns-container .btns-read {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.directory-sect .btns-container .btns-edit {
+    display: flex;
+    justify-content: space-between;
+}
+
+.directory-sect .btns-container .btn {
+    min-height: unset;
+    padding: 16px 20px;
+}
+
+.directory-sect .btns-container .btn.btn-transperent {
+    color: #939393;
+    border: 1px solid #939393;
+    background-color: transparent;
+}
+
+.directory-sect .btns-container .btns-edit .btn.btn-transperent {
+    text-transform: none;
+}
+
+
+.directory-table {
+    display: flex;
+    flex-direction: column;
+    max-height: 860px;
+    overflow-y: auto;
+}
+
+.directory-table .directory-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    border-bottom: 1px solid #ECECEC;
+}
+
+.directory-table .directory-row:has(input) {
+    padding: 5px 20px;
+}
+
+.directory-table .directory-row:has(input):first-child {
+	padding-top: 20px;
+}
+
+.directory-table .directory-row .num {
+    width: 32px;
+    font-size: 16px;
+    color: #AAAAAA;
+}
+
+.directory-table .directory-row .name .custominput {
+    width: 570px;
+}
+
+.directory-table .directory-row .del-btn {
+    margin-left: auto;
+}
+
+.directory-table .directory-row .del-btn svg {
+    width: 17px;
+    height: 17px;
+    stroke: #939393;
+}
+/* --- !Справочники --- */
+
+/* --- Управление товарами список --- */
+.pm-header {
+    display: flex;
+    column-gap: 40px;
+    align-items: center;
+}
+
+.pm-header .switch-btns {
+    display: flex;
+    border: 1px solid #D9D9D9;
+    border-radius: 9px;
+    overflow: hidden;
+}
+
+.pm-header .switch-btns .btn {
+    width: 120px;
+    min-height: unset;
+    padding: 18px 20px;
+    border-radius: unset;
+    background-color: #ffffff;
+    color: rgba(67, 67, 67, .5);
+    text-transform: none;
+}
+
+.pm-header .switch-btns .btn.active {
+    background-color: #6F1B2D;
+    color: #ffffff;
+}
+
+.pm-header .pm-filter-panel {
+    display: flex;
+    column-gap: 20px;
+}
+
+.pm-header .btn-icon {
+    width: 64px;
+    padding: 13px 10px 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid #AAAAAA;
+    border-radius: 9px;
+    font-size: 12px;
+    color: #AAAAAA;
+}
+
+.pm-header .btn-icon svg {
+    height: 20px;
+}
+
+.pm-header .pm-filter-panel .pm-search-cont {
+    width: 530px;
+    position: relative;
+}
+
+.pm-header .pm-filter-panel .pm-search-cont .pm-search {
+    width: 100%;
+    padding: 18px 63px 18px 15px;
+}
+
+.pm-header .pm-filter-panel .pm-search-cont svg {
+    width: 33px;
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    right: 15px;
+    transform: translate(0, -50%);
+}
+
+.pm-header .pm-filter-panel .select {
+    width: 300px;
+}
+
+.pm-header .btns-container {
+    margin-left: auto;
+    display: flex;
+    column-gap: 15px;
+}
+
+.pm-header .btns-container .btn-fine-shift {
+    text-transform: none;
+}
+
+
+.pm-body.table-view {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-top: 30px;
+    padding-bottom: 22px;
+}
+
+.pm-table-h {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 196px 488px 180px 50px 140px 100px 191px 70px auto;
+    column-gap: 10px;
+    font-size: 16px;
+    color: #777777;
+}
+
+.pm-table-h label.pm-th-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pm-th-item .simple-cb,
+.pm-tr-item .simple-cb {
+    display: block;
+}
+
+.pm-table {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    padding: 5px;
+    max-height: 690px;
+    overflow-y: auto;
+}
+
+.pm-table .pm-t-row-group {
+    border: 1px solid #CCCCCC;
+    border-radius: 10px;
+    margin: 0 -5px;
+    padding: 5px;
+}
+
+.pm-table .pm-t-row-group .pm-t-row:last-child {
+    border: unset;
+}
+
+.pm-table .pm-t-row {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 45px 38px 67px 500px 181px 52px 141px 102px 192px 72px 60px auto;
+    column-gap: 8.5px;
+    padding: 3px 15px;
+    border-bottom: 1px solid #E4E4E4;
+}
+
+.pm-table .pm-t-row .img img {
+    width: 100%;
+}
+
+.pm-table .pm-t-row .name {
+    padding-left: 11.5px;
+}
+
+.pm-table .pm-t-row .price-cont {
+    display: flex;
+    gap: 14px;
+}
+
+.pm-table .pm-t-row .price-cont .old-price {
+    color: #939393;
+    text-decoration: line-through;
+}
+
+.pm-table .pm-t-row .sale,
+.pm-table .pm-t-row .def.def-selected {
+    text-align: center;
+}
+
+.pm-table .pm-t-row .sale {
+    padding-right: 2px;
+}
+
+.pm-table .pm-t-row .on-site {
+    padding-left: 18px;
+}
+
+.pm-table .pm-t-row .edit {
+    color: #2D7CB6;
+    padding-left: 14.5px;
+}
+
+
+.pm-pagination {
+    display: flex;
+    padding-top: 23px;
+}
+
+.pm-pagination .pm-pag-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 9px;
+}
+
+.pm-pagination .pm-pag-item.active {
+    background-color: #6F1B2D;
+    color: #ffffff;
+}
+/* --- !Управление товарами список --- */
+
+/* --- Управление товарами | редактирование --- */
+.pm-body.edit-view {
+    padding-top: 30px;
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1010px 650px;
+    column-gap: 60px;
+}
+/* --- !Управление товарами | редактирование --- */
+
+/* --- Состав товара --- */
+/* ----- Список товаров ----- */
+.tabs-cont .tabs-items.composition-view {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: max-content;
+    gap: 0;
+    border: 1px solid #D9D9D9;
+    border-radius: 10px;
+    max-height: 750px;
+    overflow-y: auto;
+}
+
+.tabs-cont .composition-view .tabs-item {
+    border: unset;
+    border-radius: 0;
+    border-bottom: 1px solid #D9D9D9;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 7px 15px;
+    cursor: pointer;
+}
+
+.tabs-cont .composition-view .tabs-item:nth-child(odd) {
+    border-right: 1px solid #D9D9D9;
+}
+
+.tabs-cont .composition-view .tabs-item input[type="checkbox"] {
+    accent-color: #719D18;
+    width: 25px;
+    height: 25px;
+}
+
+.tabs-cont .composition-view .tabs-item .item-img-cont {
+    width: 67px;
+    height: 67px;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.tabs-cont .composition-view .tabs-item .item-info {
+    background-color: transparent;
+    height: auto;
+    padding: 0;
+}
+
+.tabs-cont .composition-view .tabs-item .item-info .item-name {
+    font-size: 18px;
+    font-weight: 400;
+    color: #555555;
+}
+/* ----- !Список товаров ----- */
+
+.comp-filter-panel {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 281px 484px auto;
+    gap: 10px;
+}
+
+.comp-filter-panel .panel-item {
+    width: 100%;
+}
+
+.info-sect-h .price {
+    color: #222222;
+    font-size: 30px;
+}
+
+.info-sect-h .price:after {
+    font-size: 26px;
+}
+
+.composition-body {
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.composition-body .composition-items {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.composition-items .composition-item {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 90px 66px 100px auto;
+    column-gap: 20px;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ECECEC;
+}
+
+.composition-items .composition-item .name {
+    height: calc(2 * line-height);
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.composition-items .composition-item .price {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.composition-items .composition-item .quantity input {
+    width: 100%;
+    padding: 13px 8px;
+    border: 1px solid #9197B3;
+    border-radius: 6px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.composition-items .composition-item .total {
+    color: #222222;
+}
+
+.composition-items .composition-item .del-btn svg {
+    width: 17px;
+    height: 17px;
+    stroke: #939393;
+}
+/* --- Состав товара --- */
+
+/* !Управление товарами */

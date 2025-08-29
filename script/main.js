@@ -74,13 +74,15 @@ $('document').ready(function() {
 
 
     //Инициализация скролла
-    new ScrollBooster({
-        viewport: document.querySelector('.tabs-viewport'),
-        content: document.querySelector('.tabs-control'),
-        scrollMode: 'transform',
-        direction: 'horizontal',
-        emulateScroll: true,
-    });
+    if(document.querySelector('.tabs-viewport')) {
+        new ScrollBooster({
+            viewport: document.querySelector('.tabs-viewport'),
+            content: document.querySelector('.tabs-control'),
+            scrollMode: 'transform',
+            direction: 'horizontal',
+            emulateScroll: true,
+        });
+    }
 });
 
 //Кастомная кнопка добавления файла

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+	<title>Цветы</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="../style.css">
+	<link rel="shortcut icon" href="../circles.ico">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+	<script src="https://use.fontawesome.com/c61f48834a.js"></script>
+
+</head>
+
+<body>
+	<div class="container">
+		
+		<div class="info-section-cont left-sis write-create-cont">
+			<div class="rBlock-header info-sect-h h-container-flex">
+				<input type="text" class="custominput" placeholder="Найти товар">
+			</div>
+			
+			<div class="rBlock-body write-b">
+				<div class="tabs-cont sect-cont-def">
+					<div class="tabs-viewport">
+						<div class="tabs-control">
+							<div class="tabs-control-item">Все</div>	<!-- Для обычных элементов active на выбранный -->
+							<div class="tabs-control-item type-mode open"> <!-- Добавить класс при нажатии open -->
+								<div class="type-mode-items">
+									<div class="type name active">Роза</div>  <!-- active на нужный тип -->
+									<div class="type">40</div>
+									<div class="type">50</div>
+									<div class="type">60</div>
+									<div class="type">70</div>
+									<div class="type">80</div>
+									<div class="type">90</div>
+									<div class="type">100</div>
+									<div class="type">110</div>
+								</div>
+							</div>
+							<div class="tabs-control-item">Хризантемы</div>
+							<div class="tabs-control-item select-mode" data-tab-id="tab-a-1"> <!-- Добавить класс при нажатии open -->
+								<div class="select-mode">
+									Цветы
+									<svg width="17" height="10" viewBox="0 0 17 10" stroke="black" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1 1L8.77174 9L16 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</div>
+							</div>
+							<div class="tabs-control-item select-mode" data-tab-id="tab-a-2"> <!-- Добавить класс при нажатии open -->
+								<div class="select-mode-cont">
+									Зелень
+									<svg width="17" height="10" viewBox="0 0 17 10" stroke="black" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1 1L8.77174 9L16 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</div>
+							</div>
+							<div class="tabs-control-item">Упаковка</div>
+							<div class="tabs-control-item">Декор</div>
+							<div class="tabs-control-item">Дополнительные товары</div>
+						</div>
+					</div>
+			
+					<div class="tabs-content">
+						<div class="tabs-items composition-view">
+							<label class="tabs-item" for="myCheckbox">
+								<input type="checkbox" id="myCheckbox">
+
+								<div class="item-img-cont">
+									<div class="item-img" style="background-image: url('../img/flower.png');" data-empty="Нет в наличии"></div>
+								</div>
+								
+								<div class="item-info">	
+									<div class="item-name">Хризантема одноголовая белая</div>
+								</div>
+							</label>
+
+							<label class="tabs-item" for="myCheckbox2">
+								<input type="checkbox" id="myCheckbox2">
+
+								<div class="item-img-cont">
+									<div class="item-img" style="background-image: url('../img/flower.png');" data-empty="Нет в наличии"></div>
+								</div>
+								
+								<div class="item-info">	
+									<div class="item-name">Хризантема одноголовая белая</div>
+								</div>
+							</label>
+
+							<label class="tabs-item" for="myCheckbox3">
+								<input type="checkbox" id="myCheckbox3">
+
+								<div class="item-img-cont">
+									<div class="item-img" style="background-image: url('../img/flower.png');" data-empty="Нет в наличии"></div>
+								</div>
+								
+								<div class="item-info">	
+									<div class="item-name">Хризантема одноголовая белая</div>
+								</div>
+							</label>
+						</div>
+
+						<div class="add-tabs-items">
+							<div class="add-item sect-cont-def" id="tab-a-1">
+								<div class="card">
+									<div class="card-title">Категория</div>
+									<div class="card-name">Экзотические цветы ЭФИОПСКИЕ</div>
+								</div>
+
+								<div class="card">
+									<div class="card-title">Категория</div>
+									<div class="card-name">Классика</div>
+								</div>
+
+								<div class="card">
+									<div class="card-title">Категория</div>
+									<div class="card-name">Диантусы</div>
+								</div>
+
+								<div class="card">
+									<div class="card-title">Категория</div>
+									<div class="card-name">Ромашки</div>
+								</div>
+
+								<div class="card">
+									<div class="card-title">Категория</div>
+									<div class="card-name">Экзотика</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="info-section-cont right-sis" data-empty="Выберите смену, чтобы увидеть детали">
+			<div class="rBlock-header info-sect-h h-container-flex">
+				<h3 class="rb-title">Состав</h3>
+				<div class="price w-rub">2 689</div>
+			</div>
+			<div class="rBlock-body composition-body">
+				<div class="composition-items">
+					<div class="composition-item">
+						<div class="name">Bona Forte Фоггер-аэрозоль инсектицидное средство от насекомых-вредителей, баллон 150 мл</div>
+						<div class="price w-rub">10 223</div>
+						<div class="quantity"><input type="text" value="2" /></div>
+						<div class="total w-rub">1 000 000</div>
+						<div class="del-btn">
+							<svg width="26" height="25" viewBox="0 0 26 25" stroke="black" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M2 23.5L24 1.5M2 1.5L24 23.5" stroke-width="3" stroke-linecap="round"/>
+							</svg>
+						</div>
+					</div>
+					<div class="composition-item">
+						<div class="name">Bona Forte Фоггер-аэрозоль инсектицидное средство от насекомых-вредителей, баллон 150 мл</div>
+						<div class="price w-rub">10 223</div>
+						<div class="quantity"><input type="text" value="2" /></div>
+						<div class="total w-rub">1 000 000</div>
+						<div class="del-btn">
+							<svg width="26" height="25" viewBox="0 0 26 25" stroke="black" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M2 23.5L24 1.5M2 1.5L24 23.5" stroke-width="3" stroke-linecap="round"/>
+							</svg>
+						</div>
+					</div>
+					<div class="composition-item">
+						<div class="name">Bona Forte Фоггер-аэрозоль инсектицидное средство от насекомых-вредителей, баллон 150 мл</div>
+						<div class="price w-rub">10 223</div>
+						<div class="quantity"><input type="text" value="2" /></div>
+						<div class="total w-rub">1 000 000</div>
+						<div class="del-btn">
+							<svg width="26" height="25" viewBox="0 0 26 25" stroke="black" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M2 23.5L24 1.5M2 1.5L24 23.5" stroke-width="3" stroke-linecap="round"/>
+							</svg>
+						</div>
+					</div>
+					<div class="composition-item">
+						<div class="name">Bona Forte Фоггер-аэрозоль инсектицидное средство от насекомых-вредителей, баллон 150 мл</div>
+						<div class="price w-rub">10 223</div>
+						<div class="quantity"><input type="text" value="2" /></div>
+						<div class="total w-rub">1 000 000</div>
+						<div class="del-btn">
+							<svg width="26" height="25" viewBox="0 0 26 25" stroke="black" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M2 23.5L24 1.5M2 1.5L24 23.5" stroke-width="3" stroke-linecap="round"/>
+							</svg>
+						</div>
+					</div>
+					<div class="composition-item">
+						<div class="name">Bona Forte Фоггер-аэрозоль инсектицидное средство от насекомых-вредителей, баллон 150 мл</div>
+						<div class="price w-rub">10 223</div>
+						<div class="quantity"><input type="text" value="2" /></div>
+						<div class="total w-rub">1 000 000</div>
+						<div class="del-btn">
+							<svg width="26" height="25" viewBox="0 0 26 25" stroke="black" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M2 23.5L24 1.5M2 1.5L24 23.5" stroke-width="3" stroke-linecap="round"/>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="btn-container sect-cont-def">
+				<button class="btn">Применить</button>
+			</div>
+		</div>
+		
+	</div>
+</body>
+
+<script src="../script/jquery-3.3.1.min.js"></script>
+<script src="../script/main.js"></script>
+<script src="../script/scrollbooster.min.js"></script> <!-- скрипт для создания скроллов -->
+
+</html>
+
+<!-- #CECECE -->

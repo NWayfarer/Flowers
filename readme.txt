@@ -12,3 +12,12 @@
 
 Пустой чек - blank-check.html
 Заполненный чек - filling-check.html (есть скрытые элементы в панели управления, стили для всего прописаны)
+
+Справочники - directory.html
+Справочники(редактирование) - directory-edit.html
+
+Управление товарами (список товаров) - product-management.html
+Управление товарами (редактировать товар) - product-management-edit.html (не закончен)
+
+Состав товара (Список товаров) - product-composition.html
+Состав товара (Выбрать из витрины) - product-composition-showcase.html
