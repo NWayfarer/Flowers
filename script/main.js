@@ -83,6 +83,15 @@ $('document').ready(function() {
             emulateScroll: true,
         });
     }
+
+    $('.sections-tabs-wrapper').each(function() {
+        let tw = $(this);
+        tw.find('.sections-tab-item').not(':first').hide();
+        tw.find('.sections-tab').click(function() {
+            tw.find('.sections-tab').removeClass('active').eq($(this).index()).addClass('active');
+            tw.find('.sections-tab-item').hide().eq($(this).index()).fadeIn()
+        }).eq(0).addClass('active');
+    });
 });
 
 //Кастомная кнопка добавления файла

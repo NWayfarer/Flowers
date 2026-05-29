@@ -24,3 +24,5 @@
 
 Состав товара (Список товаров) - product-composition.html
 Состав товара (Выбрать из витрины) - product-composition-showcase.html
+
+Купоны - coupons.html

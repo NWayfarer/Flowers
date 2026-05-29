@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+	<title>Цветы</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="../style.css">
+	<link rel="shortcut icon" href="../circles.ico">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+	<script src="https://use.fontawesome.com/c61f48834a.js"></script>
+
+</head>
+
+<body>
+	<div class="container">
+		
+		<div class="left-sis sections-tabs-wrapper">
+			<div class="sections-tabs-control">
+				<span class="sections-tab">Детали купона</span>
+				<span class="sections-tab">Товары</span>
+			</div>
+
+			<div class="sections-tabs-content">
+				<div class="info-section-cont write-create-cont sections-tab-item">
+					<div class="rBlock-header info-sect-h h-container-flex">
+						<h3 class="rb-title">Создать купон</h3>
+					</div>
+					
+					<div class="rBlock-body write-b">
+						<div class="create-coupon-form">
+							<div class="sect find-client-sect">
+								<div class="form-field">
+									<label for="" class="title">Найти клиента <span class="req">*</span></label>
+									<div class="field-w-cb">
+										<!-- Номер телефона -->
+										<input type="text" class="custominput">
+										<div class="cb-box">
+											<input type="checkbox" class="simple-cb">
+											<div class="label">Раздать всем клиентам</div>
+										</div>
+									</div>
+								</div>
+								<div class="selected-clients">
+									<div class="selected-client">
+										<span class="num">+7 999 999-99-99</span>
+										<div class="del-item">
+											<svg width="26" height="25" viewBox="0 0 26 25" stroke="black" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M2 23.5L24 1.5M2 1.5L24 23.5" stroke-width="3" stroke-linecap="round"></path>
+											</svg>
+										</div>
+									</div>
+									<div class="selected-client">
+										<span class="num">+7 999 999-99-99</span>
+										<div class="del-item">
+											<svg width="26" height="25" viewBox="0 0 26 25" stroke="black" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M2 23.5L24 1.5M2 1.5L24 23.5" stroke-width="3" stroke-linecap="round"></path>
+											</svg>
+										</div>
+									</div>
+									<div class="selected-client">
+										<span class="num">+7 999 999-99-99</span>
+										<div class="del-item">
+											<svg width="26" height="25" viewBox="0 0 26 25" stroke="black" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M2 23.5L24 1.5M2 1.5L24 23.5" stroke-width="3" stroke-linecap="round"></path>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-field">
+								<label for="" class="title">Название купона</label>
+								<input type="text" class="custominput">
+							</div>
+
+							<div class="form-field">
+								<label for="" class="title">Описание</label>
+								<textarea class="customtextarea" rows="6" wrap="hard"></textarea>
+							</div>
+
+							<div class="form-field">
+								<label for="" class="title">Город (франшиза)</label>
+								<!-- Выпадающий список -->
+								<input type="text" class="custominput" value="Тюмень">
+							</div>
+
+							<div class="sect three-col-sect">
+								<div class="form-field">
+									<label for="" class="title">Номинал купона (% скидки)</label>
+									<input type="text" class="custominput">
+								</div>
+								<div class="form-field">
+									<label for="" class="title">Минимальная сумма заказа</label>
+									<input type="text" class="custominput">
+								</div>
+								<div class="form-field">
+									<label for="" class="title">Магазин</label>
+									<!-- Выпадающий список -->
+									<input type="text" class="custominput" value="Тюмень">
+								</div>
+							</div>
+
+							<div class="sect date-time-sect">
+								<div class="form-field">
+									<label for="" class="title">Срок действия</label>
+									<!-- Компонент заполнения периода даты и времени -->
+									<input type="text" class="custominput">
+								</div>
+							</div>
+
+							<div class="sect two-col-sect">
+								<div class="form-field">
+									<label for="" class="title">Тип заказа:</label>
+									<div class="options-list">	
+										<div class="cb-box">
+											<input type="radio" name="order-type" class="simple-cb">
+											<div class="label">Любой</div>
+										</div>
+										<div class="cb-box">
+											<input type="radio" name="order-type" class="simple-cb">
+											<div class="label">Самовывоз</div>
+										</div>
+										<div class="cb-box">
+											<input type="radio" name="order-type" class="simple-cb">
+											<div class="label">Доставка</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-field">
+									<label for="" class="title">Площадка:</label>
+									<div class="options-list">	
+										<div class="cb-box">
+											<input type="checkbox" class="simple-cb">
+											<div class="label">Любая</div>
+										</div>
+										<div class="cb-box">
+											<input type="checkbox" class="simple-cb">
+											<div class="label">Приложение</div>
+										</div>
+										<div class="cb-box">
+											<input type="checkbox" class="simple-cb">
+											<div class="label">Сайт</div>
+										</div>
+										<div class="cb-box">
+											<input type="checkbox" class="simple-cb">
+											<div class="label">Магазин</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="form-field">
+								<label for="" class="title">Текст push-уведомления</label>
+								<textarea class="customtextarea" rows="6" wrap="hard"></textarea>
+							</div>
+
+							<div class="btns-container">
+								<button class="btn">Выдать</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="info-section-cont write-create-cont sections-tab-item">
+					<div class="rBlock-header info-sect-h h-container-flex">
+						<input type="text" class="custominput" placeholder="Найти товар">
+					</div>
+					
+					<div class="rBlock-body write-b">
+						<div class="tabs-cont">
+							<div class="tabs-viewport">
+								<div class="tabs-control">
+									<div class="tabs-control-item">Все</div>	<!-- Для обычных элементов active на выбранный -->
+									<div class="tabs-control-item type-mode open"> <!-- Добавить класс при нажатии open -->
+										<div class="type-mode-items">
+											<div class="type name active">Роза</div>  <!-- active на нужный тип -->
+											<div class="type">40</div>
+											<div class="type">50</div>
+											<div class="type">60</div>
+											<div class="type">70</div>
+											<div class="type">80</div>
+											<div class="type">90</div>
+											<div class="type">100</div>
+											<div class="type">110</div>
+										</div>
+									</div>
+									<div class="tabs-control-item">Хризантемы</div>
+									<div class="tabs-control-item select-mode" data-tab-id="tab-a-1"> <!-- Добавить класс при нажатии open -->
+										<div class="select-mode">
+											Цветы
+											<svg width="17" height="10" viewBox="0 0 17 10" stroke="black" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1 1L8.77174 9L16 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>
+										</div>
+									</div>
+									<div class="tabs-control-item select-mode" data-tab-id="tab-a-2"> <!-- Добавить класс при нажатии open -->
+										<div class="select-mode-cont">
+											Зелень
+											<svg width="17" height="10" viewBox="0 0 17 10" stroke="black" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1 1L8.77174 9L16 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>
+										</div>
+									</div>
+									<div class="tabs-control-item">Упаковка</div>
+									<div class="tabs-control-item">Декор</div>
+									<div class="tabs-control-item">Дополнительные товары</div>
+								</div>
+							</div>
+					
+							<div class="tabs-content goods">
+								<div class="tabs-items composition-view">
+									<label class="tabs-item" for="myCheckbox">
+										<input type="checkbox" id="myCheckbox">
+
+										<div class="item-img-cont">
+											<div class="item-img" style="background-image: url('../img/flower.png');" data-empty="Нет в наличии"></div>
+										</div>
+										
+										<div class="item-info">	
+											<div class="item-name">Хризантема одноголовая белая</div>
+											<div class="item-desc">Р36</div>
+										</div>
+									</label>
+
+									<label class="tabs-item" for="myCheckbox2">
+										<input type="checkbox" id="myCheckbox2">
+
+										<div class="item-img-cont">
+											<div class="item-img" style="background-image: url('../img/flower.png');" data-empty="Нет в наличии"></div>
+										</div>
+										
+										<div class="item-info">	
+											<div class="item-name">Хризантема одноголовая белая</div>
+											<div class="item-desc">Р36</div>
+										</div>
+									</label>
+
+									<label class="tabs-item" for="myCheckbox3">
+										<input type="checkbox" id="myCheckbox3">
+
+										<div class="item-img-cont">
+											<div class="item-img" style="background-image: url('../img/flower.png');" data-empty="Нет в наличии"></div>
+										</div>
+										
+										<div class="item-info">	
+											<div class="item-name">Хризантема одноголовая белая</div>
+											<div class="item-desc">Р36</div>
+										</div>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="info-section-cont right-sis" data-empty="Добавьте интересующую номенклатуру в разделе «Товары», чтобы начать">
+			<div class="rBlock-header info-sect-h h-container-flex">
+				<h3 class="rb-title">Выбранные позиции</h3>
+				<button class="btn btn-second btn-medium">Очистить</button> <!-- btn-disabled - класс когда не выбраны элементы/товары -->
+			</div>
+			<div class="rBlock-body selected-product-body">
+				<div class="selected-product-items">
+					<div class="selected-product-item">
+						<div class="picture"><img src="../img/rose.png"/></div>
+						<div class="info">
+							<div class="name">Роза Эквадор Красная</div>
+							<div class="desc">Р123</div>
+						</div>
+						<div class="del-btn">
+							<svg width="26" height="25" viewBox="0 0 26 25" stroke="black" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M2 23.5L24 1.5M2 1.5L24 23.5" stroke-width="3" stroke-linecap="round"/>
+							</svg>
+						</div>
+					</div>
+					<div class="selected-product-item">
+						<div class="picture"><img src="../img/flower.png"/></div>
+						<div class="info">
+							<div class="name">Диантус</div>
+							<div class="desc">Р33</div>
+						</div>
+						<div class="del-btn">
+							<svg width="26" height="25" viewBox="0 0 26 25" stroke="black" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M2 23.5L24 1.5M2 1.5L24 23.5" stroke-width="3" stroke-linecap="round"/>
+							</svg>
+						</div>
+					</div>
+					<div class="selected-product-item">
+						<div class="picture"><img src="../img/rose.png"/></div>
+						<div class="info">
+							<div class="name">Роза Эквадор Кремовая</div>
+							<div class="desc">Р36</div>
+						</div>
+						<div class="del-btn">
+							<svg width="26" height="25" viewBox="0 0 26 25" stroke="black" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M2 23.5L24 1.5M2 1.5L24 23.5" stroke-width="3" stroke-linecap="round"/>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</body>
+
+<script src="../script/jquery-3.3.1.min.js"></script>
+<script src="../script/main.js"></script>
+<script src="../script/scrollbooster.min.js"></script> <!-- скрипт для создания скроллов -->
+
+</html>
+
+<!-- #CECECE -->
