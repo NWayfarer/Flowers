@@ -29,4 +29,4 @@
 
 Скидка клиента (модалка) - promocodes-discount-modal.html
 Модельное окно с предупреждением - promocodes-discount-modal-attention.html
-Поле промокод для сайта - promocode-input-site.html (стили в самом файле, не в style.css)
+Поле промокод для сайта - promocode-input-site.html (стили в самом файле, не в style.css, потому что делал сразу под стили сайта)
