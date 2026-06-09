@@ -26,3 +26,7 @@
 Состав товара (Выбрать из витрины) - product-composition-showcase.html
 
 Купоны - coupons.html
+
+Скидка клиента (модалка) - promocodes-discount-modal.html
+Модельное окно с предупреждением - promocodes-discount-modal-attention.html
+Поле промокод для сайта - promocode-input-site.html (стили в самом файле, не в style.css)

@@ -3222,3 +3222,232 @@ button {
 /* --- !Правая секция --- */
 
 /* !Купоны */
+
+
+
+/* Промокоды */
+
+/* --- Форма "Скидка клиента" --- */
+.discount-modal {
+    width: 650px;
+    padding: 40px;
+    border-radius: 15px;
+    background: #FFFFFF;
+    position: relative;
+}
+
+.discount-modal .modal-header .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.discount-modal .discount-fields {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.field-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+}
+
+.field-item .item-header {
+    font-size: 22px;
+    color: #434343b3;
+}
+
+.field-item .item-cont {
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+}
+
+.field-item label.item-cont {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.field-item .item-cont.active {
+    color: #252525;
+}
+
+.field-item .items-cont {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+}
+
+.discount-fields .field-item .item-cont .cb-box {
+    font-size: 22px;
+    max-width: 460px;
+    column-gap: 16px;
+}
+
+.discount-fields .field-item .item-cont .cb-box .label {
+    padding-top: 4px;
+}
+
+.discount-fields .field-item .item-cont .cb-box .label span {
+    color: #434343b3;
+}
+
+.discount-fields .field-item .item-cont .cb-box .simple-cb {
+    width: 35px;
+    height: 35px;
+    flex-shrink: 0;
+}
+
+.discount-fields .field-item .item-cont .price {
+    flex-shrink: 0;
+    padding-top: 4px;
+}
+
+.discount-fields .field-item .item-cont.promocode-view .cb-box,
+.discount-fields .field-item .item-cont.bonus-view .cb-box {
+    align-items: center;
+}
+
+.discount-fields .field-item .item-cont.promocode-view {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+}
+
+.discount-fields .field-item .item-cont.promocode-view .cb-box {
+    width: 100%;
+    max-width: unset;
+}
+
+.discount-fields .field-item .promocode-cont {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.discount-fields .field-item .promocode-cont .custominput {
+    max-width: 250px;
+    padding: 14px 15px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    font-size: 22px;
+}
+
+.discount-fields .field-item .promocode-cont .btn {
+    background-color: #567AFB;
+    color: #ffffff;
+    min-height: unset;
+    padding: 16px 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    text-transform: none;
+}
+
+.discount-fields .field-item .promocode-cont .btn.btn-disabled {
+    color: #43434366;
+}
+
+.discount-fields .field-item .item-cont.active .promocode-cont .btn.btn-disabled {
+    opacity: .7;
+    color: #ffffff;
+    background-color: #567AFB !important;
+}
+
+.discount-fields .field-item .promocode-cont .price {
+    flex-grow: 1;
+    text-align: right;
+    margin-left: 14px;
+    padding-top: 0;
+}
+
+.discount-fields .field-item .promocode-notice {
+    display: none;
+    column-gap: 8px;
+    padding-left: 51px;
+    font-size: 18px;
+    line-height: 135%;
+}
+
+.discount-fields .field-item .promocode-notice.active {
+    display: flex;
+}
+
+.discount-fields .field-item .promocode-notice .notice-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.discount-fields .field-item .item-cont.bonus-view .bonus-cont {
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+}
+
+.discount-fields .field-item .item-cont.bonus-view .cb-box {
+    max-width: unset;
+}
+
+.discount-fields .field-item .item-cont.bonus-view .bonus-cont .custominput {
+    max-width: 180px;
+    font-size: 22px;
+    padding: 14px 15px;
+    background-color: #F7F7F7;
+    color: #434343ce;
+}
+
+.discount-fields .field-item .item-cont.bonus-view.active .bonus-cont .custominput {
+    background-color: #ffffff;
+    color: inherit;
+}
+
+.discount-fields .field-item .bonus-cont .balance-bonuses {
+    font-size: 18px;
+}
+/* --- !Форма "Скидка клиента" --- */
+
+/* --- Модельное окно с предупреждением --- */
+.attention-modal {
+    width: 490px;
+    padding: 40px;
+    border-radius: 15px;
+    background: #FFFFFF;
+    position: relative;
+}
+
+.modal-container .attention-modal .modal-header {
+    justify-content: flex-start;
+    column-gap: 15px;
+}
+
+.modal-container .attention-modal .modal-header .modal-header-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.modal-container .attention-modal .modal-header .modal-title {
+    font-size: 22px;
+    color: #252525;
+}
+
+.modal-container .attention-modal .attention-info {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.modal-container .attention-modal .attention-info span {
+    font-size: 22px;
+    font-weight: 500;
+}
+/* --- !Модельное окно с предупреждением --- */
+
+/* !Промокоды */
+
+/* Для сайта */
+
+/* Поле Промокод в корзине */
+
+/* !Поле Промокод в корзине */
+
+/* !Для сайта */

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+	<title>Цветы</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- <link rel="stylesheet" href="../style.css"> -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+	<script src="https://use.fontawesome.com/c61f48834a.js"></script>
+
+</head>
+
+<body>
+	<div class="container">
+		<div class="free-container">
+			<div class="order-details-cont">
+				
+				<!-- Поле промокода -->
+				<div class="label__box promocode_view">
+					<label class="radio" for="discountPromocode">
+						<input type="radio" name="discountType" id="discountPromocode">
+						<div class="div_checkbox div_checkbox_gap">
+							<p class="div_checkbox_text">Промокод</p>
+						</div>
+					</label>
+					
+					<div class="promocode_control"> 
+						<input type="text" class="input_promocode" placeholder="Введите промокод" disabled="">
+						<button class="btn_activation">Активировать</button>
+					</div>
+					
+					<!-- Промокод прошел проверку -->
+					<div class="promocode-notice active"> <!-- Добавить класс active чтобы видно уведомление -->
+						<img class="notice-icon" src="../img/selected-green-light.svg">
+						<div class="notice-info">Промокод активирован</div>
+					</div>
+					<!-- Есть ошибки при проверке промокода -->
+					<div class="promocode-notice"> <!-- Добавить класс active чтобы видно уведомление -->
+						<img class="notice-icon" src="../img/attention-y.svg">
+						<div class="notice-info">Промокод не найден</div>
+					</div>				
+				</div>
+				<!-- !Поле промокода -->
+
+				<style>
+					.label__box.promocode_view {
+						flex-direction: column;
+						align-items: normal;
+					}
+
+					.label__box.promocode_view .promocode_control {
+						display: flex;
+						column-gap: 10px;
+					}
+
+					.label__box.promocode_view .promocode_control .input_promocode {
+						flex-grow: 1;
+						padding: 11px 13px;
+						border: 1px solid #ECE9E4;
+						border-radius: 6px;
+						font-size: 15px;
+					}
+
+					.label__box.promocode_view .promocode_control .btn_activation {
+						width: 132px;
+						flex-shrink: 0;
+						padding: 9px 12px;
+						border-radius: 6px;
+						background-color: #CD6567;
+						font-size: 16px;
+						font-weight: 500;
+						color: #ffffff;
+					}
+
+					.label__box.promocode_view .promocode_control .btn_activation[disabled] {
+						cursor: default;
+						opacity: .7;
+					}
+
+					.label__box.promocode_view .promocode_control .btn_activation.clear {
+						background-color: #ECE9E4;
+						color: #1B2F33;
+					}
+
+					.label__box.promocode_view .promocode-notice {
+						display: none;
+						column-gap: 8px;
+						font-size: 16px;
+						line-height: 135%;
+						color: #1B2F33;
+					}
+
+					.label__box.promocode_view .promocode-notice.active {
+						display: flex;
+					}
+
+					.label__box.promocode_view .promocode-notice .notice-icon {
+						width: 24px;
+						height: 24px;
+					}
+				</style>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script src="../script/jquery-3.3.1.min.js"></script>
+<script src="../script/main.js"></script>
+
+</html>
+
+<!-- #CECECE -->
