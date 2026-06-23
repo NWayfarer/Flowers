@@ -2681,6 +2681,25 @@ button {
     margin-bottom: 20px;
 }
 
+.pm-products-container .pm-title.w-annotation {
+    display: flex;
+    column-gap: 10px;
+}
+
+.pm-products-container .pm-title.w-annotation span {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #D9D9D9;
+    font-size: 15px;
+    line-height: 1;
+    color: #ffffff;
+    cursor: pointer;
+}
+
 .pm-p-sect {
     margin-bottom: 20px;
 }
@@ -2715,7 +2734,7 @@ button {
     justify-content: center;
     align-items: center;
     border: 3px solid #ffffff;
-    background-color: #628222;
+    background-color: #30BD57;
     border-radius: 50%;
     position: absolute;
     top: -8px;
@@ -2763,10 +2782,23 @@ button {
 }
 
 
+.materials-groups .materials-group-header {
+    display: flex;
+    column-gap: 20px;
+    padding-left: 35px;
+}
+
+.materials-groups .materials-group-header .h-mg {
+    min-width: 70px;
+    font-size: 13px;
+    text-align: center;
+    color: #555555;
+}
+
 .materials-groups .materials-item {
     display: flex;
     align-items: center;
-    column-gap: 15px;
+    column-gap: 20px;
     padding: 10px 15px 10px 0;
     border-bottom: 1px solid #CCCCCC;
 }
@@ -2779,14 +2811,31 @@ button {
     width: 25px;
     font-size: 16px;
     color: #848484;
+    margin-right: -10px;
+}
+
+.materials-groups .materials-item .photos {
+    display: flex;
+    column-gap: 20px;
 }
 
 .materials-groups .materials-item .img-box {
     width: 70px;
     height: 70px;
-    border-radius: 2px;
+    border-radius: 6px;
     flex-shrink: 0;
+    position: relative;
     overflow: hidden;
+}
+
+.materials-groups .materials-item .img-box.empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5px;
+    background-color: #f5e0e1;
+    cursor: pointer;
 }
 
 .materials-groups .materials-item .img-box img {
@@ -2794,7 +2843,44 @@ button {
     object-fit: cover;
 }
 
-.materials-groups .materials-item .info {
+.materials-groups .materials-item .img-box .del-photo {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-left: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    border-bottom-left-radius: 9px;
+    background-color: #f5e0e1;
+    line-height: 0;
+}
+
+.materials-groups .materials-item .img-box .del-photo svg {
+    width: 17px;
+    height: 17px;
+}
+
+.materials-groups .materials-item .img-box .del-photo svg path {
+    stroke: #CD6567;
+    opacity: 1;
+}
+
+.materials-groups .materials-item .img-box.empty img {
+    width: 23px;
+    object-fit: unset;
+}
+
+.materials-groups .materials-item .img-box.empty span {
+    font-size: 8.33px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1;
+    color: #6F1B2D;
+}
+
+.materials-groups .materials-item .info,
+.materials-groups .materials-item .photos {
     flex-grow: 1;
 }
 
@@ -2804,7 +2890,7 @@ button {
 
 .materials-groups .materials-item .info .customtextarea {
     width: 100%;
-    height: 83px;
+    height: 70px;
     font-family: 'Roboto';
     font-size: 16px;
     padding: 8px 10px;
@@ -3443,3 +3529,81 @@ button {
 /* --- !Модельное окно с предупреждением --- */
 
 /* !Промокоды */
+
+
+
+/* Дополнительные элементы */
+
+/* --- Авторизация (блок с кнопкой призыва к звонку) --- */
+
+/* --- !Авторизация (блок с кнопкой призыва к звонку) --- */
+
+
+/* --- Выбор клиента (секция вместо пин-пада) --- */
+.create_order_prepayment-wrapper-item {
+    width: 490px;
+    height: fit-content;
+    background-color: #ffffff;
+}
+
+.call-drop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.call-drop .cd-img {
+    width: 99px;
+    margin-bottom: 18px;
+}
+
+.call-drop .cd-title .title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #252525;
+    text-align: center;
+}
+
+.call-drop .cd-title .sub-title {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.call-drop .cd-info {
+    width: 100%;
+    padding: 20px 30px;
+    background-color: #88F08D33;
+    border-radius: 9px;
+}
+
+.call-drop .cd-info .phone {
+    font-size: 46px;
+    font-weight: 500;
+    text-align: center;
+    color: #252525;
+    margin-bottom: 10px;
+}
+
+.call-drop .cd-info .annotation {
+    font-size: 18px;
+    color: #678053;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+}
+
+.call-drop .cd-info .annotation span {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #6780534D;
+    border-radius: 50%;
+    text-align: center;
+}
+/* --- !Выбор клиента (секция вместо пин-пада) --- */
+
+/* !Дополнительные элементы */
