@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+	<title>Цветы</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="../style.css">
+	<link rel="shortcut icon" href="../circles.ico">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+	<script src="https://use.fontawesome.com/c61f48834a.js"></script>
+
+</head>
+
+<body>
+	<div class="container">
+
+		<!-- Форма "Выдать сертификат" -->
+		<div class="modal-container open"> <!-- чтобы показать, нужен класс - open -->
+			<div class="issue-certificate-modal">
+				<div class="modal-body">
+		
+					<div class="issue-c-sect">
+						<!-- <div class="issue-c-side"></div> -->
+						<div class="issue-c-info">
+							<div class="title">Выдать сертификат</div>
+							<div class="sub-title">Введите номер с карты</div>
+							<div class="number">
+								<input type="text" class="num" maxlength="1" inputmode="numeric" pattern="[0-9]" placeholder="0">
+								<input type="text" class="num" maxlength="1" inputmode="numeric" pattern="[0-9]" placeholder="0">
+								<input type="text" class="num" maxlength="1" inputmode="numeric" pattern="[0-9]" placeholder="0">
+								<input type="text" class="num" maxlength="1" inputmode="numeric" pattern="[0-9]" placeholder="0">
+								<input type="text" class="num" maxlength="1" inputmode="numeric" pattern="[0-9]" placeholder="0">
+							</div>
+							<div class="btn-container">
+								<button class="btn">Выдать</button>
+								<button class="btn btn-second">Отмена</button>
+							</div>
+						</div>
+
+						<div class="numpad">
+							<button class="pad-item">1</button>
+							<button class="pad-item">2</button>
+							<button class="pad-item">3</button>
+							<button class="pad-item">4</button>
+							<button class="pad-item">5</button>
+							<button class="pad-item">6</button>
+							<button class="pad-item">7</button>								
+							<button class="pad-item">8</button>
+							<button class="pad-item">9</button>
+							<button class="pad-item scan">
+								<svg width="36" height="33" viewBox="0 0 36 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M3.00586 7.92857V1.5H10.863" stroke="#B6B6B6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M33.0059 7.92857V1.5H25.863" stroke="#B6B6B6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M3.00586 25.0714V31.5H10.863" stroke="#B6B6B6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M33.0059 25.0714V31.5H25.863" stroke="#B6B6B6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M0 16H36" stroke="#FF5B5B" stroke-width="3" stroke-linejoin="round"/>
+								</svg>
+								<span>Сканировать</span>
+							</button>
+							<button class="pad-item">0</button>
+							<button class="pad-item erase">
+								<svg width="42" height="29" viewBox="0 0 42 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M20.3884 20.3633L30.874 9.37742M20.3884 9.37742L30.874 20.3633M12.3906 2.15972L2.0154 
+										13.6511C1.3063 14.4364 1.33165 15.6383 2.07325 16.393L12.3984 26.9017C12.7745 27.2844 13.2885 
+										27.5 13.825 27.5H37.7529C38.8575 27.5 39.7529 26.6046 39.7529 25.5V3.5C39.7529 2.39543 38.8575 
+										1.5 37.7529 1.5H13.8751C13.3092 1.5 12.7698 1.73971 12.3906 2.15972Z" stroke="white" 
+										stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								<span>Стереть</span>
+							</button>
+						</div>
+					</div>
+		
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</body>
+
+<script src="../script/jquery-3.3.1.min.js"></script>
+<script src="../script/main.js"></script>
+
+</html>
+
+<!-- #CECECE -->

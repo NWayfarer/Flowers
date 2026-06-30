@@ -145,6 +145,10 @@ button {
     color: #777777;
 }
 
+.hidden {
+    display: none !important;
+}
+
 .h-container-flex {
     display: flex;
     flex-wrap: nowrap;
@@ -219,6 +223,15 @@ button {
     background-color: #30BD57;
 }
 
+.btn-del {
+    background-color: #C04F5526;
+    color: #C04F55;
+}
+
+.btn-blue {
+    background-color: #567afb;
+}
+
 .btn-disabled {
     background-color: #D9D9D9 !important;
     color: #ffffff;
@@ -239,6 +252,10 @@ button {
 
 .file-uploader {
     display: none !important;
+}
+
+.upload-file input {
+    display: none;
 }
 
 .modal-container {
@@ -282,11 +299,27 @@ button {
     color: #252525;
 }
 .custominput::placeholder {
-    color: rgba(67, 67, 67, .3);
+    font-size: 18px;
+    color: #434343;
+    opacity: .6;
 }
 .input-icon {
     width: fit-content;
     position: relative;
+}
+.input-icon span {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translate(0, -50%);
+}
+.input-icon span svg {
+
 }
 .input-icon:before {
     position: absolute;
@@ -310,6 +343,40 @@ button {
     padding: 14px 20px;
     border: 1px solid #D9D9D9;
     border-radius: 6px;
+    font-size: 18px;
+	font-family: 'Roboto', sans-serif;
+}
+
+.quantity-comp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 5px;
+}
+.quantity-comp .quantity {
+    min-width: 70px;
+    flex-grow: 1;
+    font-size: 18px;
+    text-align: center;
+    line-height: 1;
+    color: #252525;
+}
+.quantity-comp .qc-control {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: rgba(205, 101, 103, .1);
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+.quantity-comp .qc-control.disabled {
+    background-color: #F7F7F7;
+}
+.quantity-comp .qc-control.disabled svg path {
+    stroke: #B6B6B6;
 }
 
 .w-rub:after {
@@ -326,6 +393,11 @@ button {
 .info-list .info-row {
     display: flex;
     gap: 10px;
+}
+
+.info-list .info-row.comment {
+    flex-direction: column;
+    row-gap: 5px;
 }
 
 
@@ -1114,6 +1186,7 @@ button {
     accent-color: #719D18;
     width: 25px;
     height: 25px;
+    flex-shrink: 0;
 }
 /* --- simple custom --- */
 
@@ -1629,7 +1702,7 @@ button {
 }
 
 .filter-panel input {
-    min-height: 64px;
+    /* min-height: 64px; */
     flex-grow: 1;
 }
 
@@ -3530,14 +3603,566 @@ button {
 
 /* !Промокоды */
 
+/* Скидочная система */
+
+/* --- Главная с разделами --- */
+.discount-sections {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+}
+
+.discount-sections .discount-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 20px 25px;
+    border-radius: 6px;
+    background-color: #DADEE6;
+}
+
+.discount-sections .discount-item .icon {
+    width: 50px;
+    height: 50px;
+}
+
+.discount-sections .discount-item .title {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1;
+    color: #536580;
+}
+/* --- !Главная с разделами --- */
+
+/* --- Сертификаты (редактирование) --- */
+.discount-system-cont {
+    overflow: hidden;
+}
+
+.discount-system-cont .certificate-tabs-cont {
+    display: flex;
+    border: 1px solid #B6B6B6;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.discount-system-cont .certificate-tabs-cont .tab {
+    padding: 16px 20px;
+    line-height: 1;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.discount-system-cont .certificate-tabs-cont .tab:not(:last-child) {
+    border-right: 1px solid #B6B6B6;
+}
+
+.discount-system-cont .certificate-tabs-cont .tab.active {
+    background-color: #722A39;
+    color: #ffffff;
+}
+
+.discount-system-cont .filter-panel {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding-top: 30px;
+    padding-right: 22px;
+    padding-bottom: 30px;
+}
+
+.discount-system-cont .filter-panel .search-certificate {
+    grid-column: span 3;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
+}
+
+.discount-system-cont .filter-panel .custominput {
+    width: 100%;
+    min-height: unset;
+}
+
+.discount-system-cont .filter-panel .btn:not(.btn-disabled) {
+    background-color: #ffffff;
+    border: 1px solid#939393;
+    color: #848484;
+}
+
+
+.certificate-table {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 100%;
+}
+
+.certificate-table .ct-control, 
+.certificate-table .ct-body .ct-row {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    grid-template-columns: 60px 124px 170px 80px 280px 106px;
+}
+
+.certificate-table.material .ct-control, 
+.certificate-table.material .ct-body .ct-row {
+    grid-template-columns: 60px 124px 170px 80px 241px 144px;
+}
+
+.certificate-table .ct-control {
+    font-size: 16px;
+    color: #777777;
+}
+
+.certificate-table .ct-body {
+    height: 100%;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.certificate-table .ct-body .ct-row {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    border-bottom: 1px solid #E4E4E4;
+}
+
+.certificate-table .ct-body .ct-row.selected {
+    background-color: #ebebeb;
+}
+
+.certificate-table .ct-row .ct-row-status span,
+.certificate-selected .rb-title span {
+    width: fit-content;
+    display: block;
+    padding: 10px 14px;
+    border: 1px solid #D9D9D9;
+    border-radius: 10px;
+    background-color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    color: #252525;
+}
+
+.certificate-table .ct-row .ct-row-status span.sold,
+.certificate-selected .rb-title span.sold {
+	background-color: #30BD57;
+	border-color: #30BD57;
+	color: #ffffff;
+}
+
+.certificate-table .ct-row .ct-row-status span.used,
+.certificate-selected .rb-title span.used {
+	background-color: #EDEDED;
+	color: #434343;
+}
+
+.certificate-table .ct-row .ct-row-status span.return,
+.certificate-selected .rb-title span.return {
+	background-color: #CD656726;
+	border-color: #CD656726;
+	color: #CD6567;
+}
+
+.certificate-table .ct-row .ct-row-status span,
+.certificate-table .ct-row .ct-row-s-num,
+.certificate-table .ct-row .ct-row-denomination,
+.certificate-selected .rb-title span {
+    color: #252525;
+}
+
+.certificate-table .ct-row .ct-row-s-num {
+    font-weight: 500;
+}
+
+.certificate-table .ct-row .ct-row-source {
+    opacity: .7;
+}
+
+
+.certificate-selected .rb-title {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    color: #252525;
+}
+
+.certificate-selected .cs-date {
+    font-size: 18px;
+    color: #252525;
+    opacity: .5;
+}
+
+.certificate-issuance .cs-body,
+.certificate-selected .cs-body {
+    padding: 6px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.certificate-issuance .cs-body {
+    padding-top: 20px;
+}
+
+.certificate-selected .cs-info-sect {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #D9D9D9;
+}
+.certificate-selected .cs-info-sect:last-child {
+    border-bottom: 0;
+}
+.certificate-selected .cs-info-sect {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #D9D9D9;
+}
+.certificate-selected .cs-info-sect .info-row .name {
+    opacity: .78;
+}
+.certificate-selected .cs-info-sect .info-row .value {
+    color: #252525;
+}
+.certificate-selected .cs-info-sect .info-row .value img {
+    width: 246px;
+    border-radius: 8px;
+}
+.certificate-selected .cs-info-sect .info-row .value a {
+    color: #567AFB;
+}
+.certificate-selected .cs-info-sect .info-row .value span {
+    color: #434343;
+    opacity: .78;
+}
+.cs-comment-cont .title {
+    font-size: 17px;
+    margin-bottom: 8px;
+    opacity: .5;
+}
+.cs-comment-cont .customtextarea {
+    width: 100%;
+}
+.certificate-selected .btn-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: space-between;
+}
+/* --- !Сертификаты (редактирование) --- */
+
+/* --- Сертификаты (создание) --- */
+/* ----- Офлайн ----- */
+.certificate-issuance .info-list {
+    row-gap: 30px;
+}
+
+.certificate-issuance .cs-info-sect {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+}
+
+.certificate-issuance .info-list .info-row {
+    flex-direction: column;
+    row-gap: 8px;
+    column-gap: 16px;
+}
+
+.certificate-issuance .info-list .info-row.sold {
+    flex-direction: row;
+}
+
+.certificate-issuance .info-list .info-row .value {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+}
+
+.certificate-issuance .info-list .info-row .custominput {
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.certificate-issuance .info-list .info-row.city .custominput {
+    width: 370px;
+}
+
+.certificate-issuance .info-list .info-row.s-num .custominput {
+    width: 300px;
+}
+
+.certificate-issuance .info-list .info-row.nominal .value .input-icon,
+.certificate-issuance .info-list .info-row.nominal .value .input-icon .actually-money {
+    max-width: 140px;
+    height: 50px;
+    color: #252525;
+}
+
+.certificate-issuance .info-list .info-row.nominal .value input.selected {
+    border-color: #30BD57;
+}
+
+.certificate-issuance .info-list .info-row.nominal .value .input-icon:before {
+    font-size: 20px;
+    line-height: 1;
+    color: #434343;
+    opacity: .7;
+}
+
+.certificate-issuance .info-list .info-row.nominal .value {
+    column-gap: 8px;
+}
+
+.certificate-issuance .info-list .info-row.nominal .nom {
+    line-height: 1;
+    padding: 15px 15px;
+    border: 1px solid #B6B6B6;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.certificate-issuance .info-list .info-row .title {
+    font-weight: 500;
+    color: #252525;
+}
+
+.certificate-issuance .info-list .info-row .item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+.certificate-issuance .info-list .info-row .item.shop input {
+    width: 370px;
+}
+
+.certificate-issuance .info-list .info-row .item.date input {
+    width: 200px;
+}
+
+.certificate-issuance .info-list .info-row .item .name {
+    font-size: 17px;
+    opacity: .5;
+}
+
+.certificate-issuance .info-list .info-row.nominal .nom.selected {
+    border-color: #30BD57;
+}
+/* ----- !Офлайн ----- */
+
+/* ----- Онлайн ----- */
+.certificate-issuance .cs-body.issuance-online {
+    display: grid;
+    grid-template-columns: 300px auto;
+    column-gap: 30px;
+    padding-bottom: 40px;
+}
+
+.certificate-issuance .info-list .info-row.design .value {
+    flex-direction: column;
+    align-items: unset;
+    row-gap: 16px;
+}
+
+.certificate-issuance .info-list .info-row.design .value .btn {
+    width: 100%;
+    font-size: 18px;
+}
+
+.certificate-issuance .info-list .info-row.design .value .img-selected {
+    width: 100%;
+    height: 186px;
+    border-radius: 16px;
+    background-position: center center;
+    background-size: cover;
+}
+
+.certificate-issuance .info-list .info-row.design .value .img-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+}
+
+.certificate-issuance .info-list .info-row.design .value .img-list .img-item {
+    height: 43px;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 6px;
+}
+
+.certificate-issuance .info-list .info-row.design .value .img-list .img-item.selected {
+    border: 2px solid #FF4D00;
+}
+
+.certificate-issuance .info-list .info-row.nominal-online {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 12px;
+    column-gap: 32px;
+}
+
+.certificate-issuance .info-list .info-row.nominal-online .title {
+    grid-column: span 2;
+}
+
+.certificate-issuance .info-list .info-row.nominal-online .actually-money {
+    height: 50px;
+    color: #252525;
+}
+
+.certificate-issuance .info-list .info-row.nominal-online .input-icon:before {
+    font-size: 20px;
+    line-height: 1;
+    color: #434343;
+    opacity: .7;
+}
+
+.certificate-issuance .issuance-online .info-list .info-row .custominput,
+.certificate-issuance .issuance-online .info-list .info-row .customtextarea {
+    width: 100%;
+}
+
+.certificate-issuance .info-list .info-row.sender .value {
+    flex-direction: column;
+    align-items: unset;
+    row-gap: 18px;
+}
+
+.certificate-issuance .cs-body.issuance-online .info-row .quantity-comp {
+    width: 100%;
+}
+/* ----- !Онлайн ----- */
+/* --- !Сертификаты (создание) --- */
+
+/* --- Форма "Выдать сертификат" --- */
+.issue-certificate-modal {
+    max-width: 1020px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 15px;
+    background-color: #ffffff;
+}
+
+.issue-certificate-modal .modal-body {
+    padding: 0;
+}
+
+.issue-certificate-modal .issue-c-sect {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 400px 480px;
+    column-gap: 60px;
+}
+
+.issue-certificate-modal .issue-c-sect .issue-c-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+
+.issue-certificate-modal .issue-c-sect .issue-c-info .title {
+    font-size: 30px;
+    line-height: 1;
+    color: #252525;
+}
+
+.issue-certificate-modal .issue-c-sect .issue-c-info .sub-title {
+    font-size: 20px;
+    line-height: 1;
+    color: #646464;
+}
+
+.issue-certificate-modal .issue-c-sect .issue-c-info .number {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+}
+
+.issue-certificate-modal .issue-c-sect .issue-c-info .number .num {
+    width: 100%;
+    height: 67px;
+    min-width: 75px;
+    min-height: 50px;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    border: 1px solid #d9d9d9;
+    border-radius: 9px;
+    outline: none;
+}
+
+.issue-certificate-modal .issue-c-sect .issue-c-info .number .num:focus {
+    border-color: #30bd57;
+}
+
+.issue-certificate-modal .issue-c-sect .issue-c-info .btn-container {
+    padding-top: 24px;
+    column-gap: 15px;
+}
+
+.issue-certificate-modal .issue-c-sect .issue-c-info .btn-container .btn {
+    flex-grow: 1;
+}
+
+.numpad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.numpad .pad-item {
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    border: 1px solid #E6DADC;
+    border-radius: 6px;
+    font-size: 42px;
+    font-weight: 600;
+    color: #945C67;
+    background-color: #E6DADC;
+}
+
+.numpad .scan,
+.numpad .erase {
+    gap: 9px;
+    font-size: 15px;
+    line-height: 100%;
+    font-weight: 500;
+}
+
+.numpad .scan {
+    color: #434343;
+    background-color: #ffffff;
+    border-color: #b6b6b6;
+}
+
+.numpad .erase {
+    color: #ffffff;
+    background-color: rgba(103, 22, 38, 0.8);
+    border-color: rgba(103, 22, 38, 0.8);
+}
+/* --- !Форма "Выдать сертификат" --- */
+
+/* !Скидочная система */
+
 
 
 /* Дополнительные элементы */
-
-/* --- Авторизация (блок с кнопкой призыва к звонку) --- */
-
-/* --- !Авторизация (блок с кнопкой призыва к звонку) --- */
-
 
 /* --- Выбор клиента (секция вместо пин-пада) --- */
 .create_order_prepayment-wrapper-item {

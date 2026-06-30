@@ -33,3 +33,10 @@
 
 Блоки/секции которые дополняют уже сверстанные элементы - additional-elements.html
 Секция звонка в формах авторизации и регистрации для сайта - auth-form-call-sect-site.html (стили в самом файле, не в style.css, потому что делал сразу под стили сайта)
+
+Сертификаты (выбор раздела) - discount-system.html
+Сертификаты (модалка "Выдать сертификат") - issue-certificate-modals.html
+Сертификаты (редактирование офлайн сертификата) - discount-system-certificate-offline.html
+Сертификаты (создание/выпуск офлайн сертификата) - discount-system-certificate-offline-issuance.html
+Сертификаты (редактирование онлайн сертификата) - discount-system-certificate-online.html
+Сертификаты (создание/выпуск онлайн сертификата) - discount-system-certificate-online-issuance.html

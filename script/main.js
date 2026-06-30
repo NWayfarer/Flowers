@@ -92,6 +92,15 @@ $('document').ready(function() {
             tw.find('.sections-tab-item').hide().eq($(this).index()).fadeIn()
         }).eq(0).addClass('active');
     });
+
+    $('.certificate-tabs-cont').each(function() {
+        let tw = $(this);
+        $('.discount-system-cont').find('.tab-item').not(':first').hide();
+        tw.find('.tab').click(function() {
+            tw.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
+            $('.discount-system-cont').find('.tab-item').hide().eq($(this).index()).fadeIn()
+        }).eq(0).addClass('active');
+    });
 });
 
 //Кастомная кнопка добавления файла
