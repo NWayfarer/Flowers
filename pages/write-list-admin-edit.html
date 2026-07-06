@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+	<title>Цветы</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="../style.css">
+	<link rel="shortcut icon" href="../circles.ico">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+	<script src="https://use.fontawesome.com/c61f48834a.js"></script>
+
+</head>
+
+<body>
+	<div class="container">
+		
+		<div class="info-section-cont left-sis write-cont write-cont-admin disabled">
+			<div class="rBlock-header info-sect-h h-container-flex">
+				<div class="filter-items">
+					<input type="text" class="custominput" placeholder="Магазин" disabled>
+					<!-- Выпадающий список -->
+
+					<input type="text" class="custominput" placeholder="Тип списания" disabled>
+					<!-- Выпадающий список -->
+					 
+					<input type="text" class="custominput" placeholder="Дата" disabled> 
+					<!-- Компонент даты -->
+
+					<button class="btn-icon">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M11.9091 22.8182C13.342 22.82 14.761 22.5386 16.0848 21.9902C17.4086 21.4419 18.611 
+								20.6374 19.6229 19.6229C20.6374 18.611 21.4419 17.4086 21.9902 16.0848C22.5386 14.761 22.82 
+								13.342 22.8182 11.9091C22.82 10.4762 22.5386 9.05715 21.9902 7.73337C21.4419 6.40958 20.6374 
+								5.20719 19.6229 4.19528C18.611 3.18082 17.4086 2.37631 16.0848 1.82796C14.761 1.27961 13.342 
+								0.998241 11.9091 1.00001C10.4762 0.998241 9.05715 1.27961 7.73337 1.82796C6.40958 2.37631 
+								5.20719 3.18082 4.19528 4.19528C3.18082 5.20719 2.37631 6.40958 1.82796 7.73337C1.27961 
+								9.05715 0.998241 10.4762 1.00001 11.9091C0.998241 13.342 1.27961 14.761 1.82796 16.0848C2.37631 
+								17.4086 3.18082 18.611 4.19528 19.6229C5.20719 20.6374 6.40958 21.4419 7.73337 21.9902C9.05715 
+								22.5386 10.4762 22.82 11.9091 22.8182Z" stroke="#434343" stroke-width="2" stroke-linejoin="round"/>
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M11.9095 4.81836C12.2712 4.81836 12.618 4.96203 
+								12.8738 5.21776C13.1295 5.47349 13.2732 5.82034 13.2732 6.182C13.2732 6.54365 13.1295 6.8905 
+								12.8738 7.14623C12.618 7.40196 12.2712 7.54563 11.9095 7.54563C11.5479 7.54563 11.201 7.40196 
+								10.9453 7.14623C10.6896 6.8905 10.5459 6.54365 10.5459 6.182C10.5459 5.82034 10.6896 5.47349 
+								10.9453 5.21776C11.201 4.96203 11.5479 4.81836 11.9095 4.81836Z" fill="#434343"/>
+							<path d="M12.1816 17.3629V9.72656H11.0906M10.2725 17.3629H14.0906" stroke="#434343" 
+								stroke-width="2.18182" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+						Справ.
+					</button>
+				</div>
+				
+				<button class="btn btn-medium btn-add btn-disabled">
+					<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M1.24977 8.56325L15.8772 8.56325M8.56348 15.877L8.56348 1.24954" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+					</svg>
+					Списание
+				</button>
+			</div>
+			
+			<div class="rBlock-body write-b">
+				<div class="staff-table">
+					<div class="st-control">
+						<div class="control-item">№</div>
+						<div class="control-item">Дата</div>
+						<div class="control-item">Тип списания</div>
+						<div class="control-item">Инициатор</div>
+						<div class="control-item">Сумма закуп/розница</div>
+					</div>
+					
+					<div class="st-body">
+						<div class="st-row active">
+							<div class="employee-id">29448</div>
+							<div class="employee-date">
+								<div class="date">12.03.2026, 17:35</div>
+								<div class="shop">Фабричная 20</div>
+							</div>
+							<div class="employee-reason">На салон</div>
+							<div class="employee-name">Светлана Тоболкина</div>
+							<div class="employee-amount">
+								<span class="w-rub">–2 563</span>
+								<span class="w-rub">–2 563</span>	
+							</div>
+						</div>
+
+						<div class="st-row">
+							<div class="employee-id">29447</div>
+							<div class="employee-date">
+								<div class="date">12.03.2026, 17:35</div>
+								<div class="shop">Московский тракт 112/12</div>
+							</div>
+							<div class="employee-reason">Разбор букета</div>
+							<div class="employee-name">Светлана Тоболкина</div>
+							<div class="employee-amount">
+								<span class="w-rub">–2 563</span>
+								<span class="w-rub">–2 563</span>	
+							</div>
+						</div>
+
+						<div class="st-row">
+							<div class="employee-id">29446</div>
+							<div class="employee-date">
+								<div class="date">12.03.2026, 17:35</div>
+								<div class="shop">Московский тракт 112/12...</div>
+							</div>
+							<div class="employee-reason">С прихода</div>
+							<div class="employee-name">Светлана Тоболкина</div>
+							<div class="employee-amount">
+								<span class="w-rub">–2 563</span>
+								<span class="w-rub">–2 563</span>	
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="info-section-cont right-sis" data-empty="Выберите запись, чтобы увидеть детали">
+			<div class="rBlock-header info-sect-h h-container-flex write-deteil-h">
+				<div class="btns-container">
+					<button class="btn btn-second btn-medium">Добавить вариант</button>
+					<button class="btn btn-medium">Сохранить</button>
+				</div>
+			</div>
+			<div class="directory-table">
+				<div class="directory-row">
+					<div class="num">3</div>
+					<div class="name"><input type="text" class="custominput" placeholder="Введите название" value=""></div>
+					<div class="del-btn">
+						<svg width="26" height="25" viewBox="0 0 26 25" stroke="black" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M2 23.5L24 1.5M2 1.5L24 23.5" stroke-width="3" stroke-linecap="round"></path>
+						</svg>
+					</div>
+				</div>
+				<div class="directory-row">
+					<div class="num">2</div>
+					<div class="name"><input type="text" class="custominput" placeholder="Введите название" value="С прихода"></div>
+					<div class="del-btn">
+						<svg width="26" height="25" viewBox="0 0 26 25" stroke="black" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M2 23.5L24 1.5M2 1.5L24 23.5" stroke-width="3" stroke-linecap="round"></path>
+						</svg>
+					</div>
+				</div>
+				<div class="directory-row">
+					<div class="num">1</div>
+					<div class="name"><input type="text" class="custominput" placeholder="Введите название" value="На салон"></div>
+					<div class="del-btn">
+						<svg width="26" height="25" viewBox="0 0 26 25" stroke="black" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M2 23.5L24 1.5M2 1.5L24 23.5" stroke-width="3" stroke-linecap="round"></path>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</body>
+
+<script src="../script/jquery-3.3.1.min.js"></script>
+<script src="../script/main.js"></script>
+
+</html>
+
+<!-- #CECECE -->

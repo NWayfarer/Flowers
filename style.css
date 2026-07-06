@@ -145,8 +145,16 @@ button {
     color: #777777;
 }
 
+.req {
+    color: #CD6567;
+}
+
 .hidden {
     display: none !important;
+}
+
+.ml-a {
+    margin-left: auto;
 }
 
 .h-container-flex {
@@ -230,6 +238,27 @@ button {
 
 .btn-blue {
     background-color: #567afb;
+}
+
+.btn-add {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+}
+
+.btn-icon {
+    width: 64px;
+    padding: 13px 10px 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid #AAAAAA;
+    border-radius: 6px;
+    font-size: 12px;
+    color: #AAAAAA;
 }
 
 .btn-disabled {
@@ -317,9 +346,6 @@ button {
     top: 50%;
     right: 8px;
     transform: translate(0, -50%);
-}
-.input-icon span svg {
-
 }
 .input-icon:before {
     position: absolute;
@@ -511,7 +537,7 @@ button {
 .comment-sect .customtextarea {
     width: 100%;
     font-size: 16px;
-    background-color: #F5F7FA;
+    /* background-color: #F5F7FA; */
 }
 
 .assembly-list {
@@ -1197,7 +1223,7 @@ button {
 /* Смены флористов */
 /* --- Открытие смены --- */
 .rBlock-header {
-    padding: 0 22px;
+    padding: 0 20px;
 }
 .rBlock-body {
     flex-grow: 1;
@@ -1784,7 +1810,6 @@ button {
 /* Списание */
 /* --- Общий список и информация об списании --- */
 /* ----- Левый блок ----- */
-
 .write-cont .info-sect-h .filter-items {
     display: flex;
     gap: 10px;
@@ -1792,37 +1817,119 @@ button {
 
 .write-cont .info-sect-h input {
     max-width: 265px;
-    height: 64px;
+    /* height: 64px; */
+}
+
+.write-cont .btn-add {
+    height: 55px;
+    column-gap: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 .write-b {
     padding-top: 50px;
 }
 
-.write-b .staff-table .st-control {
-    grid-template-columns: 74px 100px 240px 200px auto;
+.write-b .staff-table {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-.write-b .staff-table .st-control .control-item:first-child {
-    padding-left: 20px;
+.write-b .tabs-control {
+    padding-left: 0;
+}
+
+.write-b .staff-table .st-control,
+.write-b .staff-table .st-body .st-row {
+    grid-template-columns: 100px 216px 150px 236px auto;
+    column-gap: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.write-b .staff-table .st-control {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.write-b .staff-table .st-control .control-item {
+    color: #848484;
+}
+
+.write-b .staff-table .st-body {
+    row-gap: 0;
 }
 
 .write-b .staff-table .st-body .st-row {
-    grid-template-columns: 72px 120px 260px 220px auto;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 17px;
+    border: unset;
+    border-radius: unset;
+    border-top: 1px solid #ECECEC;
+}
+
+.write-b .staff-table .st-body .st-row > div {
+    color: #434343;
+}
+
+.write-b .staff-table .st-body .st-row .employee-date .shop,
+.write-b .staff-table .st-body .st-row .employee-name {
+    color: #848484;
+}
+
+.write-b .staff-table .st-body .st-row .employee-date {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2px;
+}
+
+.write-b .staff-table .st-body .st-row .employee-date .shop {
+    font-size: 15px;
+    text-transform: uppercase;
 }
 
 .write-b .staff-table .st-body .st-row .employee-amount {
-    color: #8B2D2E;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4px;
 }
 
-.write-b .staff-table .st-body .st-row .employee-amount:after {
-    color: rgba(139, 45, 46, .5);
+.write-b .staff-table .st-body .st-row .employee-amount .w-rub:after {
+    font-size: 15px;
+    margin-right: 3px;
 }
 /* ----- !Левый блок ----- */
 
 /* ----- Правый блок ----- */
+.write-deteil-h {
+    flex-direction: column;
+    align-items: unset;
+    row-gap: 6px;
+}
+
+.write-deteil-h .rb-subtitle {
+    font-weight: 400;
+    opacity: .7;
+}
+
 .write-deteil-b {
    padding-top: 30px; 
+}
+
+.write-deteil-b .comment-sect {
+    padding-top: 20px;
+}
+
+.write-deteil-b .photo-sect {
+    padding-top: 20px;
+}
+
+.write-deteil-b .photo-sect .title {
+    margin-bottom: 8px;
+    font-size: 17px;
+    opacity: .8;
 }
 
 .write-deteil-info {
@@ -1830,12 +1937,12 @@ button {
 }
 
 .write-deteil-info .info-row .name {
-   width: 120px;
-   color: #939393;
+   width: 170px;
+   color: #848484;
 }
 
 .write-deteil-products {
-   padding-top: 20px;
+   padding-top: 40px;
 }
 
 .write-deteil-products .amount.w-rub {
@@ -1848,26 +1955,86 @@ button {
 
 .write-deteil-header, 
 .write-deteil-items .product-row {
-    grid-template-columns: 40px auto 70px 100px;
+    grid-template-columns: 33px auto 70px 188px;
     column-gap: 20px;
+    padding-left: 22px;
+    padding-right: 22px;
+}
+
+.write-deteil-items .product-row {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.write-deteil-items .product-row:last-child {
+    padding-bottom: 0;
+    border-bottom: unset;
+}
+
+.write-deteil-total .amount,
+.write-deteil-items .product-row .amount {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.write-deteil-items .product-row .num,
+.write-deteil-items .product-row .quantity {
+    opacity: .7;
+}
+ 
+.write-deteil-items {
+    padding-left: 0;
+    padding-right: 0;
+    row-gap: 0;
 }
 
 .write-deteil-header {
     align-items: center;
 }
 
+.write-deteil-header .p-header-item {
+    font-size: 15px;
+}
+
 .write-deteil-total {
-    grid-template-columns: auto 70px 100px;
+    grid-template-columns: auto 70px 188px;
     column-gap: 20px;
     padding-top: 16px;
-    border-top: 1px solid #D9D9D9;
+    border-top: 2px solid #434343CC;
 }
 /* ----- !Правый блок ----- */
-
 /* --- !Общий список и информация об списании --- */
+
+/* --- Общий список и информация об списании (админ) --- */
+/* ----- Левый блок ----- */
+.write-cont-admin .info-sect-h input {
+    max-width: 230px;
+}
+.write-cont-admin .btn-icon {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #434343;
+    font-weight: 500;
+}
+/* ----- !Левый блок ----- */
+
+/* ----- Правый блок ----- */
+.write-deteil-h .btns-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+/* ----- !Правый блок ----- */
+/* --- !Общий список и информация об списании (админ) --- */
 
 /* --- Создать списание --- */
 /* ----- Левый блок ----- */
+
+.write-create-cont .info-sect-h .search {
+    min-width: 484px;
+}
+
 .write-create-cont {
     padding: 22px 0 0;
 }
@@ -1892,10 +2059,87 @@ button {
     flex-grow: 1;
 }
 
-.write-create-b .comment-sect {
-    padding-top: 30px;
+.write-create-b .props-sect {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding-top: 20px;
 }
 
+.write-create-b .props-sect .prop {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+.write-create-b .props-sect .prop .title {
+    font-size: 17px;
+    color: #434343cc;
+}
+
+.write-create-b .props-sect .prop .custominput {
+    max-width: 370px;
+}
+
+.write-create-b .props-sect .prop textarea {
+    font-size: 16px;
+}
+
+.photos-add {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.photos-add .img-box {
+    width: 74px;
+    height: 74px;
+    border-radius: 6px;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.photos-add .img-box img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.photos-add .img-box .del-photo {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-left: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    border-bottom-left-radius: 9px;
+    background-color: #f5e0e1;
+    line-height: 0;
+}
+
+.photos-add .img-box .del-photo svg {
+    width: 17px;
+    height: 17px;
+}
+
+.photos-add .img-box .del-photo svg path {
+    stroke: #CD6567;
+    opacity: 1;
+}
+
+.write-create-b .props-sect .prop .btn-add {
+    margin-top: 8px;
+}
+
+.write-create-b .assembly-item.assembly-item-edited .item-header .info-block {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #43434380;
+}
 
 /* ----- !Правый блок ----- */
 /* --- !Создать списание --- */

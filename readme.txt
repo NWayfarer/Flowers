@@ -7,8 +7,10 @@
 Журнал инкассации (Выдача из кассы) - florist-shifts-collection-journal-issuance.html
 Журнал пересчета - florist-shifts-conversion-journal.html
 
-Списать товары - write-list.html
-Создать списание и Взять в работу - write-create.html (тут есть элементы для продаж)
+Списания. Список - write-list.html
+Списания. Список (админ) - write-list-admin.html
+Списания. Список (админ). Детали справочника - write-list-admin-edit.html
+Списания. Создать списание - write-create.html (тут есть элементы для продаж)
 
 Пустой чек - blank-check.html
 Заполненный чек - filling-check.html (есть скрытые элементы в панели управления, стили для всего прописаны)
@@ -40,3 +42,4 @@
 Сертификаты (создание/выпуск офлайн сертификата) - discount-system-certificate-offline-issuance.html
 Сертификаты (редактирование онлайн сертификата) - discount-system-certificate-online.html
 Сертификаты (создание/выпуск онлайн сертификата) - discount-system-certificate-online-issuance.html
+Шаблон сертификата - certificate-template.html

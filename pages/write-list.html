@@ -25,11 +25,16 @@
 					<input type="text" class="custominput" placeholder="Тип списания">
 					<!-- Выпадающий список -->
 					 
-					<input type="text" class="custominput" placeholder="Магазины"> 
-					<!-- Выпадающий список -->
+					<input type="text" class="custominput" placeholder="Дата"> 
+					<!-- Компонент даты -->
 				</div>
 				
-				<button class="btn">Списать товары</button>
+				<button class="btn btn-medium btn-add">
+					<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M1.24977 8.56325L15.8772 8.56325M8.56348 15.877L8.56348 1.24954" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+					</svg>
+					Списание
+				</button>
 			</div>
 			
 			<div class="rBlock-body write-b">
@@ -37,43 +42,52 @@
 					<div class="st-control">
 						<div class="control-item">№</div>
 						<div class="control-item">Дата</div>
-						<div class="control-item">Инициатор</div>
 						<div class="control-item">Тип списания</div>
-						<div class="control-item">Сумма списания</div>
+						<div class="control-item">Инициатор</div>
+						<div class="control-item">Сумма закуп/розница</div>
 					</div>
 					
 					<div class="st-body">
-						<div class="st-row">
-							<div class="employee-id">3</div>
-							<div class="employee-date-time">
-								<div class="date">31.04.2023</div>
-								<div class="time">08:43</div>
-							</div>
-							<div class="employee-name">Александра Мандрагора</div>
-							<div class="employee-reason">Курьер такси</div>
-							<div class="employee-amount w-rub">8 693</div>
-						</div>
-
 						<div class="st-row active">
-							<div class="employee-id">2</div>
-							<div class="employee-date-time">
-								<div class="date">31.04.2023</div>
-								<div class="time">08:43</div>
+							<div class="employee-id">29448</div>
+							<div class="employee-date">
+								<div class="date">12.03.2026, 17:35</div>
+								<div class="shop">Фабричная 20</div>
 							</div>
-							<div class="employee-name">Александра Мандрагора</div>
-							<div class="employee-reason">Курьер такси</div>
-							<div class="employee-amount w-rub">10 693</div>
+							<div class="employee-reason">На салон</div>
+							<div class="employee-name">Светлана Тоболкина</div>
+							<div class="employee-amount">
+								<span class="w-rub">–2 563</span>
+								<span class="w-rub">–2 563</span>	
+							</div>
 						</div>
 
 						<div class="st-row">
-							<div class="employee-id">1</div>
-							<div class="employee-date-time">
-								<div class="date">31.04.2023</div>
-								<div class="time">08:43</div>
+							<div class="employee-id">29447</div>
+							<div class="employee-date">
+								<div class="date">12.03.2026, 17:35</div>
+								<div class="shop">Московский тракт 112/12</div>
 							</div>
-							<div class="employee-name">Александра Мандрагора</div>
-							<div class="employee-reason">Курьер такси</div>
-							<div class="employee-amount w-rub">5 693</div>
+							<div class="employee-reason">Разбор букета</div>
+							<div class="employee-name">Светлана Тоболкина</div>
+							<div class="employee-amount">
+								<span class="w-rub">–2 563</span>
+								<span class="w-rub">–2 563</span>	
+							</div>
+						</div>
+
+						<div class="st-row">
+							<div class="employee-id">29446</div>
+							<div class="employee-date">
+								<div class="date">12.03.2026, 17:35</div>
+								<div class="shop">Московский тракт 112/12...</div>
+							</div>
+							<div class="employee-reason">С прихода</div>
+							<div class="employee-name">Светлана Тоболкина</div>
+							<div class="employee-amount">
+								<span class="w-rub">–2 563</span>
+								<span class="w-rub">–2 563</span>	
+							</div>
 						</div>
 					</div>
 				</div>
@@ -81,78 +95,128 @@
 		</div>
 
 		<div class="info-section-cont right-sis" data-empty="Выберите запись, чтобы увидеть детали">
-			<div class="rBlock-header info-sect-h h-container-flex">
-				<h3 class="rb-title">Списание</h3>
+			<div class="rBlock-header info-sect-h h-container-flex write-deteil-h">
+				<h3 class="rb-title">Списание № 29448</h3>
+				<h5 class="rb-subtitle">Смена №20</h5>
 			</div>
 			<div class="rBlock-body write-deteil-b">
 				<div class="info-list write-deteil-info">
 					<div class="info-row">
-						<div class="name">Инициатор:</div>
-						<div class="value">Заречный проезд 14</div>
+						<div class="name">ID записи:</div>
+						<div class="value">29448</div>
 					</div>
 					<div class="info-row">
-						<div class="name">Склад:</div>
-						<div class="value">Червишевский тракт 90</div>
-					</div>
-					<div class="info-row">
-						<div class="name">Дата:</div>
-						<div class="value">12.01.2024 12:09</div>
+						<div class="name">Склад (Магазин):</div>
+						<div class="value">Фабричная 12</div>
 					</div>
 					<div class="info-row">
 						<div class="name">Тип списания:</div>
-						<div class="value">Ручное</div>
+						<div class="value">Общая</div>
+					</div>
+					<div class="info-row">
+						<div class="name">Дата:</div>
+						<div class="value">12.02.2026, 17:35</div>
+					</div>
+					<div class="info-row">
+						<div class="name">Инициатор:</div>
+						<div class="value">Светлана Тоболкина</div>
+					</div>
+					<div class="info-row">
+						<div class="name">Упущенная выгода:</div>
+						<div class="value w-rub">–2 884</div>
+					</div>
+				</div>
+
+				<div class="comment-sect sect-cont-def">
+					<div class="title">Комментарий:</div>
+					<textarea class="customtextarea" rows="3"></textarea>
+				</div>
+
+				<div class="photo-sect sect-cont-def">
+					<div class="title">Фото</div>
+					<div class="photos-add">
+						<div class="img-box">
+							<img src="../img/flower.png" alt="">
+						</div>
+						<div class="img-box">
+							<img src="../img/flower.png" alt="">
+						</div>
+						<div class="img-box">
+							<img src="../img/flower.png" alt="">
+						</div>
 					</div>
 				</div>
 
 				<div class="products-list write-deteil-products">
 					<div class="products-header write-deteil-header sect-cont-def">
 						<div class="p-header-item">№</div>
-						<div class="p-header-item">Название</div>
+						<div class="p-header-item">Наименование</div>
 						<div class="p-header-item">Кол-во</div>
-						<div class="p-header-item">Сумма списания</div>
+						<div class="p-header-item">
+							<span>Сумма списания</span><br>
+							<span>Закуп / Розница</span>
+						</div>
 					</div>
 
 					<div class="products-items write-deteil-items sect-cont-def">
 						<div class="product-row">
-							<div class="num">1</div>
-							<div class="name">Конфеты «Ferrero Rocher» 125гр.</div>
+							<div class="num">5</div>
+							<div class="name">Гвоздика Персиковая Кремовая</div>
 							<div class="quantity">1</div>
-							<div class="amount w-rub">500</div>
+							<div class="amount">
+								<span class="w-rub">1 512</span>
+								<span class="w-rub">2 563</span>
+							</div>
 						</div>
 
 						<div class="product-row">
-							<div class="num">2</div>
-							<div class="name">Конфеты «Ferrero Rocher» 100гр.</div>
+							<div class="num">4</div>
+							<div class="name">Альстромерия Цветная</div>
 							<div class="quantity">1</div>
-							<div class="amount w-rub">500</div>
+							<div class="amount">
+								<span class="w-rub">62</span>
+								<span class="w-rub">140</span>
+							</div>
 						</div>
 
 						<div class="product-row">
 							<div class="num">3</div>
 							<div class="name">Роза кустовая красная</div>
 							<div class="quantity">6</div>
-							<div class="amount w-rub">500</div>
+							<div class="amount">
+								<span class="w-rub">50</span>
+								<span class="w-rub">175</span>
+							</div>
 						</div>
 
 						<div class="product-row">
-							<div class="num">4</div>
+							<div class="num">2</div>
 							<div class="name">Хризантема одноголовая желтая</div>
 							<div class="quantity">2</div>
-							<div class="amount w-rub">500</div>
+							<div class="amount">
+								<span class="w-rub">429,6</span>
+								<span class="w-rub">1 260</span>
+							</div>
 						</div>
 
 						<div class="product-row">
-							<div class="num">5</div>
-							<div class="name">Декоративная прищепка 2.5 см цветная</div>
+							<div class="num">1</div>
+							<div class="name">Роза Эквадор Нежно Розовая 60</div>
 							<div class="quantity">1</div>
-							<div class="amount w-rub">50</div>
+							<div class="amount">
+								<span class="w-rub">53,4</span>
+								<span class="w-rub">175</span>
+							</div>
 						</div>
 					</div>
 
 					<div class="products-total write-deteil-total sect-cont-def">
 						<div class="title">Итого</div>
 						<div class="quantity">11</div>
-						<div class="amount w-rub">7 566</div>
+						<div class="amount">
+							<span class="w-rub">2 517</span>
+							<span class="w-rub">5 401</span>
+						</div>
 					</div>
 				</div>
 			</div>

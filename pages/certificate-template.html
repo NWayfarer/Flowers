@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+	<title>Сертификат</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class="certificate-container">
+		<div class="cert-cost">
+			<img src="../img/certificate-template-bg.png" class="cost-bg">
+			<div class="cost">
+				<div class="title">На сумму</div>
+				<div class="price">10000 <span>₽</span></div>
+			</div>
+		</div>
+		<div class="cert-info">
+			<div class="cert-desc">
+				<div class="title">Целый букет впечатлений</div>
+				<div class="desc">
+					Пара добрых слов, которые увидит получатель вместе с сертификатом 
+					Пара добрых слов, которые увидит получатель вместе с сертификатом 
+					Пара добрых слов, которые увидит получатель вместе с сертификатом 
+					Пара добрых слов, которые увидит получатель 
+				</div>
+				<p class="sender">Отправитель <span>Николай</span></p>
+			</div>
+			<div class="cert-view">
+				<img src="../img/certificate.png" class="view">
+				<div class="num-info">
+					<div class="num">
+						<span>Номер карты</span>
+						<div>0000 0000 0000</div>
+					</div>
+					<div class="barcode">
+						<img src="../img/barcode.png">
+					</div>
+					<p class="city">Действует в городе <span>Тюмень</span></p>
+				</div>
+			</div>
+		</div>
+		<div class="cert-how-use">
+			<div class="hu-cert">
+				<div class="title">Как использовать сертификат?</div>
+				<div class="subtitle">Сертификат можно предьявить при покупке онлайн и в магазине сети <span>&#x2764</span></div>
+				<div class="desc">
+					<ul>
+						<li>Откройте сайт <span>cvetograd24.ru</span> и добавьте интересующие товары в корзину.</li>
+						<li>Перейдие в корзину и нажмите кнопку «Использовать сертификат». Введите номер сертификата без пробелов.</li>
+						<li>Выберите способ оплаты, если сумма товаров превышает сумму сертификата и начните оформлять заказ.</li>
+						<li>Сертификат можно использовать единоразово или частично.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="site-info">
+				<div class="qr-cont">
+					<img src="../img/qr-site.png" class="qr">
+					<span>Наш сайт</span>
+				</div>
+				<div class="note">
+					Если у вас возникли трудности напишите в чат службы поддержи и укажите номер сертификата
+				</div>
+				<img src="../img/flow-city-logo.png" class="logo">
+			</div>
+		</div>
+	</div>
+</body>
+
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+html, body, div, span, p, a, img, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+	width: 100%;
+	height: 100%;
+    color: #434343;
+	display: flex;
+	flex-direction: column;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+}
+
+li {
+    display: list-item;
+}
+
+li::marker {
+	color: #CD6567;
+}
+
+.certificate-container {
+    width: 999px;
+    height: 1411px;
+    position: relative;
+}
+
+.cert-cost {
+    position: relative;
+    margin-bottom: 284px;
+}
+
+.cert-cost .cost-bg {
+    width: 100%;
+}
+
+.cert-cost .cost {
+    position: absolute;
+    left: 60px;
+    bottom: 120px;
+}
+
+.cert-cost .cost .title {
+    font-size: 25px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.cert-cost .cost .price {
+    font-size: 50px;
+    font-weight: 700;
+    color: #CE3253;
+    padding: 11px 32px 11px 40px;
+    border-radius: 24px;
+    background-color: #ffffff;
+}
+
+.cert-info {
+    width: 100%;
+    position: absolute;
+    top: 517px;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    padding: 46px 60px;
+    border-radius: 60px;
+    background-color: #ffffff;
+}
+
+.cert-info .cert-desc {
+    width: 452px;
+}
+
+.cert-info .cert-desc .title,
+.cert-how-use .hu-cert .title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #CD6567;
+}
+
+.cert-info .cert-desc .title {
+    margin-bottom: 10px;
+}
+
+.cert-info .cert-desc .desc {
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 1.3;
+    color: #252525;
+}
+
+.cert-info .cert-desc .sender {
+    font-size: 16px;
+    font-weight: 500;
+    color: #252525;
+}
+
+.cert-info .cert-desc .sender span {
+    margin-left: 5px;
+    padding: 8px 18px;
+    color: #CD6567;
+    border-radius: 9px;
+    background-color: #CD656726;
+}
+
+.cert-view {
+    width: 348px;
+}
+
+.cert-view .view {
+    width: 100%;
+    margin-bottom: 25px;
+    border: 1px solid #D9D9D9;
+    border-radius: 16px;
+}
+
+.cert-view .num-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cert-view .num-info .num span {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 16px;
+    color: #25252580;
+}
+
+.cert-view .num-info .num div {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.cert-view .num-info .barcode {
+    width: 109px;
+    height: 54px;
+}
+
+.cert-view .num-info .barcode img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.cert-view .num-info .city {
+    width: 100%;
+    margin-top: 18px;
+    font-size: 16px;
+    color: #434343cc;
+}
+
+.cert-view .num-info .city span {
+    color: #252525;
+}
+
+.cert-how-use {
+    display: flex;
+    justify-content: space-between;
+	align-items: flex-end;
+    padding: 142px 60px 70px 60px;
+    background-color: #F2F2F2;
+}
+
+.cert-how-use .hu-cert {
+    width: 544px;
+}
+
+.cert-how-use .hu-cert .title {
+    margin-bottom: 20px;
+}
+
+.cert-how-use .hu-cert .subtitle {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: #434343;
+}
+
+.cert-how-use .hu-cert .subtitle span {
+    color: #CD6567;
+}
+
+.cert-how-use .hu-cert .desc ul {
+    padding-left: 20px;
+    font-size: 16px;
+    line-height: 1.3;
+    color: #434343cc;
+}
+
+.cert-how-use .hu-cert .desc ul li:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+.cert-how-use .hu-cert .desc ul li span {
+    font-weight: 500;
+    color: #CD6567cc;
+}
+
+.cert-how-use .site-info {
+    width: 247px;
+}
+
+.cert-how-use .site-info .qr-cont {
+    margin-bottom: 20px;
+}
+
+.cert-how-use .site-info .qr-cont img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.cert-how-use .site-info .qr-cont span {
+    display: block;
+}
+
+.cert-how-use .site-info .note {
+    font-size: 14px;
+    line-height: 1.3;
+    color: #434343cc;
+    margin-bottom: 30px;
+}
+
+.cert-how-use .site-info .logo {
+    width: 129px;
+}
+</style>
+
+</html>
+
+<!-- #CECECE -->

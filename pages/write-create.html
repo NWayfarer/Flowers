@@ -21,7 +21,7 @@
 		
 		<div class="info-section-cont left-sis write-create-cont">
 			<div class="rBlock-header info-sect-h h-container-flex">
-				<input type="text" class="custominput" placeholder="Найти заказ">
+				<input type="text" class="custominput search" placeholder="Найти товар">
 			</div>
 			
 			<div class="rBlock-body write-b">
@@ -328,9 +328,58 @@
 				<h3 class="rb-title">Создать списание</h3> <!-- Для страницы "Взять в работу", заголовок соответвствующий -->
 			</div>
 			<div class="rBlock-body write-create-b">
-				<div class="comment-sect sect-cont-def">
-					<div class="title">Комментарий</div>
-					<textarea class="customtextarea" name="" id=""></textarea>
+				<div class="props-sect sect-cont-def">
+					<div class="prop">
+						<div class="title">Тип списания <span class="req">*</span></div>
+						<!-- Выпадающий список -->
+						<input class="custominput" placeholder="Выбрать">
+					</div>
+					<div class="prop">
+						<div class="title">Комментарий <span class="req">*</span></div>
+						<textarea class="customtextarea" rows="3"></textarea>
+					</div>
+					<div class="prop">
+						<div class="title">Фото</div>
+						<div class="photos-add">
+							<div class="img-box">
+								<img src="../img/flower.png" alt="">
+								<button class="del-photo">
+									<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path opacity="0.5" d="M2.21113 2.21094L18.7881 18.7879M18.7881 2.21094L2.21113 18.7879" stroke="black" stroke-width="2.5" stroke-linecap="round"></path>
+									</svg>
+								</button>
+							</div>
+							<div class="img-box">
+								<img src="../img/flower.png" alt="">
+								<button class="del-photo">
+									<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path opacity="0.5" d="M2.21113 2.21094L18.7881 18.7879M18.7881 2.21094L2.21113 18.7879" stroke="black" stroke-width="2.5" stroke-linecap="round"></path>
+									</svg>
+								</button>
+							</div>
+							<div class="img-box">
+								<img src="../img/flower.png" alt="">
+								<button class="del-photo">
+									<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path opacity="0.5" d="M2.21113 2.21094L18.7881 18.7879M18.7881 2.21094L2.21113 18.7879" stroke="black" stroke-width="2.5" stroke-linecap="round"></path>
+									</svg>
+								</button>
+							</div>
+						</div>
+						<button class="btn btn-second btn-medium btn-add">
+							<svg width="18" height="29" viewBox="0 0 18 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.25 8.47222V20.0278C1.25 21.9432 2.04018 23.7802 3.4467 25.1347C4.85322 26.4891 
+									6.76088 27.25 8.75 27.25C10.7391 27.25 12.6468 26.4891 14.0533 25.1347C15.4598 23.7802 
+									16.25 21.9432 16.25 20.0278V6.30556C16.25 4.96474 15.6969 3.67884 14.7123 2.73074C13.7277 
+									1.78264 12.3924 1.25 11 1.25C9.60761 1.25 8.27226 1.78264 7.28769 2.73074C6.30312 3.67884 
+									5.75 4.96474 5.75 6.30556V18.5833C5.75 19.3495 6.06607 20.0843 6.62868 20.6261C7.19129 
+									21.1679 7.95435 21.4722 8.75 21.4722C9.54565 21.4722 10.3087 21.1679 10.8713 20.6261C11.4339 
+									20.0843 11.75 19.3495 11.75 18.5833V8.47222" stroke="#A8A8A8" stroke-width="2.5" 
+									stroke-linecap="round" stroke-linejoin="round"/>
+							</svg> 
+							Добавить
+						</button>
+					</div>
 				</div>
 
 				<div class="assembly-list write-view" data-empty="Выберите товар к списанию"> <!-- Если пустой добавить empty-info-sect -->
