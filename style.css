@@ -21,7 +21,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 	display: block;
 }
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, 
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, 
+img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, 
+i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, 
+caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, 
+embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, 
+section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -76,6 +82,7 @@ button {
 
 /* Стили песочка */
 .container {
+    max-width: 1800px;
     height: 100vh;
     margin: 0 auto;
     display: flex;
@@ -99,14 +106,19 @@ button {
     color: #d7595f;
 }
 
+.left-sis {
+    width: 990px;
+    border-radius: 15px 15px 0 0;
+}
+
 .right-sis {
     width: 795px;
     border-radius: 15px 0 0 0;
 }
 
-.left-sis {
-    width: 990px;
-    border-radius: 15px 15px 0 0;
+.left-sis.inactive,
+.right-sis.inactive {
+    opacity: .5;
 }
 
 .full-sis {
@@ -3426,7 +3438,7 @@ button {
     grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
     border-bottom: 1px solid #D9D9D9;
-    box-shadow: 0px 7px 10px 0px rgba(150, 150, 150, 0.3);
+    /* box-shadow: 0px 7px 10px 0px rgba(150, 150, 150, 0.3); */
 }
 
 .sections-tabs-wrapper .sections-tabs-control .sections-tab {
@@ -3437,12 +3449,13 @@ button {
     text-transform: uppercase;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    background-color: #ffffff;
+    color: #ffffff;
+    background-color: #30BD57;
 }
 
 .sections-tabs-wrapper .sections-tabs-control .sections-tab.active {
-    color: #ffffff;
-    background-color: #30BD57;
+    color: #434343;
+    background-color: #ffffff;
 }
 
 .sections-tabs-wrapper .sections-tabs-content {
@@ -3850,27 +3863,26 @@ button {
 /* Скидочная система */
 
 /* --- Главная с разделами --- */
-.discount-sections {
+.main-sections {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 16px;
 }
 
-.discount-sections .discount-item {
+.main-sections .main-sections-item {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
     padding: 20px 25px;
     border-radius: 6px;
-    background-color: #DADEE6;
 }
 
-.discount-sections .discount-item .icon {
+.main-sections .main-sections-item .icon {
     width: 50px;
     height: 50px;
 }
 
-.discount-sections .discount-item .title {
+.main-sections .main-sections-item .title {
     display: flex;
     align-items: center;
     height: 56px;
@@ -3878,9 +3890,28 @@ button {
     font-weight: 500;
     text-transform: uppercase;
     line-height: 1;
-    color: #536580;
 }
 /* --- !Главная с разделами --- */
+
+/* ----- Скидочная система ----- */
+.discount-sections .discount-item {
+    background-color: #DADEE6;
+}
+
+.discount-sections .discount-item .title {
+    color: #536580;
+}
+/* ----- !Скидочная система ----- */
+
+/* ----- Настройка уведомлений ----- */
+.notifications-sections .notifications-item {
+    background-color: #EDE4F9;
+}
+
+.notifications-sections .notifications-item .title {
+    color: #6C5380;
+}
+/* ----- !Настройка уведомлений ----- */
 
 /* --- Сертификаты (редактирование) --- */
 .discount-system-cont {
@@ -4403,6 +4434,617 @@ button {
 /* --- !Форма "Выдать сертификат" --- */
 
 /* !Скидочная система */
+
+/* Продажи */
+
+/* Продажи. Успешная оплата */
+.payment-success-wrapper-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.payment-success-check .psc-body {
+    padding: 30px 30px 25px;
+    background-color: #ffffff;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.payment-success-check .psc-header {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+}
+
+.payment-success-check .psc-header span {
+    opacity: .5;
+}
+
+.payment-success-check .psc-body .psc-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.payment-success-check .psc-body .psc-info .icon {
+    width: 99px;
+    height: 99px;
+    object-fit: contain;
+    margin-bottom: 22px;
+}
+
+.payment-success-check .psc-body .psc-info .title {
+    font-size: 45px;
+    font-weight: 500;
+    color: #252525;
+}
+
+.payment-success-check .psc-body .psc-info .subtitle {
+    font-size: 22px;
+    color: #252525;
+    margin-top: 12px;
+}
+
+.payment-success-check .psc-body .psc-info .payments {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+    margin-top: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.psc-body .psc-info .payments .item {
+    display: grid;
+    align-items: end;
+    grid-template-columns: 1fr auto;
+    column-gap: 10px;
+}
+
+.psc-body .psc-info .payments .item .text {
+    display: flex;
+    column-gap: 10px;
+    color: #8e8e8e;
+}
+
+.psc-body .psc-info .payments .item .text:after {
+    content: '';
+    height: 17px;
+    flex-grow: 1;
+    border-bottom: 1px dashed #D9D9D9;
+}
+
+.psc-body .psc-info .payments .item .val {
+    color: #252525;
+}
+
+.psc-body .psc-info .payments .item .val.w-rub:after {
+    font-size: 16px;
+}
+
+.psc-body .psc-info .payments .item.item-total .text {
+    font-size: 22px;
+    color: #434343;
+}
+
+.psc-body .psc-info .payments .item.item-total .text:after {
+    height: 21px;
+}
+
+.psc-body .psc-info .payments .item.item-total .val {
+    font-size: 30px;
+}
+
+.psc-body .psc-info .payments .item.item-total .val.w-rub:after {
+    font-size: 25px;
+}
+
+.payment-success-check .psc-body .psc-info .note {
+    display: flex;
+    align-items: center;
+    column-gap: 7px;
+    margin-top: 20px;
+}
+
+.psc-body .psc-info .note p {
+    font-size: 17px;
+    opacity: .5;
+}
+
+.psc-body .psc-info .note span {
+    padding: 5px 8px;
+    color: #30BD57;
+    background-color: #30BD5726;
+    border-radius: 9px;
+}
+
+.psc-body .psc-info .note span:after {
+    font-size: 16px;
+}
+
+.payment-success-check .psc-footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 15px;
+    padding: 20px 40px;
+    background-color: #567AFB;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.payment-success-check .psc-footer .icon {
+    width: 18px;
+    object-fit: contain;
+}
+
+.payment-success-check .psc-footer p {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.payment-success-btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 15px;
+}
+
+.payment-success-btns .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 14px;
+    min-height: unset;
+    padding: 33px 32px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    color: #434343;
+}
+/* !Продажи. Успешная оплата */
+
+
+/* !Продажи */
+
+
+/* Настройки уведомлений/Уведомления */
+
+/* --- Уведомления --- */
+.notification-wrapper {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+}
+
+.notification-wrapper .notification-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 2999;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.notification-wrapper .notification-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3000;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 795px;
+    padding: 20px 12px 0 16px;
+    background-color: #ffffff;
+    border-top-left-radius: 15px;
+}
+
+.notification-container .notification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.notification-container .notification-header .title {
+    font-size: 30px;
+    color: #252525;
+}
+
+.notification-container .notification-header .setting-btn {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.notification-container .notification-body {
+    flex-grow: 1;
+    overflow: hidden;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.notification-container .notification-body::-webkit-scrollbar {
+    width: 10px;
+}
+  
+.notification-container .notification-body::-webkit-scrollbar-thumb {
+    border-radius: 9px;
+    background-color: rgba(147, 147, 147, .3);
+}
+
+.notification-container .notification-items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+}
+
+.notification-container .notification-item {
+    padding-bottom: 6px;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.notification-container .notification-item:last-child {
+    padding-bottom: 12px;
+    border-bottom: unset;
+}
+
+.notification-container .notification-item .notification-item-container {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+    padding-top: 15px;
+    padding-left: 16px;
+    padding-right: 15px;
+    padding-bottom: 16px;
+    border-radius: 6px;
+}
+
+.notification-container .notification-item.not-viewed .notification-item-container {
+    padding-left: 11px;
+    background-color: #0D99FF1A;
+    border-left: 5px solid #0D99FF59;
+}
+
+.notification-container .notification-item .icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.notification-container .notification-item .info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    flex-grow: 1;
+}
+
+.notification-container .notification-item .info .title {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #252525;
+}
+
+.notification-container .notification-item .info .desc {
+    line-height: 1.2;
+}
+
+.notification-container .notification-item .info .additional {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+}
+
+.notification-container .notification-item .info .sticker {
+    padding: 6px 14px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    color: #FF7A00;
+    background-color: #FF7A0026;
+    border-radius: 36px;
+}
+
+.notification-container .notification-item .info .date {
+    font-size: 16px;
+    line-height: 1;
+    opacity: .6;
+}
+
+.notification-container .notification-item .close-btn {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+/* --- !Уведомления --- */
+
+/* --- Настройки уведомлений */
+/* ----- Общие (админ) ----- */
+.ns-general {
+    padding-right: 10px;
+}
+
+.notification-settings-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+.notification-settings-container .notification-settings-header, 
+.notification-settings-container .notification-settings-body .audio-items .item .item-content {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 40px 312px;
+    column-gap: 27px;
+}
+
+.notification-settings-container .notification-settings-header {
+    padding-right: 10px;
+}
+
+.notification-settings-container .notification-settings-body .audio-items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.notification-settings-body .audio-items .item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.notification-settings-body .audio-items .item .title {
+    font-weight: 500;
+    color: #252525;
+}
+
+.notification-settings-body .audio-items .item .item-content .audio-container {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.notification-settings-body .audio-items .item .audio-container .audio {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+}
+
+.notification-settings-body .audio-container .audio .audio-control-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    padding-left: 14px;
+    border: 1px solid #D9D9D9;
+    border-radius: 50px;
+    transition: background-color .3s ease;
+}
+
+.notification-settings-body .audio-container .audio .audio-control-btn svg {
+    max-width: 12px;
+    object-fit: contain;
+}
+
+.notification-settings-body .audio-container .audio.audio-play .audio-control-btn {
+    padding: 10px;
+    border: unset;
+    background-color: #434343;
+}
+
+.notification-settings-body .audio-container .audio .audio-control-progress .title {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.notification-settings-body .audio-container .audio .audio-control-progress .time {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
+    font-size: 12px;
+    color: #B6B6B6;
+    line-height: 1.1;
+}
+
+.notification-settings-body .audio-container .audio .audio-control-progress .progress-bar {
+    width: 212px;
+    height: 6px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.notification-settings-body .audio-container .audio .progress-bar .progress {
+    display: none;
+    width: 0;
+    height: 6px;
+    border-radius: 10px;
+    background-color: #434343;
+    position: relative;
+    transition: width .2s ease;
+}
+
+.notification-settings-body .audio-container .audio.audio-play .progress-bar .progress {
+    display: block;
+}
+
+.notification-settings-body .audio-container .audio.audio-play .progress-bar .progress:after {
+    content: "";
+    display: block;
+    width: 9px;
+    height: 14px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    background-color: #434343;
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    transform: translate(0, -50%);
+}
+
+.notification-settings-body .audio-items .item .audio-container .btn-add-audio {
+    width: fit-content;
+    padding: 12px 16px;
+    border: 1px solid #B6B6B6;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #434343;
+}
+
+.notification-settings-body .audio-items .item .audio-container .btn-change-audio {
+    font-size: 18px;
+    font-weight: 500;
+    color: #434343;
+    flex-shrink: 0;
+}
+
+.notification-settings-body .audio-items .item .audio-container .btn-del-audio {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.notification-settings-body .audio-items .item .item-content .sound {
+    width: 24px;
+    height: 24px;
+}
+
+.notification-settings-body .audio-items .item .item-content .periodicity {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.notification-settings-body .audio-items .item .item-content .periodicity-item {
+    width: fit-content;
+    min-width: 40px;
+    height: 40px;
+    padding: 10px 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 7px;
+    flex-shrink: 0;
+    border: 1px solid #D9D9D9;
+    border-radius: 6px;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1;
+    color: #434343;
+}
+
+.notification-settings-body .audio-items .item .item-content .periodicity-item:first-child {
+    padding: 8px 6px;
+}
+
+.notification-settings-body .audio-items .item .item-content .periodicity-item.checked {
+    padding-top: 8px;
+    padding-left: 8px;
+    padding-right: 12px;
+    padding-bottom: 8px;
+    background-color: #30BD5726;
+    border: unset;
+    color: #30BD57;
+}
+
+.notification-settings-body .audio-items .item .item-content .periodicity-item:first-child.checked {
+    padding: 8px 6px;
+}
+
+.notification-settings-body .audio-items .item .item-content .periodicity.sound-off .periodicity-item {
+    opacity: .5;
+    cursor: default;
+}
+
+.notification-settings-body .audio-items .item .item-content .periodicity.sound-off .periodicity-item.checked {
+    opacity: 1;
+    filter: grayscale(1);
+    cursor: default;
+}
+/* ----- !Общие (админ) ----- */
+
+/* ----- Приложения (админ) ----- */
+.ns-applications .notification-settings-container .notification-settings-header,
+.ns-applications .notification-settings-container .notification-settings-body .audio-items .item {
+    grid-template-columns: 510px 410px;
+    column-gap: 20px;
+}
+
+.ns-applications .notification-settings-container .notification-settings-body .audio-items .item .item-content {
+    display: block;
+}
+
+.ns-applications .notification-settings-body .audio-items .item {
+    display: grid;
+    align-items: center;
+}
+
+.ns-applications .notification-settings-container .notification-settings-header .name {
+    display: flex;
+    column-gap: 10px;
+}
+
+.ns-applications .notification-settings-container .notification-settings-header .name .help {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background-color: #127FCE;
+    cursor: pointer;
+}
+
+.notification-settings-body .audio-items .item .item-info {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.notification-settings-body .audio-items .item .item-info .icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* ----- !Приложения (админ) ----- */
+
+/* --- !Настройки уведомлений */
+
+/* !Настройки уведомлений/Уведомления */
 
 
 

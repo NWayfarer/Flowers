@@ -43,3 +43,10 @@
 Сертификаты (редактирование онлайн сертификата) - discount-system-certificate-online.html
 Сертификаты (создание/выпуск онлайн сертификата) - discount-system-certificate-online-issuance.html
 Шаблон сертификата - certificate-template.html
+
+Уведомления - notification.html
+Выбор раздела в настройке уведомлений - notification-settings.html
+Настройка уведомлений (магазина) - notification-settings-edit.html
+Настройка уведомлений (админ) - notification-settings-edit-admin.html
+
+Успешная оплата - payment-successful.html
