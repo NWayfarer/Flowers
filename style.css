@@ -2863,6 +2863,22 @@ button {
     font-size: 16px;
 }
 
+.pm-info-container .pm-info .additional-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+}
+
+.pm-info-container .pm-info .additional-info .additional {
+    font-size: 17px;
+    color: #848484;
+}
+
+.pm-info-container .pm-info .additional-info .additional a {
+    margin-left: 20px;
+    color: #567AFB;
+}
+
 
 .pm-info-container .pm-info-params {
     row-gap: 10px;
