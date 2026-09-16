@@ -73,6 +73,24 @@ $('document').ready(function() {
 
 
 
+    // Выпадающие менюшки
+    $('.menu-toggle').on('click', function() {
+        $('.menu-toggle-cont[data-menu-toggle-cont="'+ $(this).data('menuToggleBtn') +'"]').toggleClass('open');
+    });
+
+
+
+    // Модальные окна
+    $('.modal-toggle').on('click', function() {
+        $('#'+ $(this).data('modalId')).addClass('open');
+    });
+
+    $('.close-modal').on('click', function() {
+        $(this).parents('.modal-container.open').removeClass('open');
+    });
+
+
+
     //Инициализация скролла
     if(document.querySelector('.tabs-viewport')) {
         new ScrollBooster({
@@ -103,9 +121,18 @@ $('document').ready(function() {
     });
 });
 
-//Кастомная кнопка добавления файла
+// Кастомная кнопка добавления файла
 if(document.querySelector('.file-up')) {
     document.querySelector('.file-up').onclick = function () {
         document.getElementById(this.dataset.fUp).click();
     };
 }
+
+// // Выпадающее меню 
+// const button = document.querySelector('#pm-additional-toggle');
+// const menu = document.querySelector('#pm-additional-toggle-cont');
+
+// button.addEventListener('click', () => {
+//     menu.classList.toggle('open');
+// });
+

@@ -23,7 +23,9 @@
 			<div class="pm-header sect-cont-def">
 				<div class="switch-btns">
 					<button class="btn active">Сайт</button>
+					<button class="btn">Онлайн витирина</button>
 					<button class="btn">Розница</button>
+					<button class="btn">Flowwow</button>
 				</div>
 				<div class="pm-filter-panel">
 					<button class="btn-icon">
@@ -40,20 +42,96 @@
 							<path d="M28.8734 29.3734L20.5547 21.0547" stroke="#AAAAAA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 						</svg>
 					</div>
-
-					<!-- Выпадающий список -->
-					<input class="custominput select" placeholder="Действие">
 				</div>
 				<div class="btns-container">
 					<button class="btn btn-fine-shift">Создать товар</button>
-					<button class="btn-icon">
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M11.9999 22.9119C13.4328 22.9137 14.8519 22.6323 16.1757 22.084C17.4994 21.5356 18.7018 20.7311 19.7137 19.7167C20.7282 18.7048 21.5327 17.5024 22.0811 16.1786C22.6294 14.8548 22.9108 13.4357 22.909 12.0028C22.9108 10.57 22.6294 9.1509 22.0811 7.82712C21.5327 6.50333 20.7282 5.30094 19.7137 4.28903C18.7018 3.27457 17.4994 2.47006 16.1757 1.92171C14.8519 1.37336 13.4328 1.09199 11.9999 1.09376C10.5671 1.09199 9.14797 1.37336 7.82419 1.92171C6.5004 2.47006 5.29801 3.27457 4.2861 4.28903C3.27164 5.30094 2.46713 6.50333 1.91878 7.82712C1.37043 9.1509 1.08906 10.57 1.09083 12.0028C1.08906 13.4357 1.37043 14.8548 1.91878 16.1786C2.46713 17.5024 3.27164 18.7048 4.2861 19.7167C5.29801 20.7311 6.5004 21.5356 7.82419 22.084C9.14797 22.6323 10.5671 22.9137 11.9999 22.9119Z" stroke="#AAAAAA" stroke-width="2" stroke-linejoin="round"/>
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M12.0004 4.90625C12.362 4.90625 12.7089 5.04992 12.9646 5.30565C13.2203 5.56138 13.364 5.90823 13.364 6.26989C13.364 6.63155 13.2203 6.97839 12.9646 7.23412C12.7089 7.48985 12.362 7.63352 12.0004 7.63352C11.6387 7.63352 11.2919 7.48985 11.0361 7.23412C10.7804 6.97839 10.6367 6.63155 10.6367 6.26989C10.6367 5.90823 10.7804 5.56138 11.0361 5.30565C11.2919 5.04992 11.6387 4.90625 12.0004 4.90625Z" fill="#AAAAAA"/>
-							<path d="M12.2724 17.4567V9.82031H11.1815M10.3633 17.4567H14.1815" stroke="#AAAAAA" stroke-width="2.18182" stroke-linecap="round" stroke-linejoin="round"/>
-						</svg>
-						Справ.
+					<div class="pm-menu-additional">
+						<button id="pm-additional-toggle" class="btn-icon menu-toggle" data-menu-toggle-btn="1">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle opacity="0.6" cx="2" cy="12" r="2" fill="#434343"/>
+								<circle opacity="0.6" cx="12" cy="12" r="2" fill="#434343"/>
+								<circle opacity="0.6" cx="22" cy="12" r="2" fill="#434343"/>
+							</svg>
+							Еще
+						</button>
+
+						<div id="pm-additional-toggle-cont" class="pm-add-items menu-toggle-cont" data-menu-toggle-cont="1">
+							<button class="pm-add-item modal-toggle" data-modal-id="prod-availability">
+								<img src="../img/pm-additional-icon-1.svg">
+								<span>Настройка доступности</span>
+							</button>
+							<button class="pm-add-item modal-toggle" data-modal-id="conf-update-timer">
+								<img src="../img/pm-additional-icon-2.svg">
+								<span>Таймер запуска обновления наличия</span>
+							</button>
+							<button class="pm-add-item">
+								<img src="../img/pm-additional-icon-3.svg">
+								<span>Структура каталога</span>
+							</button>
+							<button class="pm-add-item">
+								<img src="../img/pm-additional-icon-4.svg">
+								<span>Товарный фид (экспорт)</span>
+							</button>
+							<button class="pm-add-item">
+								<img src="../img/pm-additional-icon-5.svg">
+								<span>Справочники</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="pm-subheader sect-cont-def">
+				<div class="pm-action-panel active"> <!-- Добавить active когда кнопки можно нажимать -->
+					<button class="pm-action-item">
+						<img src="../img/pm-icon-1.svg">
+						Назначить цену
 					</button>
+					<button class="pm-action-item">
+						<img src="../img/pm-icon-2.svg">
+						Авторасчет цены
+					</button>
+					<button class="pm-action-item">
+						<img src="../img/pm-icon-3.svg">
+						Скидка / наценка
+					</button>
+					<button class="pm-action-item modal-toggle" data-modal-id="update-availability">
+						<img src="../img/pm-icon-4.svg">
+						Обновить наличие
+					</button>
+					<button class="pm-action-item">
+						<img src="../img/pm-icon-5.svg">
+						Перенести в категорию
+					</button>
+					<button class="pm-action-item">
+						<img src="../img/pm-icon-6.svg">
+						Удалить
+					</button>
+					<div class="pm-menu-additional">
+						<button class="pm-action-item menu-toggle" data-menu-toggle-btn="2">
+							<img src="../img/pm-icon-7.svg">
+							Еще
+						</button>
+
+						<div id="pm-additional-more-cont" class="pm-add-items menu-toggle-cont" data-menu-toggle-cont="2">
+							<button class="pm-add-item">
+								<img src="../img/pm-more-icon-1.svg">
+								<span>Сгруппировать товары</span>
+							</button>
+							<button class="pm-add-item modal-toggle" data-modal-id="change-availability">
+								<img src="../img/pm-more-icon-2.svg">
+								<span>Изменить доступность товара(ов)</span>
+							</button>
+							<button class="pm-add-item">
+								<img src="../img/pm-more-icon-3.svg">
+								<span>Добавить в подборку</span>
+							</button>
+							<button class="pm-add-item">
+								<img src="../img/pm-more-icon-4.svg">
+								<span>Добавить в рекомендации</span>
+							</button>
+						</div>
+					</div>
 				</div>
 			</div>
 
@@ -61,113 +139,108 @@
 				<div class="pm-table-h">
 					<label class="pm-th-item" for="selectAll">
 						<input type="checkbox" id="selectAll" class="simple-cb">
-						Выбрать все
+						Выбрать
 					</label>
-					<div class="pm-th-item">Название</div>
-					<div class="pm-th-item">Артикул</div>
-					<div class="pm-th-item">По ум.</div>
-					<div class="pm-th-item">Размер</div>
-					<div class="pm-th-item">Лейбл</div>
+					<div class="pm-th-item">Название <img src="../img/filter-icon.svg"></div>
+					<div class="pm-th-item">Артикул <img src="../img/filter-icon.svg"></div>
 					<div class="pm-th-item">Цена <img src="../img/filter-icon.svg"></div>
 					<div class="pm-th-item">Скидка/<br>наценка</div>
-					<div class="pm-th-item">Показать<br>на сайте</div>
+					<div class="pm-th-item">Доступность / исключение</div>
+					<div class="pm-th-item">Лейбл</div>
+					<div class="pm-th-item">По ум.</div>
+					<div class="pm-th-item">Размер</div>
 					<div class="pm-th-item">Дата создания <img src="../img/filter-icon.svg"></div>
 				</div>
 
 				<div class="pm-table">
 					<div class="pm-t-row">
-						<div class="pm-tr-item id">5</div>
 						<div class="pm-tr-item check"><input type="checkbox" class="simple-cb"></div>
 						<div class="pm-tr-item img"><img src="../img/flower.png" alt=""></div>
 						<div class="pm-tr-item name">Букет из гортензий и пионовидных роз</div>
 						<div class="pm-tr-item article">KF-2369</div>
+						<div class="pm-tr-item price-cont">
+							<div class="price w-rub">120 000</div>
+							<div class="old-price w-rub">100 000</div>
+						</div>
+						<div class="pm-tr-item sale"><span class="neg">- 20%</span></div>
+						<div class="pm-tr-item accessibility"><input type="text" class="pm-select-spec" value="Под заказ"> <input type="checkbox" class="simple-cb"></div>
+						<div class="pm-tr-item label">Хит</div>
 						<div class="pm-tr-item def def-selected"><img src="../img/selected-green.svg" alt=""></div>
 						<div class="pm-tr-item size">Большой</div>
-						<div class="pm-tr-item label">Хит</div>
-						<div class="pm-tr-item price-cont">
-							<div class="price w-rub">600</div>
-							<div class="old-price w-rub">650</div>
-						</div>
-						<div class="pm-tr-item sale">- 20%</div>
-						<div class="pm-tr-item on-site"><input type="checkbox" class="simple-cb"></div>
 						<div class="pm-tr-item date">12.02.2026, 17:35</div>
 						<div class="pm-tr-item edit"><button><img src="../img/edit.svg"></button></div>
 					</div>
 
 					<div class="pm-t-row">
-						<div class="pm-tr-item id">4</div>
 						<div class="pm-tr-item check"><input type="checkbox" class="simple-cb"></div>
 						<div class="pm-tr-item img"><img src="../img/flower.png" alt=""></div>
 						<div class="pm-tr-item name">Букет из гортензий и пионовидных роз</div>
 						<div class="pm-tr-item article">KF-2369</div>
+						<div class="pm-tr-item price-cont">
+							<div class="price w-rub">120 000</div>
+							<div class="old-price w-rub">100 000</div>
+						</div>
+						<div class="pm-tr-item sale"><span class="pos">+ 20%</span></div>
+						<div class="pm-tr-item accessibility"><input type="text" class="pm-select-spec" value="Под заказ"> <input type="checkbox" class="simple-cb"></div>
+						<div class="pm-tr-item label">Хит</div>
 						<div class="pm-tr-item def def-selected"><img src="../img/selected-green.svg" alt=""></div>
 						<div class="pm-tr-item size">Большой</div>
-						<div class="pm-tr-item label">Хит</div>
-						<div class="pm-tr-item price-cont">
-							<div class="price w-rub">600</div>
-							<div class="old-price w-rub">650</div>
-						</div>
-						<div class="pm-tr-item sale">- 20%</div>
-						<div class="pm-tr-item on-site"><input type="checkbox" class="simple-cb"></div>
 						<div class="pm-tr-item date">12.02.2026, 17:35</div>
 						<div class="pm-tr-item edit"><button><img src="../img/edit.svg"></button></div>
 					</div>
 
 					<div class="pm-t-row-group">
 						<div class="pm-t-row">
-							<div class="pm-tr-item id">3</div>
 							<div class="pm-tr-item check"><input type="checkbox" class="simple-cb"></div>
 							<div class="pm-tr-item img"><img src="../img/flower.png" alt=""></div>
 							<div class="pm-tr-item name">Букет из гортензий и пионовидных роз</div>
 							<div class="pm-tr-item article">KF-2369</div>
+							<div class="pm-tr-item price-cont">
+								<div class="price w-rub">120 000</div>
+								<div class="old-price w-rub">100 000</div>
+							</div>
+							<div class="pm-tr-item sale"><span class="pos">+ 20%</span></div>
+							<div class="pm-tr-item accessibility"><input type="text" class="pm-select-spec" value="Под заказ"> <input type="checkbox" class="simple-cb"></div>
+							<div class="pm-tr-item label">Хит</div>
 							<div class="pm-tr-item def def-selected"><img src="../img/selected-green.svg" alt=""></div>
 							<div class="pm-tr-item size">Большой</div>
-							<div class="pm-tr-item label">Хит</div>
-							<div class="pm-tr-item price-cont">
-								<div class="price w-rub">600</div>
-								<div class="old-price w-rub">650</div>
-							</div>
-							<div class="pm-tr-item sale">- 20%</div>
-							<div class="pm-tr-item on-site"><input type="checkbox" class="simple-cb"></div>
 							<div class="pm-tr-item date">12.02.2026, 17:35</div>
 							<div class="pm-tr-item edit"><button><img src="../img/edit.svg"></button></div>
 						</div>
 
 						<div class="pm-t-row">
-							<div class="pm-tr-item id">2</div>
 							<div class="pm-tr-item check"><input type="checkbox" class="simple-cb"></div>
 							<div class="pm-tr-item img"><img src="../img/flower.png" alt=""></div>
 							<div class="pm-tr-item name">Букет из гортензий и пионовидных роз</div>
 							<div class="pm-tr-item article">KF-2369</div>
+							<div class="pm-tr-item price-cont">
+								<div class="price w-rub">120 000</div>
+								<div class="old-price w-rub">100 000</div>
+							</div>
+							<div class="pm-tr-item sale"><span class="pos">+ 20%</span></div>
+							<div class="pm-tr-item accessibility"><input type="text" class="pm-select-spec" value="Под заказ"> <input type="checkbox" class="simple-cb"></div>
+							<div class="pm-tr-item label">Хит</div>
 							<div class="pm-tr-item def def-selected"><img src="../img/selected-green.svg" alt=""></div>
 							<div class="pm-tr-item size">Большой</div>
-							<div class="pm-tr-item label">Хит</div>
-							<div class="pm-tr-item price-cont">
-								<div class="price w-rub">600</div>
-								<div class="old-price w-rub">650</div>
-							</div>
-							<div class="pm-tr-item sale">- 20%</div>
-							<div class="pm-tr-item on-site"><input type="checkbox" class="simple-cb"></div>
 							<div class="pm-tr-item date">12.02.2026, 17:35</div>
 							<div class="pm-tr-item edit"><button><img src="../img/edit.svg"></button></div>
 						</div>
 					</div>
 
 					<div class="pm-t-row">
-						<div class="pm-tr-item id">1</div>
 						<div class="pm-tr-item check"><input type="checkbox" class="simple-cb"></div>
 						<div class="pm-tr-item img"><img src="../img/flower.png" alt=""></div>
 						<div class="pm-tr-item name">Букет из гортензий и пионовидных роз</div>
 						<div class="pm-tr-item article">KF-2369</div>
+						<div class="pm-tr-item price-cont">
+							<div class="price w-rub">120 000</div>
+							<div class="old-price w-rub">100 000</div>
+						</div>
+						<div class="pm-tr-item sale"><span class="pos">+ 20%</span></div>
+						<div class="pm-tr-item accessibility"><input type="text" class="pm-select-spec" value="Под заказ"> <input type="checkbox" class="simple-cb"></div>
+						<div class="pm-tr-item label">Хит</div>
 						<div class="pm-tr-item def def-selected"><img src="../img/selected-green.svg" alt=""></div>
 						<div class="pm-tr-item size">Большой</div>
-						<div class="pm-tr-item label">Хит</div>
-						<div class="pm-tr-item price-cont">
-							<div class="price w-rub">600</div>
-							<div class="old-price w-rub">650</div>
-						</div>
-						<div class="pm-tr-item sale">- 20%</div>
-						<div class="pm-tr-item on-site"><input type="checkbox" class="simple-cb"></div>
 						<div class="pm-tr-item date">12.02.2026, 17:35</div>
 						<div class="pm-tr-item edit"><button><img src="../img/edit.svg"></button></div>
 					</div>
@@ -186,7 +259,152 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- Класс close-modal у кнопок просто чтобы модалку закрыть, его не нужно добавлять -->
+
+		<div id="update-availability" class="modal-container">
+			<div class="modal-body pm-update-availability-modal">
+				<div class="modal-img">
+					<img src="../img/attention-y.svg">
+				</div>
+				<div class="modal-info-cont">
+					<div class="modal-title">Контрольный вопрос</div>
+					<div class="modal-info">Вы хотите запустить пересчет для обновления наличия?</div>
+					<div class="btn-container">
+						<div class="btn btn-second btn-medium close-modal">Да</div>
+						<div class="btn btn-second btn-medium close-modal">Нет</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="change-availability" class="modal-container not-h-cl-btn">
+			<div class="change-availability-cont modal-cont">
+				<div class="modal-header">
+					<h2 class="modal-title">Изменить доступность товара(ов)</h2>
+					<button class="close-modal">
+						<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none" class="setprice_close">
+							<rect opacity="0.8" x="1.5" y="1.5" width="47" height="47" rx="23.5" stroke="#844451" stroke-width="3"></rect>
+							<path d="M17 33L33 17M17 17L33 33" stroke="#844451" stroke-width="3" stroke-linecap="round"></path>
+						</svg>
+					</button>
+				</div>
+				<div class="modal-body">
+
+					<div class="modal-desc">Выбрано 20 товаров</div>
+
+					<div class="modal-fields">
+						<!-- Выпадающий список -->
+						<input type="text" class="custominput" value="Выберать тип доступности">
+						<div class="cb-box">
+							<input type="checkbox" class="simple-cb">
+							<div class="label">Сделать исключением</div>
+						</div>
+					</div>
+						
+					<div class="btn-container">
+						<button class="btn btn-medium close-modal">Сохранить</button>
+						<button class="btn btn-second btn-medium close-modal">Отмена</button>
+					</div>
 		
+				</div>
+			</div>
+		</div>
+		
+		<div id="conf-update-timer" class="modal-container not-h-cl-btn">
+			<div class="conf-update-timer-cont modal-cont">
+				<div class="modal-header">
+					<h2 class="modal-title">Настройка таймера запуска обновления наличия</h2>
+					<button class="close-modal">
+						<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none" class="setprice_close">
+							<rect opacity="0.8" x="1.5" y="1.5" width="47" height="47" rx="23.5" stroke="#844451" stroke-width="3"></rect>
+							<path d="M17 33L33 17M17 17L33 33" stroke="#844451" stroke-width="3" stroke-linecap="round"></path>
+						</svg>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="modal-desc">Последнее изменение:<br>Александра Рожкова 18.06.2026, 10:31</div>
+
+					<div class="modal-fields">
+						<div class="m-field">
+							<div class="title-field">Укажите время для запуска</div>
+							<div class="field-elem">
+								<div class="input-icon">
+									<input type="text" class="custominput" value="06:00">
+									<span>
+										<img src="../img/clock.svg">
+									</span>
+								</div>
+								<button><img src="../img/close.svg"></button>
+							</div>
+							<div class="field-elem">
+								<div class="input-icon">
+									<input type="text" class="custominput" value="11:00">
+									<span>
+										<img src="../img/clock.svg">
+									</span>
+								</div>
+								<button><img src="../img/close.svg"></button>
+							</div>
+						</div>
+						<button class="btn btn-second btn-medium">Добавить таймер</button>
+					</div>
+						
+					<div class="btn-container">
+						<button class="btn btn-medium close-modal">Сохранить</button>
+						<button class="btn btn-second btn-medium close-modal">Отмена</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="prod-availability" class="modal-container not-h-cl-btn">
+			<div class="prod-availability-cont modal-cont">
+				<div class="modal-header">
+					<h2 class="modal-title">Доступность товаров</h2>
+					<button class="close-modal">
+						<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none" class="setprice_close">
+							<rect opacity="0.8" x="1.5" y="1.5" width="47" height="47" rx="23.5" stroke="#844451" stroke-width="3"></rect>
+							<path d="M17 33L33 17M17 17L33 33" stroke="#844451" stroke-width="3" stroke-linecap="round"></path>
+						</svg>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="modal-desc">Последнее изменение:<br>Александра Рожкова 18.06.2026, 10:31</div>
+
+					<div class="modal-fields">
+						<div class="m-field">
+							<div class="title-field">В наличии</div>
+							<div class="field-elem field-elem-twin">
+								<input type="text" class="custominput" value="100">
+								<input type="text" class="custominput" value="100">
+							</div>
+						</div>
+						<div class="m-field">
+							<div class="title-field">Доступен с изменениями</div>
+							<div class="field-elem field-elem-twin">
+								<input type="text" class="custominput" value="91">
+								<input type="text" class="custominput" value="99">
+							</div>
+							<textarea class="customtextarea" rows="3">Части цветов в этой сборке нет в наличии, при заказе менеджер предложит вам замену.</textarea>
+						</div>
+						<div class="m-field">
+							<div class="title-field">Под заказ</div>
+							<div class="field-elem field-elem-twin">
+								<input type="text" class="custominput" value="75">
+								<input type="text" class="custominput" value="90">
+							</div>
+							<input type="text" class="custominput ci-full" placeholder="Укажите комментарий для клиента">
+						</div>
+					</div>
+						
+					<div class="btn-container">
+						<button class="btn btn-medium close-modal">Сохранить</button>
+						<button class="btn btn-second btn-medium close-modal">Отмена</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </body>
 

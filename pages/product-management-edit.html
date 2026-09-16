@@ -55,12 +55,6 @@
 									<input class="custominput" value="Нежный" />
 								</div>
 							</div>
-							<div class="pm-i-field">
-								<div class="title">Описание</div>
-								<textarea class="customtextarea" rows="4" wrap="hard">Свеча в стеклянном стакане с деревянным фитилем, благодаря которому при горении можно услышать легкое потрескивание.
-
-Состав: кокосовый воск, отдушка, деревянный фитиль</textarea>
-							</div>
 						</div>
 
 						<div class="pm-i-cb-container">
@@ -115,16 +109,51 @@
 									Скидка
 								</label>
 							</div>
+
+							<div class="pm-i-field">
+								<div class="title">Описание</div>
+								<textarea class="customtextarea" rows="4" wrap="hard">Свеча в стеклянном стакане с деревянным фитилем, благодаря которому при горении можно услышать легкое потрескивание.
+
+Состав: кокосовый воск, отдушка, деревянный фитиль</textarea>
+							</div>
 						</div>
 
-						<div class="pm-i-params-sect composition-sect">
-							<h4 class="pm-title">Состав</h4>
+						<div class="pm-i-params-sect">
+							<div class="composition-sect">
+								<h4 class="pm-title">Состав</h4>
 
-							<div class="composition">
-								Роза розовая 60 см - 2, Ромашка кусовая садовая - 2, Диантус асс - 2, Салал - 2, Ромашка кусовая садовая - 2, Роза розовая 60 см - 2
+								<div class="composition">
+									Роза розовая 60 см - 2, Ромашка кусовая садовая - 2, Диантус асс - 2, Салал - 2, Ромашка кусовая садовая - 2, Роза розовая 60 см - 2
+								</div>
+
+								<button class="btn">Редактировать</button>
 							</div>
 
-							<button class="btn">Редактировать</button>
+							<div class="pm-i-cb-w-title">
+								<div class="title">Доступность товара</div>
+
+								<div class="pm-i-cb-container">
+									<!-- Выпадающий список -->
+									<input type="text" class="custominput" value="Доступен с заменой" />
+
+									<div class="cb-box">
+										<input type="checkbox" class="simple-cb">
+										<div class="label">Сделать исключением</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="pm-i-cb-container">
+								<div class="cb-box">
+									<input type="checkbox" class="simple-cb">
+									<div class="label">Показать блок «В подарок»</div>
+								</div>
+								
+								<div class="cb-box">
+									<input type="checkbox" class="simple-cb">
+									<div class="label">Показать блок «Дополнения к товару»</div>
+								</div>
+							</div>
 						</div>
 
 						<div class="pm-i-params-sect prices-sect">
@@ -161,11 +190,11 @@
 					</div>
 
 					<div class="btns-container">
-						<button class="btn">Сохранить</button>
+						<button class="btn btn-medium">Сохранить</button>
 						
 						<div class="add-btns">
-							<button class="btn btn-second">Добавить вариацию</button>
-							<button class="btn btn-second">Удалить товар</button>
+							<button class="btn btn-second btn-medium">Добавить вариацию</button>
+							<button class="btn btn-medium btn-del">Удалить товар</button>
 						</div>
 
 					</div>
@@ -371,8 +400,8 @@
 						</div>
 
 						<div class="materials-btn">
-							<button class="btn-material">Добавить фото</button>
-							<button class="btn-material">Добавить видео</button>
+							<button class="btn btn-second btn-medium">Добавить фото</button>
+							<button class="btn btn-second btn-medium">Добавить видео</button>
 						</div>
 					</div>
 				</div>
